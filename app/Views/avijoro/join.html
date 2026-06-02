@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Nous rejoindre — AVIJORO Madagascar</title>
+  <link rel="stylesheet" href="styles.css"/>
+  <style>
+    .join-grid { display:grid; grid-template-columns:1fr 1.3fr; gap:56px; align-items:start; }
+    .join-why { position:sticky; top:calc(var(--navbar-h) + 24px); }
+    .why-item {
+      display:flex; align-items:flex-start; gap:14px;
+      padding:18px; border-radius:var(--radius-sm);
+      background:var(--white); border:1px solid var(--gray-200);
+      margin-bottom:14px; transition:box-shadow var(--transition);
+    }
+    .why-item:hover { box-shadow:var(--shadow-sm); }
+    .why-icon { width:44px; height:44px; border-radius:10px; background:var(--green-light); display:flex; align-items:center; justify-content:center; font-size:1.2rem; flex-shrink:0; }
+    .why-item h4 { font-size:.95rem; margin-bottom:3px; }
+    .why-item p  { font-size:.83rem; color:var(--gray-600); }
+    .form-row  { display:grid; grid-template-columns:1fr 1fr; gap:16px; }
+    .checkbox-group { display:flex; flex-direction:column; gap:8px; }
+    .checkbox-item { display:flex; align-items:center; gap:10px; cursor:pointer; font-size:.9rem; }
+    .checkbox-item input { width:16px; height:16px; accent-color:var(--green); cursor:pointer; }
+    .success-msg { display:none; text-align:center; padding:40px; background:var(--green-light); border-radius:var(--radius); border:2px solid var(--green); }
+    .success-msg .big-check { font-size:3rem; margin-bottom:16px; }
+    .success-msg h3 { color:var(--green-dark); margin-bottom:8px; }
+    .testimonials-strip { background:var(--gray-50); padding:56px 0; }
+    @media(max-width:900px){ .join-grid{ grid-template-columns:1fr; } .join-why{ position:static; } .form-row{ grid-template-columns:1fr; } }
+  </style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar" id="navbar">
+  <div class="container">
+    <a href="index.html" class="nav-logo"><div class="logo-icon">🌿</div>AVIJORO <span>Madagascar</span></a>
+    <ul class="nav-links">
+      <li class="nav-item"><a href="index.html" class="nav-link">Accueil</a></li>
+      <li class="nav-item"><a href="about.html" class="nav-link">À propos</a></li>
+      <li class="nav-item"><a href="projects.html" class="nav-link">Projets</a></li>
+      <li class="nav-item"><a href="news.html" class="nav-link">Actualités</a></li>
+      <li class="nav-item"><a href="media.html" class="nav-link">Médias</a></li>
+      <li class="nav-item"><a href="join.html" class="nav-link active">Nous rejoindre <span class="chevron">▾</span></a>
+        <div class="dropdown">
+          <a href="#pourquoi"><div class="d-icon">🌟</div>Pourquoi s'engager</a>
+          <a href="#formulaire"><div class="d-icon">📝</div>Formulaire d'inscription</a>
+          <a href="#temoignages-b"><div class="d-icon">💬</div>Témoignages</a>
+        </div>
+      </li>
+      <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+    </ul>
+    <div class="nav-right">
+      <div class="lang-selector"><button class="lang-btn active">FR</button><button class="lang-btn">MG</button><button class="lang-btn">EN</button></div>
+      <a href="donate.html" class="btn btn-orange btn-sm">❤️ Faire un don</a>
+    </div>
+    <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+<div class="drawer-overlay" id="drawerOverlay"></div>
+<aside class="drawer" id="drawer">
+  <div class="drawer-header"><a href="index.html" class="nav-logo"><div class="logo-icon">🌿</div>AVIJORO <span>Madagascar</span></a><button class="drawer-close" id="drawerClose">✕</button></div>
+  <nav class="drawer-nav">
+    <a href="index.html" class="drawer-link"><span class="d-icon">🏠</span> Accueil</a>
+    <a href="about.html" class="drawer-link"><span class="d-icon">ℹ️</span> À propos</a>
+    <a href="projects.html" class="drawer-link"><span class="d-icon">📁</span> Projets</a>
+    <a href="news.html" class="drawer-link"><span class="d-icon">📰</span> Actualités</a>
+    <a href="media.html" class="drawer-link"><span class="d-icon">🎬</span> Médias</a>
+    <button class="drawer-link drawer-parent"><span class="d-icon">🙋</span> Nous rejoindre <span class="chevron-r">›</span></button>
+    <div class="drawer-sub">
+      <a href="#pourquoi">Pourquoi s'engager</a>
+      <a href="#formulaire">Formulaire</a>
+      <a href="#temoignages-b">Témoignages</a>
+    </div>
+    <a href="donate.html" class="drawer-link"><span class="d-icon">❤️</span> Nous soutenir</a>
+    <a href="faq.html" class="drawer-link"><span class="d-icon">❓</span> FAQ</a>
+    <a href="contact.html" class="drawer-link"><span class="d-icon">📩</span> Contact</a>
+  </nav>
+  <div class="drawer-footer">
+    <div class="drawer-lang"><button class="lang-btn active">FR</button><button class="lang-btn">MG</button><button class="lang-btn">EN</button></div>
+    <a href="donate.html" class="btn btn-orange" style="justify-content:center;">❤️ Faire un don</a>
+  </div>
+</aside>
+
+<!-- PAGE HERO -->
+<section class="page-hero" style="background-image:none;background:linear-gradient(135deg,#0f2027,#1a4a2e)">
+  <div class="container">
+    <nav class="breadcrumb"><a href="index.html">Accueil</a><span class="sep">/</span><span>Nous rejoindre</span></nav>
+    <h1>Devenez bénévole</h1>
+    <p>Rejoignez plus de 320 bénévoles qui donnent de leur temps pour changer des vies à Madagascar.</p>
+  </div>
+</section>
+
+<!-- POURQUOI -->
+<section class="section" id="pourquoi">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="badge badge-green">Pourquoi s'engager</span>
+      <h2>Ce que vous y gagnez</h2>
+    </div>
+    <div class="grid-4" style="margin-bottom:0">
+      <div class="card reveal" style="padding:24px;text-align:center">
+        <div style="font-size:2.2rem;margin-bottom:12px">🌟</div>
+        <h3>Expérience enrichissante</h3>
+        <p style="font-size:.85rem;margin-top:8px">Vivez des expériences humaines uniques et développez des compétences valorisables.</p>
+      </div>
+      <div class="card reveal reveal-delay-1" style="padding:24px;text-align:center">
+        <div style="font-size:2.2rem;margin-bottom:12px">🤝</div>
+        <h3>Réseau solidaire</h3>
+        <p style="font-size:.85rem;margin-top:8px">Rejoignez une communauté de gens engagés, créatifs et bienveillants.</p>
+      </div>
+      <div class="card reveal reveal-delay-2" style="padding:24px;text-align:center">
+        <div style="font-size:2.2rem;margin-bottom:12px">📜</div>
+        <h3>Certificat officiel</h3>
+        <p style="font-size:.85rem;margin-top:8px">Recevez une attestation de bénévolat reconnue après 3 mois d'engagement.</p>
+      </div>
+      <div class="card reveal reveal-delay-3" style="padding:24px;text-align:center">
+        <div style="font-size:2.2rem;margin-bottom:12px">🎓</div>
+        <h3>Formations gratuites</h3>
+        <p style="font-size:.85rem;margin-top:8px">Accédez à des formations en leadership, gestion de projet et communication.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FORMULAIRE + POURQUOI -->
+<section class="section" id="formulaire" style="background:var(--gray-50)">
+  <div class="container">
+    <div class="join-grid">
+      <!-- Gauche : infos -->
+      <div class="join-why reveal">
+        <span class="badge badge-green" style="margin-bottom:16px">Comment ça marche</span>
+        <h2 style="margin-bottom:24px">Rejoindre AVIJORO en 3 étapes</h2>
+        <div class="why-item">
+          <div class="why-icon">📝</div>
+          <div><h4>1. Remplissez le formulaire</h4><p>Partagez vos motivations, compétences et disponibilités. Tout le monde est bienvenu !</p></div>
+        </div>
+        <div class="why-item">
+          <div class="why-icon">📞</div>
+          <div><h4>2. Entretien de bienvenue</h4><p>Un membre de l'équipe vous contacte dans les 48h pour un échange informel.</p></div>
+        </div>
+        <div class="why-item">
+          <div class="why-icon">🚀</div>
+          <div><h4>3. Intégration & formation</h4><p>Participez à une journée d'intégration et commencez votre aventure avec nous !</p></div>
+        </div>
+        <div style="margin-top:24px;padding:20px;background:var(--green-light);border-radius:var(--radius);border-left:4px solid var(--green)">
+          <strong style="color:var(--green-dark)">320+ bénévoles nous font déjà confiance</strong>
+          <p style="font-size:.85rem;margin-top:6px;color:var(--gray-600)">Étudiants, professionnels, retraités — chacun apporte ses talents uniques.</p>
+        </div>
+      </div>
+
+      <!-- Droite : formulaire -->
+      <div class="card reveal reveal-delay-1" style="padding:36px" id="formCard">
+        <h3 style="margin-bottom:24px">📋 Formulaire d'inscription bénévole</h3>
+
+        <div id="joinSuccess" class="success-msg">
+          <div class="big-check">✅</div>
+          <h3>Bienvenue dans la famille AVIJORO !</h3>
+          <p>Votre demande a été reçue. Notre équipe vous contactera dans les 48 heures. Merci pour votre engagement !</p>
+          <a href="index.html" class="btn btn-primary" style="margin-top:20px">Retour à l'accueil</a>
+        </div>
+
+        <div id="joinForm">
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label">Prénom *</label>
+              <input type="text" class="form-control" placeholder="Votre prénom" required/>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Nom *</label>
+              <input type="text" class="form-control" placeholder="Votre nom" required/>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label">Email *</label>
+              <input type="email" class="form-control" placeholder="votre@email.com" required/>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Téléphone</label>
+              <input type="tel" class="form-control" placeholder="+261 XX XX XXX XX"/>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Ville de résidence *</label>
+            <select class="form-control">
+              <option value="">Sélectionnez votre ville</option>
+              <option>Antananarivo</option>
+              <option>Toliara</option>
+              <option>Mahajanga</option>
+              <option>Toamasina</option>
+              <option>Fianarantsoa</option>
+              <option>Antsiranana</option>
+              <option>Autre</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Domaines d'intérêt *</label>
+            <div class="checkbox-group">
+              <label class="checkbox-item"><input type="checkbox"/>🎓 Éducation & enseignement</label>
+              <label class="checkbox-item"><input type="checkbox"/>🏥 Santé & bien-être</label>
+              <label class="checkbox-item"><input type="checkbox"/>🌿 Environnement & reboisement</label>
+              <label class="checkbox-item"><input type="checkbox"/>💼 Développement économique</label>
+              <label class="checkbox-item"><input type="checkbox"/>📢 Communication & réseaux sociaux</label>
+              <label class="checkbox-item"><input type="checkbox"/>💻 Informatique & technologie</label>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Disponibilité</label>
+            <select class="form-control">
+              <option>Week-ends uniquement</option>
+              <option>En semaine (quelques heures)</option>
+              <option>Plein temps (stage / service civique)</option>
+              <option>Ponctuellement, selon les événements</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Votre motivation *</label>
+            <textarea class="form-control" placeholder="Dites-nous ce qui vous motive à rejoindre AVIJORO Madagascar..."></textarea>
+          </div>
+          <button class="btn btn-primary btn-lg" style="width:100%;justify-content:center" onclick="submitJoin(event)">
+            🙋 Rejoindre l'association
+          </button>
+          <p style="font-size:.78rem;color:var(--gray-400);text-align:center;margin-top:12px">
+            Vos données sont transmises de façon sécurisée et ne seront jamais partagées.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TÉMOIGNAGES BÉNÉVOLES -->
+<section class="section testimonials" id="temoignages-b">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="badge badge-blue">Témoignages</span>
+      <h2>Ils ont rejoint l'aventure</h2>
+    </div>
+    <div class="grid-3">
+      <div class="testimonial-card reveal">
+        <div class="testimonial-stars">★★★★★</div>
+        <p class="testimonial-text">"J'ai rejoint AVIJORO en 2022 sans vraiment savoir à quoi m'attendre. Aujourd'hui, c'est devenu une partie essentielle de ma vie. J'ai appris autant que j'ai donné."</p>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">R</div>
+          <div><div class="testimonial-name">Ravo Rakoto</div><div class="testimonial-role">Bénévole — Antananarivo</div></div>
+        </div>
+      </div>
+      <div class="testimonial-card reveal reveal-delay-1">
+        <div class="testimonial-stars">★★★★★</div>
+        <p class="testimonial-text">"En tant qu'étudiante en médecine, participer aux caravanes médicales m'a donné une expérience terrain inestimable. Je recommande à tous les jeunes professionnels."</p>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">L</div>
+          <div><div class="testimonial-name">Lalaina Andriantsoa</div><div class="testimonial-role">Bénévole santé — Fianarantsoa</div></div>
+        </div>
+      </div>
+      <div class="testimonial-card reveal reveal-delay-2">
+        <div class="testimonial-stars">★★★★★</div>
+        <p class="testimonial-text">"À la retraite, j'avais peur de ne plus être utile. AVIJORO m'a montré que l'expérience de vie est une richesse inestimable pour les communautés."</p>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">P</div>
+          <div><div class="testimonial-name">Pierre Rabemanantsoa</div><div class="testimonial-role">Bénévole retraité</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand"><a href="index.html" class="nav-logo"><div class="logo-icon">🌿</div>AVIJORO <span style="color:var(--green)">Madagascar</span></a><p>Association humanitaire depuis 2016.</p><div class="footer-socials"><a href="#" class="social-btn">f</a><a href="#" class="social-btn">📷</a><a href="#" class="social-btn">▶</a></div></div>
+      <div class="footer-col"><h4>Pages</h4><ul><li><a href="index.html">Accueil</a></li><li><a href="about.html">À propos</a></li><li><a href="projects.html">Projets</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+      <div class="footer-col"><h4>Agir</h4><ul><li><a href="donate.html">❤️ Faire un don</a></li><li><a href="join.html">🙋 Bénévolat</a></li><li><a href="faq.html">❓ FAQ</a></li></ul></div>
+      <div class="footer-col"><h4>Contact</h4><p style="font-size:.85rem;color:rgba(255,255,255,.6);line-height:1.8">📍 Antananarivo 101<br>📞 +261 20 22 123 45<br>✉️ contact@avijoro.mg</p></div>
+    </div>
+  </div>
+  <div class="footer-bottom"><div class="container" style="display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;width:100%"><span>© 2025 AVIJORO Madagascar.</span><div style="display:flex;gap:16px"><a href="#">Mentions légales</a><a href="#">Confidentialité</a></div></div></div>
+</footer>
+<a href="#" class="back-top" id="backTop">↑</a>
+
+<script src="main.js"></script>
+<script>
+function submitJoin(e) {
+  e.preventDefault();
+  document.getElementById('joinForm').style.display = 'none';
+  document.getElementById('joinSuccess').style.display = 'block';
+  window.scrollTo({ top: document.getElementById('formCard').offsetTop - 100, behavior: 'smooth' });
+}
+</script>
+</body>
+</html>

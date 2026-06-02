@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AVIJORO Madagascar — Accueil</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    /* Navbar scrolled state */
+    .navbar.scrolled { box-shadow: var(--shadow-md); }
+    /* Video section */
+    .video-section { background: var(--dark); padding: 80px 0; text-align: center; }
+    .video-wrap {
+      max-width: 820px; margin: 0 auto;
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--shadow-lg);
+      aspect-ratio: 16/9;
+      background: #000;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .video-placeholder {
+      width: 100%; height: 100%;
+      background: linear-gradient(135deg, #1a3a2a, #0f2027);
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      gap: 16px; color: var(--white);
+    }
+    .play-btn {
+      width: 72px; height: 72px;
+      background: var(--green);
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.8rem;
+      cursor: pointer;
+      transition: transform var(--transition), box-shadow var(--transition);
+      box-shadow: 0 0 0 12px rgba(97,206,112,.2);
+    }
+    .play-btn:hover { transform: scale(1.1); box-shadow: 0 0 0 18px rgba(97,206,112,.15); }
+    /* Donate sticky mobile */
+    .mobile-donate-bar {
+      display: none;
+      position: fixed;
+      bottom: 0; left: 0; right: 0;
+      z-index: 800;
+      background: var(--white);
+      padding: 12px 16px;
+      box-shadow: 0 -4px 16px rgba(0,0,0,.12);
+    }
+    .mobile-donate-bar .btn { width: 100%; justify-content: center; }
+    @media (max-width: 768px) { .mobile-donate-bar { display: block; } body { padding-bottom: 72px; } }
+  </style>
+</head>
+<body>
+
+<!-- ══════════════════ NAVBAR ══════════════════ -->
+<nav class="navbar" id="navbar">
+  <div class="container">
+    <a href="index.html" class="nav-logo">
+      <div class="logo-icon">🌿</div>
+      AVIJORO <span>Madagascar</span>
+    </a>
+
+    <ul class="nav-links">
+      <!-- Accueil -->
+      <li class="nav-item">
+        <a href="index.html" class="nav-link active">Accueil <span class="chevron">▾</span></a>
+        <div class="dropdown">
+          <a href="#hero"><div class="d-icon">🏠</div>Présentation</a>
+          <a href="#about"><div class="d-icon">💡</div>Mission & Valeurs</a>
+          <a href="#stats"><div class="d-icon">📊</div>Chiffres clés</a>
+          <a href="#projects"><div class="d-icon">📁</div>Projets récents</a>
+          <a href="#news"><div class="d-icon">📰</div>Actualités</a>
+          <a href="#testimonials"><div class="d-icon">💬</div>Témoignages</a>
+          <a href="#partners"><div class="d-icon">🤝</div>Partenaires</a>
+          <a href="#contact-footer"><div class="d-icon">📩</div>Contact</a>
+        </div>
+      </li>
+      <!-- À propos -->
+      <li class="nav-item">
+        <a href="about.html" class="nav-link">À propos <span class="chevron">▾</span></a>
+        <div class="dropdown">
+          <a href="about.html#histoire"><div class="d-icon">📖</div>Notre histoire</a>
+          <a href="about.html#mission"><div class="d-icon">🎯</div>Mission & Vision</a>
+          <a href="about.html#valeurs"><div class="d-icon">🌟</div>Nos valeurs</a>
+          <a href="about.html#equipe"><div class="d-icon">👥</div>L'équipe</a>
+        </div>
+      </li>
+      <!-- Projets -->
+      <li class="nav-item">
+        <a href="projects.html" class="nav-link">Projets <span class="chevron">▾</span></a>
+        <div class="dropdown">
+          <a href="projects.html#encours"><div class="d-icon">🔄</div>En cours</a>
+          <a href="projects.html#termines"><div class="d-icon">✅</div>Terminés</a>
+          <a href="projects.html#impacts"><div class="d-icon">📈</div>Impacts</a>
+        </div>
+      </li>
+      <!-- Actualités -->
+      <li class="nav-item">
+        <a href="news.html" class="nav-link">Actualités <span class="chevron">▾</span></a>
+        <div class="dropdown">
+          <a href="news.html#articles"><div class="d-icon">📝</div>Articles</a>
+          <a href="news.html#evenements"><div class="d-icon">📅</div>Événements</a>
+          <a href="news.html#campagnes"><div class="d-icon">📣</div>Campagnes</a>
+        </div>
+      </li>
+      <!-- Médias -->
+      <li class="nav-item">
+        <a href="media.html" class="nav-link">Médias <span class="chevron">▾</span></a>
+        <div class="dropdown">
+          <a href="media.html#photos"><div class="d-icon">🖼️</div>Galerie photos</a>
+          <a href="media.html#videos"><div class="d-icon">🎬</div>Vidéos</a>
+          <a href="media.html#docs"><div class="d-icon">📄</div>Documents</a>
+        </div>
+      </li>
+      <!-- Contact -->
+      <li class="nav-item">
+        <a href="contact.html" class="nav-link">Contact <span class="chevron">▾</span></a>
+        <div class="dropdown">
+          <a href="contact.html#formulaire"><div class="d-icon">✉️</div>Formulaire</a>
+          <a href="contact.html#localisation"><div class="d-icon">📍</div>Localisation</a>
+          <a href="contact.html#reseaux"><div class="d-icon">📱</div>Réseaux sociaux</a>
+        </div>
+      </li>
+    </ul>
+
+    <div class="nav-right">
+      <div class="lang-selector">
+        <button class="lang-btn active">FR</button>
+        <button class="lang-btn">MG</button>
+        <button class="lang-btn">EN</button>
+      </div>
+      <a href="donate.html" class="btn btn-orange btn-sm">❤️ Faire un don</a>
+    </div>
+
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- ══════════════════ MOBILE DRAWER ══════════════════ -->
+<div class="drawer-overlay" id="drawerOverlay"></div>
+<aside class="drawer" id="drawer">
+  <div class="drawer-header">
+    <a href="index.html" class="nav-logo">
+      <div class="logo-icon">🌿</div>
+      AVIJORO <span>Madagascar</span>
+    </a>
+    <button class="drawer-close" id="drawerClose">✕</button>
+  </div>
+  <nav class="drawer-nav">
+    <div class="drawer-section-label">Navigation</div>
+
+    <button class="drawer-link drawer-parent">
+      <span class="d-icon">🏠</span> Accueil <span class="chevron-r">›</span>
+    </button>
+    <div class="drawer-sub">
+      <a href="#hero">Présentation</a>
+      <a href="#about">Mission & Valeurs</a>
+      <a href="#stats">Chiffres clés</a>
+      <a href="#projects">Projets récents</a>
+      <a href="#news">Actualités</a>
+      <a href="#testimonials">Témoignages</a>
+      <a href="#contact-footer">Contact</a>
+    </div>
+
+    <button class="drawer-link drawer-parent">
+      <span class="d-icon">ℹ️</span> À propos <span class="chevron-r">›</span>
+    </button>
+    <div class="drawer-sub">
+      <a href="about.html#histoire">Notre histoire</a>
+      <a href="about.html#mission">Mission & Vision</a>
+      <a href="about.html#valeurs">Nos valeurs</a>
+      <a href="about.html#equipe">L'équipe</a>
+    </div>
+
+    <button class="drawer-link drawer-parent">
+      <span class="d-icon">📁</span> Projets <span class="chevron-r">›</span>
+    </button>
+    <div class="drawer-sub">
+      <a href="projects.html#encours">En cours</a>
+      <a href="projects.html#termines">Terminés</a>
+      <a href="projects.html#impacts">Impacts</a>
+    </div>
+
+    <button class="drawer-link drawer-parent">
+      <span class="d-icon">📰</span> Actualités <span class="chevron-r">›</span>
+    </button>
+    <div class="drawer-sub">
+      <a href="news.html#articles">Articles</a>
+      <a href="news.html#evenements">Événements</a>
+      <a href="news.html#campagnes">Campagnes</a>
+    </div>
+
+    <a href="media.html" class="drawer-link"><span class="d-icon">🎬</span> Médias</a>
+    <a href="join.html"  class="drawer-link"><span class="d-icon">🙋</span> Nous rejoindre</a>
+    <a href="faq.html"   class="drawer-link"><span class="d-icon">❓</span> FAQ</a>
+    <a href="contact.html" class="drawer-link"><span class="d-icon">📩</span> Contact</a>
+  </nav>
+  <div class="drawer-footer">
+    <div class="drawer-lang">
+      <button class="lang-btn active">FR</button>
+      <button class="lang-btn">MG</button>
+      <button class="lang-btn">EN</button>
+    </div>
+    <a href="donate.html" class="btn btn-orange" style="justify-content:center;">❤️ Faire un don</a>
+  </div>
+</aside>
+
+<!-- ══════════════════ HERO ══════════════════ -->
+<section class="hero" id="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-overlay"></div>
+  <div class="container">
+    <div class="hero-content">
+      <div class="hero-eyebrow">🌿 Association humanitaire</div>
+      <h1>Ensemble, <em>transformons</em> Madagascar</h1>
+      <p class="hero-desc">
+        AVIJORO Madagascar œuvre pour un Madagascar plus solidaire, plus équitable et plus durable.
+        Rejoignez des centaines de bénévoles engagés pour changer des vies.
+      </p>
+      <div class="hero-actions">
+        <a href="join.html"    class="btn btn-primary btn-lg">🙋 Rejoindre l'association</a>
+        <a href="donate.html"  class="btn btn-orange  btn-lg">❤️ Faire un don</a>
+        <a href="projects.html" class="btn btn-outline btn-lg">📁 Découvrir les projets</a>
+      </div>
+      <div class="hero-stats">
+        <div class="hero-stat">
+          <span class="number" data-target="320" data-suffix="+">0</span>
+          <span class="label">Bénévoles actifs</span>
+        </div>
+        <div class="hero-stat">
+          <span class="number" data-target="47" data-suffix="">0</span>
+          <span class="label">Projets réalisés</span>
+        </div>
+        <div class="hero-stat">
+          <span class="number" data-target="12000" data-suffix="+">0</span>
+          <span class="label">Bénéficiaires</span>
+        </div>
+        <div class="hero-stat">
+          <span class="number" data-target="8" data-suffix=" ans">0</span>
+          <span class="label">D'existence</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════ STATS BAR ══════════════════ -->
+<section class="stats-bar" id="stats">
+  <div class="container">
+    <div class="grid-4">
+      <div class="stat-item reveal">
+        <span class="num" data-target="320" data-suffix="+">320+</span>
+        <span class="lbl">Bénévoles engagés</span>
+      </div>
+      <div class="stat-item reveal reveal-delay-1">
+        <span class="num" data-target="47" data-suffix="">47</span>
+        <span class="lbl">Projets menés</span>
+      </div>
+      <div class="stat-item reveal reveal-delay-2">
+        <span class="num" data-target="12000" data-suffix="+">12 000+</span>
+        <span class="lbl">Bénéficiaires</span>
+      </div>
+      <div class="stat-item reveal reveal-delay-3">
+        <span class="num" data-target="22" data-suffix="">22</span>
+        <span class="lbl">Régions couvertes</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════ À PROPOS ══════════════════ -->
+<section class="section" id="about">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-img-wrap reveal">
+        <img class="about-img"
+          src="https://images.unsplash.com/photo-1531206715517-5c0ba140b2b8?w=700&auto=format&fit=crop&q=80"
+          alt="Bénévoles AVIJORO" loading="lazy" />
+        <div class="about-badge-float">
+          <span class="num">8</span>
+          <span class="lbl">années d'impact</span>
+        </div>
+      </div>
+      <div class="about-content reveal reveal-delay-1">
+        <span class="badge badge-green">À propos</span>
+        <h2>Une association ancrée dans les valeurs humanitaires</h2>
+        <p>
+          Fondée en 2016 à Antananarivo, AVIJORO Madagascar est une association à but non lucratif qui
+          mobilise bénévoles, partenaires et donateurs pour améliorer les conditions de vie des communautés
+          les plus vulnérables de l'île.
+        </p>
+        <p>
+          Notre approche est participative et durable : nous travaillons main dans la main avec les
+          populations locales pour concevoir des solutions adaptées à leurs réalités.
+        </p>
+        <div class="values-list">
+          <div class="value-item">
+            <div class="value-icon">🤝</div>
+            <div><h4>Solidarité</h4><p>Ensemble, plus forts</p></div>
+          </div>
+          <div class="value-item">
+            <div class="value-icon">💡</div>
+            <div><h4>Innovation</h4><p>Solutions durables</p></div>
+          </div>
+          <div class="value-item">
+            <div class="value-icon">🌿</div>
+            <div><h4>Environnement</h4><p>Préserver la nature</p></div>
+          </div>
+          <div class="value-item">
+            <div class="value-icon">🔍</div>
+            <div><h4>Transparence</h4><p>Gestion rigoureuse</p></div>
+          </div>
+        </div>
+        <a href="about.html" class="btn btn-primary">En savoir plus →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════ PROJETS ══════════════════ -->
+<section class="section" id="projects" style="background:var(--gray-50)">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="badge badge-green">Nos projets</span>
+      <h2>Des actions concrètes pour un impact réel</h2>
+      <p>Découvrez nos projets en cours et ceux que nous avons réalisés ensemble.</p>
+    </div>
+    <div class="grid-3">
+      <div class="card project-card reveal">
+        <img class="card-img" src="https://images.unsplash.com/photo-1509099836639-18ba1795216d?w=600&auto=format&fit=crop&q=80" alt="Éducation" loading="lazy" />
+        <div class="card-body">
+          <div class="project-meta">
+            <span class="badge badge-blue">Éducation</span>
+            <span style="font-size:.8rem;color:var(--gray-400)">En cours</span>
+          </div>
+          <h3 class="card-title">École pour tous à Fianarantsoa</h3>
+          <p class="card-text">Construction de salles de classe et fourniture de matériel scolaire pour 300 enfants défavorisés.</p>
+          <div class="progress-wrap">
+            <div class="progress-label"><span>Financement</span><span>72%</span></div>
+            <div class="progress-bar"><div class="progress-fill" style="width:72%"></div></div>
+          </div>
+          <a href="projects.html" class="btn btn-outline-green btn-sm">Voir le projet →</a>
+        </div>
+      </div>
+      <div class="card project-card reveal reveal-delay-1">
+        <img class="card-img" src="https://images.unsplash.com/photo-1559027615-cd4628902d4a?w=600&auto=format&fit=crop&q=80" alt="Santé" loading="lazy" />
+        <div class="card-body">
+          <div class="project-meta">
+            <span class="badge badge-orange">Santé</span>
+            <span style="font-size:.8rem;color:var(--gray-400)">En cours</span>
+          </div>
+          <h3 class="card-title">Caravanes médicales rurales</h3>
+          <p class="card-text">Consultations médicales gratuites, vaccinations et sensibilisation sanitaire dans les zones reculées.</p>
+          <div class="progress-wrap">
+            <div class="progress-label"><span>Financement</span><span>88%</span></div>
+            <div class="progress-bar"><div class="progress-fill" style="width:88%"></div></div>
+          </div>
+          <a href="projects.html" class="btn btn-outline-green btn-sm">Voir le projet →</a>
+        </div>
+      </div>
+      <div class="card project-card reveal reveal-delay-2">
+        <img class="card-img" src="https://images.unsplash.com/photo-1466611653911-95081537e5b7?w=600&auto=format&fit=crop&q=80" alt="Environnement" loading="lazy" />
+        <div class="card-body">
+          <div class="project-meta">
+            <span class="badge badge-green">Environnement</span>
+            <span style="font-size:.8rem;color:var(--gray-400)">En cours</span>
+          </div>
+          <h3 class="card-title">Reboisement côte Est</h3>
+          <p class="card-text">Plantation de 50 000 arbres endémiques pour restaurer les forêts dégradées de la côte Est.</p>
+          <div class="progress-wrap">
+            <div class="progress-label"><span>Financement</span><span>55%</span></div>
+            <div class="progress-bar"><div class="progress-fill" style="width:55%"></div></div>
+          </div>
+          <a href="projects.html" class="btn btn-outline-green btn-sm">Voir le projet →</a>
+        </div>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:36px;" class="reveal">
+      <a href="projects.html" class="btn btn-primary btn-lg">Voir tous les projets →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════ VIDEO ══════════════════ -->
+<section class="video-section" id="video">
+  <div class="container">
+    <div class="section-header reveal" style="color:var(--white)">
+      <span class="badge" style="background:rgba(97,206,112,.2);color:var(--green)">Vidéo</span>
+      <h2 style="color:var(--white)">AVIJORO en action</h2>
+      <p style="color:rgba(255,255,255,.7)">Regardez comment votre soutien transforme des vies chaque jour.</p>
+    </div>
+    <div class="video-wrap reveal">
+      <div class="video-placeholder">
+        <div class="play-btn">▶</div>
+        <p style="color:rgba(255,255,255,.7);font-size:.9rem">Cliquez pour regarder notre vidéo récapitulative 2024</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════ ACTUALITÉS ══════════════════ -->
+<section class="section" id="news">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="badge badge-blue">Actualités</span>
+      <h2>Les dernières nouvelles</h2>
+      <p>Restez informé des actions, événements et succès de l'association.</p>
+    </div>
+    <div class="grid-3">
+      <article class="card news-card reveal">
+        <img class="card-img" src="https://images.unsplash.com/photo-1542810634-71277d95dcbb?w=600&auto=format&fit=crop&q=80" alt="Actualité" loading="lazy" />
+        <div class="card-body">
+          <div class="news-date">📅 15 mai 2025</div>
+          <span class="badge badge-green" style="margin-bottom:8px">Événement</span>
+          <h3 class="card-title">Grande journée de bénévolat à Tana</h3>
+          <p class="card-text">Plus de 200 bénévoles se sont mobilisés pour nettoyer et reboiser le lac Anosy...</p>
+          <a href="news.html" class="btn btn-outline-green btn-sm">Lire la suite →</a>
+        </div>
+      </article>
+      <article class="card news-card reveal reveal-delay-1">
+        <img class="card-img" src="https://images.unsplash.com/photo-1594708767771-a7502209ff51?w=600&auto=format&fit=crop&q=80" alt="Actualité" loading="lazy" />
+        <div class="card-body">
+          <div class="news-date">📅 3 avril 2025</div>
+          <span class="badge badge-orange" style="margin-bottom:8px">Campagne</span>
+          <h3 class="card-title">Campagne de collecte de fournitures scolaires</h3>
+          <p class="card-text">Grâce à votre générosité, 1 500 kits scolaires ont été distribués avant la rentrée...</p>
+          <a href="news.html" class="btn btn-outline-green btn-sm">Lire la suite →</a>
+        </div>
+      </article>
+      <article class="card news-card reveal reveal-delay-2">
+        <img class="card-img" src="https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?w=600&auto=format&fit=crop&q=80" alt="Actualité" loading="lazy" />
+        <div class="card-body">
+          <div class="news-date">📅 12 mars 2025</div>
+          <span class="badge badge-blue" style="margin-bottom:8px">Partenariat</span>
+          <h3 class="card-title">Nouveau partenariat avec l'UNICEF Madagascar</h3>
+          <p class="card-text">AVIJORO et l'UNICEF s'associent pour un programme de nutrition infantile sur 3 ans...</p>
+          <a href="news.html" class="btn btn-outline-green btn-sm">Lire la suite →</a>
+        </div>
+      </article>
+    </div>
+    <div style="text-align:center;margin-top:36px;" class="reveal">
+      <a href="news.html" class="btn btn-outline-green btn-lg">Toutes les actualités →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════ TÉMOIGNAGES ══════════════════ -->
+<section class="section testimonials" id="testimonials">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="badge badge-green">Témoignages</span>
+      <h2>Ils parlent de nous</h2>
+      <p>Les voix de ceux qui font et vivent AVIJORO Madagascar.</p>
+    </div>
+    <div class="grid-3">
+      <div class="testimonial-card reveal">
+        <div class="testimonial-stars">★★★★★</div>
+        <p class="testimonial-text">"Rejoindre AVIJORO a changé ma vision de la solidarité. Chaque week-end passé avec les communautés me donne une énergie incroyable et un sentiment d'utilité profonde."</p>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">R</div>
+          <div>
+            <div class="testimonial-name">Ravo Rakoto</div>
+            <div class="testimonial-role">Bénévole depuis 3 ans</div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card reveal reveal-delay-1">
+        <div class="testimonial-stars">★★★★★</div>
+        <p class="testimonial-text">"Grâce aux caravanes médicales d'AVIJORO, mon village a enfin accès à des soins de base. Mes enfants ont été vaccinés pour la première fois de leur vie."</p>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">M</div>
+          <div>
+            <div class="testimonial-name">Marie Ramaroson</div>
+            <div class="testimonial-role">Bénéficiaire, Toliara</div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card reveal reveal-delay-2">
+        <div class="testimonial-stars">★★★★★</div>
+        <p class="testimonial-text">"En tant que partenaire, nous sommes impressionnés par la rigueur et la transparence d'AVIJORO. Notre investissement est utilisé de manière exemplaire."</p>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">J</div>
+          <div>
+            <div class="testimonial-name">Jean-Claude Martin</div>
+            <div class="testimonial-role">Directeur, ONG EuroAide</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════ PARTENAIRES ══════════════════ -->
+<section class="section-sm partners" id="partners">
+  <div class="container">
+    <div class="section-header reveal" style="margin-bottom:32px">
+      <span class="badge badge-blue">Partenaires</span>
+      <h2>Ils nous font confiance</h2>
+    </div>
+    <div class="partners-grid reveal">
+      <div class="partner-logo">🌍 UNICEF</div>
+      <div class="partner-logo">🏥 OMS</div>
+      <div class="partner-logo">🇪🇺 Union Européenne</div>
+      <div class="partner-logo">🌱 WWF Madagascar</div>
+      <div class="partner-logo">📚 UNESCO</div>
+      <div class="partner-logo">🤝 USAID</div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════ CTA BANNER ══════════════════ -->
+<section class="cta-banner">
+  <div class="container">
+    <div class="reveal">
+      <span class="badge" style="background:rgba(255,255,255,.2);color:var(--white);margin-bottom:16px">Rejoignez-nous</span>
+      <h2>Votre geste, leur avenir</h2>
+      <p>Chaque don, chaque heure de bénévolat change concrètement des vies à Madagascar. Agissez maintenant.</p>
+      <div class="btn-actions">
+        <a href="donate.html" class="btn btn-orange btn-lg">❤️ Faire un don maintenant</a>
+        <a href="join.html"   class="btn btn-outline btn-lg">🙋 Devenir bénévole</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════ FOOTER ══════════════════ -->
+<footer id="contact-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="nav-logo">
+          <div class="logo-icon">🌿</div>
+          AVIJORO <span style="color:var(--green)">Madagascar</span>
+        </a>
+        <p>Association humanitaire œuvrant pour un Madagascar solidaire, équitable et durable depuis 2016.</p>
+        <div class="footer-socials">
+          <a href="#" class="social-btn" title="Facebook">f</a>
+          <a href="#" class="social-btn" title="Instagram">📷</a>
+          <a href="#" class="social-btn" title="YouTube">▶</a>
+          <a href="#" class="social-btn" title="Twitter">✕</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="about.html">À propos</a></li>
+          <li><a href="projects.html">Projets</a></li>
+          <li><a href="news.html">Actualités</a></li>
+          <li><a href="media.html">Médias</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Agir</h4>
+        <ul>
+          <li><a href="donate.html">❤️ Faire un don</a></li>
+          <li><a href="join.html">🙋 Devenir bénévole</a></li>
+          <li><a href="donate.html#parrainage">🌟 Parrainage</a></li>
+          <li><a href="donate.html#entreprise">🏢 Dons entreprise</a></li>
+          <li><a href="#">📦 Dons en nature</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Newsletter</h4>
+        <p style="font-size:.85rem;margin-bottom:14px;color:rgba(255,255,255,.6)">
+          Recevez nos actualités directement dans votre boîte mail.
+        </p>
+        <div class="footer-newsletter">
+          <input type="email" placeholder="Votre adresse email" />
+          <a href="#" class="btn btn-primary" style="width:100%;justify-content:center;">S'abonner</a>
+        </div>
+        <p style="font-size:.75rem;margin-top:10px;color:rgba(255,255,255,.4)">
+          📍 Lot IVR 67, Antananarivo 101, Madagascar<br>
+          📞 +261 20 22 123 45<br>
+          ✉️ contact@avijoro.mg
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="container" style="display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;width:100%">
+      <span>© 2025 AVIJORO Madagascar. Tous droits réservés.</span>
+      <div style="display:flex;gap:16px;flex-wrap:wrap">
+        <a href="#">Mentions légales</a>
+        <a href="#">Politique de confidentialité</a>
+        <a href="#">CGU</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Back to top -->
+<a href="#" class="back-top" id="backTop" title="Retour en haut">↑</a>
+
+<!-- Mobile donate bar -->
+<div class="mobile-donate-bar">
+  <a href="donate.html" class="btn btn-orange">❤️ Faire un don</a>
+</div>
+
+<script src="main.js"></script>
+</body>
+</html>

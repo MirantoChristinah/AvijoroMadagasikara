@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Projets — AVIJORO Madagascar</title>
+  <link rel="stylesheet" href="styles.css"/>
+  <style>
+    .card-wrap { }
+    .impact-strip { background:var(--green); color:var(--white); padding:48px 0; }
+    .impact-strip .grid-4 { text-align:center; }
+    .impact-num { font-size:2.2rem; font-weight:900; display:block; }
+    .impact-lbl { font-size:.85rem; opacity:.85; }
+    .project-status-badge { display:inline-block; padding:3px 10px; border-radius:var(--radius-pill); font-size:.75rem; font-weight:700; }
+    .status-active  { background:#dcfce7; color:#166534; }
+    .status-done    { background:#dbeafe; color:#1e40af; }
+    .status-planned { background:#fef9c3; color:#854d0e; }
+  </style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar" id="navbar">
+  <div class="container">
+    <a href="index.html" class="nav-logo"><div class="logo-icon">🌿</div>AVIJORO <span>Madagascar</span></a>
+    <ul class="nav-links">
+      <li class="nav-item"><a href="index.html" class="nav-link">Accueil</a></li>
+      <li class="nav-item"><a href="about.html" class="nav-link">À propos <span class="chevron">▾</span></a>
+        <div class="dropdown">
+          <a href="about.html#histoire"><div class="d-icon">📖</div>Notre histoire</a>
+          <a href="about.html#mission"><div class="d-icon">🎯</div>Mission & Vision</a>
+          <a href="about.html#equipe"><div class="d-icon">👥</div>L'équipe</a>
+        </div>
+      </li>
+      <li class="nav-item"><a href="projects.html" class="nav-link active">Projets <span class="chevron">▾</span></a>
+        <div class="dropdown">
+          <a href="#encours"><div class="d-icon">🔄</div>En cours</a>
+          <a href="#termines"><div class="d-icon">✅</div>Terminés</a>
+          <a href="#impacts"><div class="d-icon">📈</div>Impacts & résultats</a>
+        </div>
+      </li>
+      <li class="nav-item"><a href="news.html" class="nav-link">Actualités</a></li>
+      <li class="nav-item"><a href="media.html" class="nav-link">Médias</a></li>
+      <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+    </ul>
+    <div class="nav-right">
+      <div class="lang-selector">
+        <button class="lang-btn active">FR</button>
+        <button class="lang-btn">MG</button>
+        <button class="lang-btn">EN</button>
+      </div>
+      <a href="donate.html" class="btn btn-orange btn-sm">❤️ Faire un don</a>
+    </div>
+    <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<!-- DRAWER -->
+<div class="drawer-overlay" id="drawerOverlay"></div>
+<aside class="drawer" id="drawer">
+  <div class="drawer-header">
+    <a href="index.html" class="nav-logo"><div class="logo-icon">🌿</div>AVIJORO <span>Madagascar</span></a>
+    <button class="drawer-close" id="drawerClose">✕</button>
+  </div>
+  <nav class="drawer-nav">
+    <a href="index.html"  class="drawer-link"><span class="d-icon">🏠</span> Accueil</a>
+    <a href="about.html"  class="drawer-link"><span class="d-icon">ℹ️</span> À propos</a>
+    <button class="drawer-link drawer-parent"><span class="d-icon">📁</span> Projets <span class="chevron-r">›</span></button>
+    <div class="drawer-sub">
+      <a href="#encours">En cours</a>
+      <a href="#termines">Terminés</a>
+      <a href="#impacts">Impacts</a>
+    </div>
+    <a href="news.html"    class="drawer-link"><span class="d-icon">📰</span> Actualités</a>
+    <a href="media.html"   class="drawer-link"><span class="d-icon">🎬</span> Médias</a>
+    <a href="join.html"    class="drawer-link"><span class="d-icon">🙋</span> Nous rejoindre</a>
+    <a href="donate.html"  class="drawer-link"><span class="d-icon">❤️</span> Nous soutenir</a>
+    <a href="faq.html"     class="drawer-link"><span class="d-icon">❓</span> FAQ</a>
+    <a href="contact.html" class="drawer-link"><span class="d-icon">📩</span> Contact</a>
+  </nav>
+  <div class="drawer-footer">
+    <div class="drawer-lang"><button class="lang-btn active">FR</button><button class="lang-btn">MG</button><button class="lang-btn">EN</button></div>
+    <a href="donate.html" class="btn btn-orange" style="justify-content:center;">❤️ Faire un don</a>
+  </div>
+</aside>
+
+<!-- PAGE HERO -->
+<section class="page-hero">
+  <div class="container">
+    <nav class="breadcrumb"><a href="index.html">Accueil</a><span class="sep">/</span><span>Projets</span></nav>
+    <h1>Nos Projets</h1>
+    <p>Des actions concrètes menées sur le terrain pour améliorer les conditions de vie à Madagascar.</p>
+  </div>
+</section>
+
+<!-- FILTRES + PROJETS EN COURS -->
+<section class="section" id="encours">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="badge badge-green">Projets en cours</span>
+      <h2>Ce sur quoi nous travaillons</h2>
+    </div>
+    <div class="filter-tabs reveal">
+      <button class="filter-tab active" data-filter="all">Tous</button>
+      <button class="filter-tab" data-filter="education">🎓 Éducation</button>
+      <button class="filter-tab" data-filter="sante">🏥 Santé</button>
+      <button class="filter-tab" data-filter="environnement">🌿 Environnement</button>
+      <button class="filter-tab" data-filter="economie">💼 Économie</button>
+    </div>
+    <div class="grid-3">
+      <div class="card-wrap"><div class="card project-card reveal" data-category="education">
+        <img class="card-img" src="https://images.unsplash.com/photo-1509099836639-18ba1795216d?w=600&auto=format&fit=crop&q=80" alt="École" loading="lazy"/>
+        <div class="card-body">
+          <div class="project-meta"><span class="badge badge-blue">Éducation</span><span class="project-status-badge status-active">En cours</span></div>
+          <h3 class="card-title">École pour tous à Fianarantsoa</h3>
+          <p class="card-text">Construction de 4 salles de classe et fourniture de matériel scolaire pour 300 enfants.</p>
+          <div class="progress-wrap">
+            <div class="progress-label"><span>Financement collecté</span><span>72%</span></div>
+            <div class="progress-bar"><div class="progress-fill" style="width:72%"></div></div>
+          </div>
+          <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px;font-size:.82rem;color:var(--gray-400)">
+            <span>📍 Fianarantsoa</span><span>👥 300 enfants</span><span>📅 2024–2025</span>
+          </div>
+          <a href="#" class="btn btn-primary btn-sm">Voir le détail →</a>
+        </div>
+      </div></div>
+
+      <div class="card-wrap"><div class="card project-card reveal reveal-delay-1" data-category="sante">
+        <img class="card-img" src="https://images.unsplash.com/photo-1559027615-cd4628902d4a?w=600&auto=format&fit=crop&q=80" alt="Santé" loading="lazy"/>
+        <div class="card-body">
+          <div class="project-meta"><span class="badge badge-orange">Santé</span><span class="project-status-badge status-active">En cours</span></div>
+          <h3 class="card-title">Caravanes médicales rurales</h3>
+          <p class="card-text">Consultations, vaccinations et sensibilisation dans 15 villages ruraux isolés.</p>
+          <div class="progress-wrap">
+            <div class="progress-label"><span>Financement collecté</span><span>88%</span></div>
+            <div class="progress-bar"><div class="progress-fill" style="width:88%"></div></div>
+          </div>
+          <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px;font-size:.82rem;color:var(--gray-400)">
+            <span>📍 Toliara</span><span>👥 2 000 personnes</span><span>📅 2024–2025</span>
+          </div>
+          <a href="#" class="btn btn-primary btn-sm">Voir le détail →</a>
+        </div>
+      </div></div>
+
+      <div class="card-wrap"><div class="card project-card reveal reveal-delay-2" data-category="environnement">
+        <img class="card-img" src="https://images.unsplash.com/photo-1466611653911-95081537e5b7?w=600&auto=format&fit=crop&q=80" alt="Reboisement" loading="lazy"/>
+        <div class="card-body">
+          <div class="project-meta"><span class="badge badge-green">Environnement</span><span class="project-status-badge status-active">En cours</span></div>
+          <h3 class="card-title">Reboisement côte Est</h3>
+          <p class="card-text">50 000 arbres endémiques plantés pour restaurer les forêts dégradées.</p>
+          <div class="progress-wrap">
+            <div class="progress-label"><span>Financement collecté</span><span>55%</span></div>
+            <div class="progress-bar"><div class="progress-fill" style="width:55%"></div></div>
+          </div>
+          <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px;font-size:.82rem;color:var(--gray-400)">
+            <span>📍 Toamasina</span><span>🌳 50 000 arbres</span><span>📅 2024–2026</span>
+          </div>
+          <a href="#" class="btn btn-primary btn-sm">Voir le détail →</a>
+        </div>
+      </div></div>
+
+      <div class="card-wrap"><div class="card project-card reveal" data-category="economie">
+        <img class="card-img" src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&auto=format&fit=crop&q=80" alt="Micro-entreprise" loading="lazy"/>
+        <div class="card-body">
+          <div class="project-meta"><span class="badge" style="background:#fce7f3;color:#9d174d">Économie</span><span class="project-status-badge status-active">En cours</span></div>
+          <h3 class="card-title">Micro-entrepreneurs du Sud</h3>
+          <p class="card-text">Accompagnement et micro-crédits pour 120 femmes entrepreneures de la région Sud.</p>
+          <div class="progress-wrap">
+            <div class="progress-label"><span>Financement collecté</span><span>65%</span></div>
+            <div class="progress-bar"><div class="progress-fill" style="width:65%"></div></div>
+          </div>
+          <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px;font-size:.82rem;color:var(--gray-400)">
+            <span>📍 Toliara</span><span>👥 120 femmes</span><span>📅 2025</span>
+          </div>
+          <a href="#" class="btn btn-primary btn-sm">Voir le détail →</a>
+        </div>
+      </div></div>
+
+      <div class="card-wrap"><div class="card project-card reveal reveal-delay-1" data-category="education">
+        <img class="card-img" src="https://images.unsplash.com/photo-1497375638960-ca368c7231e4?w=600&auto=format&fit=crop&q=80" alt="Numérique" loading="lazy"/>
+        <div class="card-body">
+          <div class="project-meta"><span class="badge badge-blue">Éducation</span><span class="project-status-badge status-planned">Planifié</span></div>
+          <h3 class="card-title">Salles numériques rurales</h3>
+          <p class="card-text">Équipement de 10 écoles rurales avec des tablettes et connexion internet via panneau solaire.</p>
+          <div class="progress-wrap">
+            <div class="progress-label"><span>Financement collecté</span><span>30%</span></div>
+            <div class="progress-bar"><div class="progress-fill" style="width:30%"></div></div>
+          </div>
+          <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px;font-size:.82rem;color:var(--gray-400)">
+            <span>📍 National</span><span>🏫 10 écoles</span><span>📅 2025–2026</span>
+          </div>
+          <a href="#" class="btn btn-primary btn-sm">Soutenir ce projet →</a>
+        </div>
+      </div></div>
+
+      <div class="card-wrap"><div class="card project-card reveal reveal-delay-2" data-category="sante">
+        <img class="card-img" src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=600&auto=format&fit=crop&q=80" alt="Nutrition" loading="lazy"/>
+        <div class="card-body">
+          <div class="project-meta"><span class="badge badge-orange">Santé</span><span class="project-status-badge status-active">En cours</span></div>
+          <h3 class="card-title">Nutrition infantile — UNICEF</h3>
+          <p class="card-text">Programme de lutte contre la malnutrition pour 500 enfants de moins de 5 ans.</p>
+          <div class="progress-wrap">
+            <div class="progress-label"><span>Financement collecté</span><span>92%</span></div>
+            <div class="progress-bar"><div class="progress-fill" style="width:92%"></div></div>
+          </div>
+          <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px;font-size:.82rem;color:var(--gray-400)">
+            <span>📍 Mahajanga</span><span>👶 500 enfants</span><span>📅 2024–2025</span>
+          </div>
+          <a href="#" class="btn btn-primary btn-sm">Voir le détail →</a>
+        </div>
+      </div></div>
+    </div>
+  </div>
+</section>
+
+<!-- IMPACTS -->
+<div class="impact-strip" id="impacts">
+  <div class="container">
+    <div class="grid-4">
+      <div class="stat-item reveal"><span class="impact-num" data-target="47" data-suffix="">47</span><span class="impact-lbl">Projets réalisés</span></div>
+      <div class="stat-item reveal reveal-delay-1"><span class="impact-num" data-target="12000" data-suffix="+">12 000+</span><span class="impact-lbl">Bénéficiaires</span></div>
+      <div class="stat-item reveal reveal-delay-2"><span class="impact-num" data-target="22" data-suffix="">22</span><span class="impact-lbl">Régions</span></div>
+      <div class="stat-item reveal reveal-delay-3"><span class="impact-num" data-target="320" data-suffix="+">320+</span><span class="impact-lbl">Bénévoles mobilisés</span></div>
+    </div>
+  </div>
+</div>
+
+<!-- PROJETS TERMINÉS -->
+<section class="section" id="termines" style="background:var(--gray-50)">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="badge badge-blue">Projets terminés</span>
+      <h2>Ce que nous avons accompli</h2>
+    </div>
+    <div class="grid-3">
+      <div class="card reveal" style="padding:24px">
+        <span class="project-status-badge status-done" style="margin-bottom:14px;display:inline-block">✅ Terminé 2023</span>
+        <h3 class="card-title">Puits d'eau potable — Ambovombe</h3>
+        <p class="card-text">Installation de 8 puits et systèmes de filtration pour 3 000 habitants en zone aride.</p>
+        <div style="display:flex;gap:6px;font-size:.8rem;color:var(--gray-400);margin-top:10px"><span>📍 Androy</span><span>👥 3 000 bénéf.</span></div>
+      </div>
+      <div class="card reveal reveal-delay-1" style="padding:24px">
+        <span class="project-status-badge status-done" style="margin-bottom:14px;display:inline-block">✅ Terminé 2022</span>
+        <h3 class="card-title">Centre de formation professionnelle</h3>
+        <p class="card-text">Formation de 200 jeunes en couture, informatique et agriculture durable à Toamasina.</p>
+        <div style="display:flex;gap:6px;font-size:.8rem;color:var(--gray-400);margin-top:10px"><span>📍 Toamasina</span><span>👥 200 jeunes</span></div>
+      </div>
+      <div class="card reveal reveal-delay-2" style="padding:24px">
+        <span class="project-status-badge status-done" style="margin-bottom:14px;display:inline-block">✅ Terminé 2021</span>
+        <h3 class="card-title">Bibliothèques scolaires</h3>
+        <p class="card-text">Création de 12 bibliothèques scolaires dotées de 5 000 livres en malgache et français.</p>
+        <div style="display:flex;gap:6px;font-size:.8rem;color:var(--gray-400);margin-top:10px"><span>📍 National</span><span>🏫 12 écoles</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-banner">
+  <div class="container reveal">
+    <h2>Soutenez un projet</h2>
+    <p>Votre don, même petit, permet de financer des projets concrets qui changent des vies.</p>
+    <div class="btn-actions">
+      <a href="donate.html" class="btn btn-orange btn-lg">❤️ Faire un don</a>
+      <a href="join.html"   class="btn btn-outline btn-lg">🙋 Participer</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="nav-logo"><div class="logo-icon">🌿</div>AVIJORO <span style="color:var(--green)">Madagascar</span></a>
+        <p>Association humanitaire depuis 2016.</p>
+        <div class="footer-socials"><a href="#" class="social-btn">f</a><a href="#" class="social-btn">📷</a><a href="#" class="social-btn">▶</a></div>
+      </div>
+      <div class="footer-col"><h4>Pages</h4><ul>
+        <li><a href="index.html">Accueil</a></li><li><a href="about.html">À propos</a></li>
+        <li><a href="projects.html">Projets</a></li><li><a href="news.html">Actualités</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul></div>
+      <div class="footer-col"><h4>Agir</h4><ul>
+        <li><a href="donate.html">❤️ Faire un don</a></li>
+        <li><a href="join.html">🙋 Bénévolat</a></li>
+      </ul></div>
+      <div class="footer-col"><h4>Contact</h4>
+        <p style="font-size:.85rem;color:rgba(255,255,255,.6);line-height:1.8">📍 Antananarivo 101<br>📞 +261 20 22 123 45<br>✉️ contact@avijoro.mg</p>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="container" style="display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;width:100%">
+      <span>© 2025 AVIJORO Madagascar.</span>
+      <div style="display:flex;gap:16px"><a href="#">Mentions légales</a><a href="#">Confidentialité</a></div>
+    </div>
+  </div>
+</footer>
+<a href="#" class="back-top" id="backTop">↑</a>
+<script src="main.js"></script>
+</body>
+</html>
