@@ -1,0 +1,1008 @@
+
+/* ==========================================================================
+   1. VARIABLES DU THÈME (VOS COULEURS FIGMA)
+   ========================================================================== */
+:root {
+  --font-size: 16px;
+  --background: #ffffff;
+  --foreground: oklch(0.145 0 0);
+  --card: #ffffff;
+  --card-foreground: oklch(0.145 0 0);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.145 0 0);
+  --primary: #030213;
+  --primary-foreground: oklch(1 0 0);
+  --secondary: oklch(0.95 0.0058 264.53);
+  --secondary-foreground: #030213;
+  --muted: #ececf0;
+  --muted-foreground: #717182;
+  --accent: #e9ebef;
+  --accent-foreground: #030213;
+  --destructive: #d4183d;
+  --destructive-foreground: #ffffff;
+  --border: rgba(0, 0, 0, 0.1);
+  --input: transparent;
+  --input-background: #f3f3f5;
+  --switch-background: #cbced4;
+  --font-weight-medium: 500;
+  --font-weight-normal: 400;
+  --ring: oklch(0.708 0 0);
+  --chart-1: oklch(0.646 0.222 41.116);
+  --chart-2: oklch(0.6 0.118 184.704);
+  --chart-3: oklch(0.398 0.07 227.392);
+  --chart-4: oklch(0.828 0.189 84.429);
+  --chart-5: oklch(0.769 0.188 70.08);
+  --radius: 0.625rem;
+  --sidebar: oklch(0.985 0 0);
+  --sidebar-foreground: oklch(0.145 0 0);
+  --sidebar-primary: #030213;
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.97 0 0);
+  --sidebar-accent-foreground: oklch(0.205 0 0);
+  --sidebar-border: oklch(0.922 0 0);
+  --sidebar-ring: oklch(0.708 0 0);
+  
+  /* Custom colors for AVIJORO */
+  --color-green: #2D8659;
+  --color-blue: #1E88E5;
+  --color-orange: #FF7043;
+
+  /* Équivalents des tailles de texte */
+  --text-base: 1rem;
+  --text-lg: 1.125rem;
+  --text-xl: 1.25rem;
+  --text-2xl: 1.5rem;
+}
+
+/* Thème sombre */
+.dark {
+  --background: oklch(0.145 0 0);
+  --foreground: oklch(0.985 0 0);
+  --card: oklch(0.145 0 0);
+  --card-foreground: oklch(0.985 0 0);
+  --popover: oklch(0.145 0 0);
+  --popover-foreground: oklch(0.985 0 0);
+  --primary: oklch(0.985 0 0);
+  --primary-foreground: oklch(0.205 0 0);
+  --secondary: oklch(0.269 0 0);
+  --secondary-foreground: oklch(0.985 0 0);
+  --muted: oklch(0.269 0 0);
+  --muted-foreground: oklch(0.708 0 0);
+  --accent: oklch(0.269 0 0);
+  --accent-foreground: oklch(0.985 0 0);
+  --destructive: oklch(0.396 0.141 25.723);
+  --destructive-foreground: oklch(0.637 0.237 25.331);
+  --border: oklch(0.269 0 0);
+  --input: oklch(0.269 0 0);
+  --ring: oklch(0.439 0 0);
+}
+
+/* ==========================================================================
+   2. TYPOGRAPHIE ET ELEMENTS DE BASE
+   ========================================================================== */
+* {
+  box-sizing: border-box;
+  border-color: var(--border);
+}
+
+html {
+  font-size: var(--font-size);
+}
+
+h1 { font-size: 2.5rem; font-weight: 700; line-height: 1.2; }
+h2 { font-size: 2rem; font-weight: 600; line-height: 1.3; }
+h3 { font-size: 1.5rem; font-weight: 600; line-height: 1.4; }
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background-color: #f9fafb;
+  color: #1f2937;
+}
+
+/* ==========================================================================
+   3. ADAPTATION STRUCTURELLE DE LA NAVBAR STYLE FIGMA (CORRECTION ALIGNEMENT)
+   ========================================================================== */
+.main-navbar {
+  background-color: #ffffff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  height: 80px;
+  border-bottom: 1px solid #eef0f2;
+  box-shadow: 0 1px 10px rgba(0, 0, 0, 0.01);
+}
+
+.navbar-container {
+  max-width: 1280px; /* Augmenté légèrement pour donner plus d'espace sur les grands écrans */
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar-logo {
+  color: var(--color-green);
+  font-weight: 700;
+  font-size: 1.3rem; /* Légèrement réduit pour optimiser l'espace */
+  letter-spacing: -0.3px;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-shrink: 0;
+}
+
+.navbar-menu {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem; /* Ajustement parfait de l'écartement des liens de la maquette */
+  height: 100%;
+}
+
+/* Style des liens textuels du menu principal */
+.navbar-menu .nav-item-figma {
+  color: #4b5563;
+  text-decoration: none;
+  font-size: 0.9rem; /* Taille exacte Figma pour éviter les retours à la ligne */
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  height: 80px;
+  position: relative;
+  transition: color 0.2s ease;
+  white-space: nowrap; /* Empêche le texte de se couper en deux */
+}
+
+.navbar-menu .nav-item-figma:hover,
+.navbar-menu .nav-item-figma.active {
+  color: var(--color-green);
+}
+
+/* Ligne d'accentuation verte fine calée tout en bas */
+.navbar-menu .nav-item-figma::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: var(--color-green);
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+  transform: scaleX(0);
+  transition: transform 0.2s ease;
+}
+
+.navbar-menu .nav-item-figma:hover::after,
+.navbar-menu .nav-item-figma.active::after {
+  transform: scaleX(1);
+}
+
+/* Bloc contenant les outils de droite */
+.navbar-right-block {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-shrink: 0;
+}
+
+/* Bouton Faire un don */
+.btn-soutenir {
+  background-color: #ff7043;
+  color: #ffffff !important;
+  padding: 0.6rem 1.25rem;
+  border-radius: 9999px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  box-shadow: 0 4px 12px rgba(255, 112, 67, 0.2);
+  transition: background-color 0.2s ease;
+}
+
+.btn-soutenir:hover {
+  background-color: #e65b2f;
+}
+
+/* Sélecteur de langue */
+.language-selector {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  background-color: #f8f9fa;
+  padding: 0.4rem 0.8rem;
+  border-radius: 9999px;
+  border: 1px solid #eef0f2;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.language-selector a {
+  color: #9ca3af;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.language-selector a:hover {
+  color: #111827;
+}
+
+/* ==========================================================================
+   4. PAGE D'ACCUEIL (HERO, MISSION, STATISTIQUES)
+   ========================================================================== */
+.main-content-wrapper {
+  padding-top: 4.5rem;
+}
+
+.home-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* ==========================================================================
+   CSS EXCLUSIF POUR LA PAGE BÉNÉVOLAT / REJOINDRE (STYLE ENTIÈREMENT FIGMA)
+   ========================================================================== */
+
+   /* ==========================================================================
+   HERO BANNER COMPACT ACTUALITÉS ET MÉDIAS (STYLE MAQUETTE FIGMA)
+   ========================================================================== */
+.hero-actualites-figma {
+  background: linear-gradient(to right, #1b8a4f, #1a7bb9); /* Dégradé exact Vert -> Bleu */
+  padding: 4.5rem 0; /* Hauteur réduite et compacte comme sur la photo */
+  text-align: center;
+  width: 100%;
+}
+
+.hero-actualites-container {
+  max-width: 850px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  color: #ffffff;
+}
+
+.hero-actualites-container h1 {
+  font-size: 3.5rem; /* Grand titre imposant et centré */
+  font-weight: 700;
+  margin: 0 0 1rem 0;
+  letter-spacing: -0.5px;
+  color: #ffffff;
+}
+
+.hero-actualites-container p {
+  font-size: 1.15rem;
+  font-weight: 400;
+  opacity: 0.95;
+  line-height: 1.6;
+  margin: 0;
+  color: #ffffff;
+}
+
+
+/* --- STRUCTURES GLOBALES DES SECTIONS --- */
+.benevole-gray-section {
+  background-color: #f9fafb; /* Fond gris clair de la maquette */
+  padding: 5rem 0;
+  border-top: 1px solid var(--border);
+}
+
+/* --- 1. SECTION : POURQUOI DEVENIR BÉNÉVOLE (FINES LIGNES HORIZONTALES) --- */
+.benefits-row-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.benefit-row-card {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  background-color: #f8f9fa; /* Fond léger des cartes */
+  padding: 1.25rem;
+  border-radius: 8px;
+  border: 1px solid #eef0f2;
+}
+
+/* Version Mobile et Tablette */
+@media (max-width: 992px) {
+  .benefits-row-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 576px) {
+  .benefits-row-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Grille principale 3 colonnes */
+.benevole-grid-figma {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+/* Style des cartes */
+.card-benevole-figma {
+  background: #ffffff;
+  border: 1px solid #eef0f2;
+  border-radius: 16px;
+  padding: 2.5rem 1.5rem;
+  text-align: center;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
+}
+
+/* Zone de l'émoji pour gérer sa taille et son espacement */
+.benevole-emoji-box {
+  font-size: 3rem; /* Ajuste la taille de l'émoji comme sur la photo */
+  line-height: 1;
+  margin-bottom: 1.5rem;
+  display: block;
+}
+
+/* Textes à l'intérieur */
+.card-benevole-title {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #030213;
+  margin-bottom: 0.75rem;
+}
+
+.card-benevole-desc {
+  color: #717182;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .benevole-grid-figma { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 600px) {
+  .benevole-grid-figma { grid-template-columns: 1fr; }
+}
+
+
+/* ==========================================================================
+   FORMULAIRE DE CANDIDATURE - BASE ET BOUTON ORANGE FIGMA
+   ========================================================================== */
+.form-card-container {
+  max-width: 800px;
+  margin: 0 auto;
+  background: #ffffff;
+  padding: 3rem;
+  border-radius: 1rem;
+}
+
+.form-grid-2col {
+  display: grid;
+  grid-template-cols: 1fr 1fr;
+  gap: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.form-group-figma {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-bottom: 2rem;
+}
+
+.form-label-row {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #4b5563;
+}
+
+.form-label-row svg {
+  color: #717182;
+}
+
+.form-input-figma {
+  width: 100%;
+  padding: 1rem 1.25rem;
+  border: 1px solid #cbced4;
+  background-color: #ffffff;
+  border-radius: 0.625rem;
+  font-family: inherit;
+  font-size: 1rem;
+  color: #030213;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.form-input-figma:focus {
+  outline: none;
+  border-color: var(--color-green);
+  box-shadow: 0 0 0 3px rgba(45, 134, 89, 0.1);
+}
+
+select.form-input-figma {
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://w3.org' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23717182' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpath d='m6 9 6 6 6-6'/%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 1.25rem center;
+  background-size: 1.25rem;
+  padding-right: 3rem;
+  cursor: pointer;
+}
+
+textarea.form-input-figma {
+  resize: vertical;
+  min-height: 150px;
+}
+
+/* LE BOUTON ORANGE EXACT DE LA MAQUETTE */
+.btn-submit-orange {
+  background-color: var(--color-orange);
+  color: #ffffff;
+  border: none;
+  padding: 1.1rem 3rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: 9999px; /* Forme pilule parfaite comme sur l'image */
+  width: 100%;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.btn-submit-orange:hover {
+  background-color: #F4511E; /* Orange plus foncé au survol */
+}
+
+.btn-submit-orange:active {
+  transform: scale(0.99);
+}
+
+/* ==========================================================================
+   CSS COMPLET ACTUALITÉS STYLE FIGMA (GRANDE ET PETITE GRILLE)
+   ========================================================================== */
+
+/* Barres de Filtres */
+.filters-row {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.filters-buttons {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.btn-filter {
+  background-color: #f3f4f6;
+  color: #374151;
+  padding: 0.6rem 1.25rem;
+  border-radius: 9999px;
+  text-decoration: none;
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.btn-filter:hover { 
+  background-color: #e5e7eb; 
+}
+
+.btn-filter.active {
+  background-color: var(--color-green);
+  color: white;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+/* GRILLE 1 : À la une (2 Colonnes) */
+.news-grid-featured {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Correction : colonnes au lieu de cols */
+  gap: 2rem;
+  width: 100%;
+  margin-top: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+/* GRILLE 2 : Articles Normaux (3 Colonnes) */
+.news-grid-regular {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Correction : colonnes au lieu de cols */
+  gap: 2rem;
+  width: 100%;
+  margin-top: 1.5rem;
+}
+
+/* Structure commune des cartes Figma */
+.actualite-card-figma {
+  background: #ffffff;
+  border: 1px solid #eef0f2;
+  border-radius: 16px; /* Ajusté à 16px pour correspondre aux angles de la photo */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03); /* Ombre plus douce et discrète Figma */
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.actualite-card-figma:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.05);
+}
+
+/* Blocs Images */
+.actualite-image-block {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.news-grid-featured .actualite-image-block { height: 340px; }
+.news-grid-regular .actualite-image-block { height: 220px; } /* Ajusté pour équilibrer la grille de 3 */
+
+.actualite-image-block img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Badge de catégorie positionné au-dessus de l'image */
+.actualite-badge-figma {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  background-color: rgba(255, 255, 255, 0.95); /* Plus opaque blanc */
+  color: #1f2937; /* Texte plus sombre et lisible */
+  padding: 0.35rem 1rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 600; /* Plus épais comme sur l'image */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+/* Zone de texte interne */
+.actualite-text-block {
+  padding: 1.75rem; /* Augmenté légèrement pour un rendu plus aéré */
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+/* Rangée de la date */
+.actualite-date-row {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #9ca3af; /* Gris clair identique à la maquette */
+  font-size: 0.9rem;
+  margin-bottom: 0.85rem;
+}
+
+.actualite-date-row svg {
+  stroke: #a0aec0; /* Icône calendrier assortie au gris */
+}
+
+/* Titre de l'article */
+.actualite-title-figma {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #030213; /* Noir profond contrasté */
+  line-height: 1.4;
+  margin: 0 0 1rem 0;
+}
+
+/* Extrait textuel */
+.actualite-excerpt-figma {
+  color: #717182;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  flex-grow: 1;
+}
+
+/* Lien Lire la suite */
+.actualite-link-figma {
+  color: var(--color-green);
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 0.95rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  align-self: flex-start;
+  transition: color 0.2s ease, gap 0.2s ease;
+}
+
+.actualite-link-figma:hover {
+  color: #1e5635; /* Assombrissement du vert au survol */
+}
+
+.actualite-card-figma:hover .actualite-link-figma { 
+  gap: 0.6rem; /* Animation fluide de la flèche vers la droite */
+}
+
+/* Responsive Media Queries */
+@media (max-width: 1024px) {
+  .news-grid-regular { 
+    grid-template-columns: repeat(2, 1fr); 
+  }
+}
+
+@media (max-width: 768px) {
+  .news-grid-featured, 
+  .news-grid-regular { 
+    grid-template-columns: 1fr; 
+    gap: 1.5rem;
+  }
+  .news-grid-featured .actualite-image-block,
+  .news-grid-regular .actualite-image-block {
+    height: 240px; /* Taille unique simplifiée pour mobile */
+  }
+}
+
+/* ==========================================================================
+   STYLE MÉDIATHÈQUE COMPLET (ÉQUIVALENT EXACT ACTUALITÉS)
+   ========================================================================== */
+
+/* Grille 3 colonnes identique aux actualités */
+.media-grid-figma {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  width: 100%;
+  margin-top: 1.5rem;
+}
+
+/* Cartes Médiathèque */
+.media-card-figma {
+  background: #ffffff;
+  border: 1px solid #eef0f2;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  text-decoration: none; /* Évite les soulignements sur les titres */
+}
+
+.media-card-figma:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.05);
+}
+
+/* Zone Image */
+.media-image-block {
+  position: relative;
+  width: 100%;
+  height: 240px;
+  overflow: hidden;
+}
+
+.media-image-block img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.media-card-figma:hover .media-image-block img {
+  transform: scale(1.03); /* Effet zoom léger au survol */
+}
+
+/* Badge Blanc Type (En haut à gauche) */
+.media-badge-type {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  background-color: rgba(255, 255, 255, 0.95);
+  color: #1f2937;
+  padding: 0.35rem 0.85rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  z-index: 2;
+}
+
+/* Badge Noir Compteur/Durée (En bas à droite) */
+.media-badge-counter {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  background-color: rgba(0, 0, 0, 0.75);
+  color: #ffffff;
+  padding: 0.25rem 0.6rem;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  z-index: 2;
+}
+
+/* Overlay & Icône centrale au survol (Effet carte centrale de la photo) */
+.media-hover-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  z-index: 1;
+}
+
+.media-card-figma:hover .media-hover-overlay {
+  opacity: 1;
+}
+
+/* Zone de texte sous l'image */
+.media-text-block {
+  padding: 1.75rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.media-title-figma {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #030213;
+  line-height: 1.4;
+  margin: 0 0 0.6rem 0;
+}
+
+.media-desc-figma {
+  color: #717182;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .media-grid-figma { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 768px) {
+  .media-grid-figma { grid-template-columns: 1fr; gap: 1.5rem; }
+}
+/* ==========================================================================
+   CSS EXCLUSIF PAGE CONTACT STYLE FIGMA (STRUCTURE DEUX COLONNES)
+   ========================================================================== */
+
+.contact-main-grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr; /* 1/3 pour les coordonnées, 2/3 pour le formulaire */
+  gap: 4rem;
+  padding: 5rem 0;
+  background-color: #ffffff;
+}
+
+/* --- COLONNE GAUCHE : COORDONNÉES --- */
+.contact-info-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #030213;
+  margin-bottom: 2rem;
+}
+
+.contact-info-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.contact-info-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.25rem;
+}
+
+.contact-icon-circle {
+  width: 44px;
+  height: 44px;
+  background-color: #2D8659; /* Vert officiel AVIJORO */
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  flex-shrink: 0;
+}
+
+.contact-text-block h4 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #030213;
+  margin: 0 0 0.35rem 0;
+}
+
+.contact-text-block p {
+  font-size: 0.95rem;
+  color: #717182;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* --- COLONNE DROITE : FORMULAIRE --- */
+.contact-form-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #030213;
+  margin-bottom: 2rem;
+}
+
+.contact-form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.contact-form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.contact-form-group.full-width {
+  grid-column: span 2;
+}
+
+.contact-form-group label {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #4b5563;
+}
+
+.contact-input-figma {
+  width: 100%;
+  padding: 0.85rem 1rem;
+  border: 1px solid #cbced4;
+  border-radius: 8px;
+  background-color: #ffffff;
+  font-size: 0.95rem;
+  color: #1f2937;
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+.contact-input-figma:focus {
+  border-color: #2D8659;
+}
+
+.contact-input-figma::placeholder {
+  color: #a0aec0;
+}
+
+/* Adaptabilité responsive */
+@media (max-width: 992px) {
+  .contact-main-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  .contact-form-group.full-width {
+    grid-column: span 1;
+  }
+  .contact-form-grid {
+    grid-template-columns: 1fr;
+  }
+}
+/* --- BOUTON ENVOYER ET RÉSEAUX SOCIAUX --- */
+.contact-footer-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.contact-social-block h4 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #030213;
+  margin: 0 0 1rem 0;
+}
+
+.contact-social-icons {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.contact-social-btn {
+  width: 38px;
+  height: 38px;
+  border-radius: 8px; /* Forme carrée légèrement arrondie Figma */
+  border: 1px solid #cbced4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #4b5563;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.contact-social-btn:hover {
+  border-color: #2D8659;
+  color: #2D8659;
+  background-color: #f8f9fa;
+}
+
+/* Grand Bouton Orange Figma */
+.btn-submit-contact {
+  background-color: #ff7043;
+  color: #ffffff;
+  padding: 0.85rem 2.5rem;
+  border-radius: 9999px;
+  border: none;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  box-shadow: 0 4px 14px rgba(255, 112, 67, 0.25);
+  transition: background-color 0.2s ease;
+}
+
+.btn-submit-contact:hover {
+  background-color: #e65b2f;
+}
+
+/* --- SECTION MAP : NOUS TROUVER --- */
+.contact-map-section {
+  padding: 4rem 0 6rem 0;
+  background-color: #ffffff;
+}
+
+.contact-map-title {
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: #030213;
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.contact-map-wrapper {
+  width: 100%;
+  height: 450px;
+  background-color: #e2e8f0; /* Fond gris en attente de la map */
+  border-radius: 16px; /* Coins arrondis lisses de la photo */
+  overflow: hidden;
+  border: 1px solid #eef0f2;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
+}
+
+.contact-map-wrapper iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* Responsive mobile */
+@media (max-width: 768px) {
+  .contact-footer-row {
+    flex-direction: column-reverse;
+    align-items: flex-start;
+  }
+  .btn-submit-contact {
+    width: 100%;
+    justify-content: center;
+  }
+}

@@ -1,0 +1,6 @@
+
+.env
+vendor/
+writable/
+composer.lock
+xampp-linux-installer.run

@@ -51,17 +51,6 @@ CREATE TABLE benevoles (
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
-CREATE TABLE benevoles (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    nom VARCHAR(100),
-    email VARCHAR(150),
-    telephone VARCHAR(30),
-    motivation TEXT,
-    disponibilite VARCHAR(100),
-    statut ENUM('en attente', 'accepte', 'refuse') DEFAULT 'en attente',
-    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-);
-
 CREATE TABLE temoignages (
     id INT AUTO_INCREMENT PRIMARY KEY,
     nom VARCHAR(100),
