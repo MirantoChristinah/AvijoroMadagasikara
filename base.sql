@@ -86,3 +86,13 @@ ALTER TABLE media
 ADD projet_id INT,
 ADD FOREIGN KEY (projet_id) REFERENCES projets(id);
 
+create table Langue(
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    libelle VARCHAR(100)
+
+);
+
+Insert into table Langue(libelle) Values 
+('MG') ,
+('FR') ,
+('ENG') ;
