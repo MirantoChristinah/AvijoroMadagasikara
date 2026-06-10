@@ -219,8 +219,8 @@
   </section>
 
    <!-- ================= SECTION : NOTRE ÉQUIPE STYLE FIGMA AVEC BLOCS INITIALES ================= -->
-  <section class="team-section" style="padding: 5rem 0; background-color: #ffffff; width: 100%; clear: both;">
-    <div class="container mx-auto px-4" style="max-width: 1200px; margin: 0 auto; box-sizing: border-box; width: 100%;">
+  <section class="team-section" style="padding: 5rem 0; background-color: #ffffff; width: 100%; clear: both;" id="valeurs">
+    <div class="container mx-auto px-4" style="max-width: 1200px; margin: 0 auto; box-sizing: border-box; width: 100%;" >
       
       <!-- En-tête de la section -->
       <div style="text-align: center; max-width: 45rem; margin: 0 auto 4rem auto;">

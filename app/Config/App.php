@@ -41,7 +41,7 @@ class App extends BaseConfig
     /**
      * Langues supportées
      */
-    public array $supportedLocales = ['fr', 'mg'];
+    public array $supportedLocales = ['fr', 'mg','en'];
 
     /**
      * Fuseau horaire
