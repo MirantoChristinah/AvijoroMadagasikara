@@ -56,3 +56,4 @@ $routes->group('mg', function ($routes) {
     $routes->get('contact', 'Home::contact');
 
 });
+
