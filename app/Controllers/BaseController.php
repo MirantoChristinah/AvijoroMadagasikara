@@ -42,4 +42,27 @@ abstract class BaseController extends Controller
         // Preload any models, libraries, etc, here.
         // $this->session = service('session');
     }
+     
+    //fonction qui va charger les pages 
+    protected function body(string $page,array $data)
+    {
+        // CodeIgniter 4 détecte automatiquement la langue via le segment d'URL (fr ou mg)
+        $locale = $this->request->getLocale();
+
+        // Sécurité au cas où la locale retournée est invalide
+        if (!in_array($locale, ['fr', 'mg'])) {
+            $locale = 'fr';
+        }
+
+        // Prépare les données pour les injecter dans le header, la vue principale et le footer
+        $data['lang']=$locale;
+
+        return view('includes/header', $data)
+             . view($page, $data)
+             . view('includes/footer', $data);
+    }
+
 }
+      
+
+
