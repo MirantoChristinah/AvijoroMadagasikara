@@ -310,17 +310,7 @@ body {
   border: 1px solid #eef0f2;
 }
 
-/* Version Mobile et Tablette */
-@media (max-width: 992px) {
-  .benefits-row-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-@media (max-width: 576px) {
-  .benefits-row-grid {
-    grid-template-columns: 1fr;
-  }
-}
+
 
 /* Grille principale 3 colonnes */
 .benevole-grid-figma {
@@ -383,7 +373,7 @@ body {
 
 .form-grid-2col {
   display: grid;
-  grid-template-cols: 1fr 1fr;
+  grid-template-columns: repeat(2, 1fr);
   gap: 2rem;
   margin-bottom: 0.5rem;
 }
@@ -1057,4 +1047,155 @@ textarea.form-input-figma {
 /* Affichage du menu lors du survol de l'élément parent */
 .nav-dropdown:hover .dropdown-menu {
     display: block;
+}
+/* ==========================================================================
+   6. RESPONSIVE DESIGN (CORRIGÉ ET OPTIMISÉ POUR MOBILE)
+   ========================================================================== */
+
+/* Tablettes (Écrans inférieurs à 1024px) */
+@media (max-width: 1024px) {
+  .benefits-row-grid {
+    grid-template-columns: repeat(2, 1fr); /* Passe à 2 colonnes */
+  }
+  
+  .navbar-menu {
+    gap: 1rem; /* Réduit l'espace entre les liens */
+  }
+}
+
+/* Mobiles (Écrans inférieurs à 768px) */
+@media (max-width: 768px) {
+  /* Hero Banner */
+  .hero-actualites-container h1 {
+    font-size: 2.2rem; /* Réduit la taille du gros titre */
+  }
+  
+  /* Navbar Mobile Basique */
+  .navbar-container {
+    flex-wrap: wrap;
+    height: auto;
+    padding: 1rem;
+  }
+  
+  .main-navbar {
+    height: auto;
+    position: relative; /* Évite de cacher le contenu du haut */
+  }
+  
+  .navbar-menu {
+    display: none; /* Cache le menu desktop sur mobile */
+  }
+  
+  /* Grilles et Formulaires */
+  .benefits-row-grid,
+  .form-grid-2col {
+    grid-template-columns: 1fr; /* Tout passe sur 1 seule colonne */
+  }
+  
+  .form-group-figma.full-width {
+    grid-column: span 1;
+  }
+  
+  .registration-box-figma {
+    padding: 1.5rem; /* Réduit les marges du formulaire */
+  }
+  
+  .missions-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+
+/* ==========================================================================
+   RESPONSIVE GLOBAL OPTIMISÉ
+   ========================================================================== */
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+.hero-actualites-container h1 {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+}
+
+.hero-actualites-container p {
+  font-size: clamp(1rem, 2vw, 1.15rem);
+}
+
+.home-container,
+.navbar-container,
+.hero-actualites-container,
+.form-card-container {
+  width: min(100% - 2rem, 1200px);
+  margin-inline: auto;
+}
+
+@media (max-width: 1024px){
+  .benevole-grid-figma,
+  .news-grid-regular,
+  .media-grid-figma,
+  .benefits-row-grid {
+    grid-template-columns: repeat(2,1fr);
+  }
+
+  .navbar-menu {
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 768px){
+
+  .main-navbar {
+    height: auto;
+    padding: .8rem 0;
+    position: relative;
+  }
+
+  .navbar-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .navbar-menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: .8rem;
+  }
+
+  .navbar-menu .nav-item-figma {
+    height: auto;
+    font-size: .85rem;
+  }
+
+  .navbar-right-block {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .benevole-grid-figma,
+  .benefits-row-grid,
+  .news-grid-featured,
+  .news-grid-regular,
+  .media-grid-figma,
+  .contact-form-grid,
+  .form-grid-2col {
+    grid-template-columns: 1fr;
+  }
+
+  .form-card-container {
+    padding: 1.5rem;
+  }
+
+  .contact-map-wrapper {
+    height: 300px;
+  }
 }
