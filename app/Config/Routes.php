@@ -23,6 +23,8 @@ $routes->group('fr', function ($routes) {
     $routes->get('actualites/(:num)', 'Home::voir/$1');
 
     $routes->get('media', 'Home::media');
+    $routes->post('soutenir/postuler', 'Home::postuler');
+
     $routes->get('soutenir', 'Home::support');
     $routes->get('faq', 'Home::faq');
     $routes->get('contact', 'Home::contact');
@@ -41,7 +43,10 @@ $routes->group('mg', function ($routes) {
     $routes->get('actualites/(:num)', 'Home::voir/$1');
 
     $routes->get('media', 'Home::media');
+
     $routes->get('soutenir', 'Home::support');
+    $routes->post('soutenir/postuler', 'Home::postuler');
+
     $routes->get('faq', 'Home::faq');
     $routes->get('contact', 'Home::contact');
 
@@ -57,7 +62,10 @@ $routes->group('en', function ($routes) {
     $routes->get('actualites/(:num)', 'Home::voir/$1');
 
     $routes->get('media', 'Home::media');
+
     $routes->get('soutenir', 'Home::support');
+    $routes->post('soutenir/postuler', 'Home::postuler');
+    
     $routes->get('faq', 'Home::faq');
     $routes->get('contact', 'Home::contact');
 

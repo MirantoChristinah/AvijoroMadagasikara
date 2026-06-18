@@ -1,3 +1,5 @@
+create database avijoro ;
+use avijoro ;
 
 CREATE TABLE langues (
     id INT AUTO_INCREMENT PRIMARY KEY,
