@@ -73,7 +73,7 @@
         <div class="contact-content">
           <h2 class="contact-form-title">Envoyez-nous un message</h2>
           
-          <form action="<?= base_url($lang . '/contact/envoyer') ?>" method="post">
+          <form action="<?= base_url($lang . '/contact') ?>" method="post">
             <?= csrf_field() ?>
             
             <div class="contact-form-grid">

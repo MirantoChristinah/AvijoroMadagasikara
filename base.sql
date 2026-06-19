@@ -11,6 +11,8 @@ INSERT INTO langues (code, libelle) VALUES
 ('en', 'English');
 
 
+
+
 CREATE TABLE users (
     id INT AUTO_INCREMENT PRIMARY KEY,
     nom VARCHAR(100),
@@ -134,4 +136,3 @@ CREATE TABLE traductions_interface (
     contenu TEXT NOT NULL,
     FOREIGN KEY (langue_id) REFERENCES langues(id) ON DELETE RESTRICT
 );
-

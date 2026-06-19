@@ -26,6 +26,9 @@ $routes->group('fr', function ($routes) {
     $routes->get('soutenir', 'Home::support');
     $routes->get('faq', 'Home::faq');
     $routes->get('contact', 'Home::contact');
+    $routes->post('contact', 'Home::envoyer'); 
+    //$routes->get('actualites/(:num)', 'Actualite::see/$1');
+
 
 });
 

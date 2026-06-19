@@ -1,15 +1,46 @@
 <?php
+
 namespace App\Controllers;
+
+use App\Models\ProjectsModel;
 
 class Projects extends BaseController
 {
-    public function index ()
+    public function index()
     {
-        //data['projects']= variable qui contient les données  model pour récuperer les données dans database
-        body("avijoro/projects",$data);
+        $projetModel=new ProjectsModel();
+        $categorieSelectionnee = $this->request->getGet('categorie') ?? 'Tous';
+        $data = [
+            'categorie_selectionnee' => $categorieSelectionnee,
+            'liste_projets'          => $projetModel->getProjetsFormates($locale, $categorieSelectionnee)
+        ];
+
+        body("avijoro/projects", $data);
     }
+     public function see($id)
+    {
+        $projetModel = new ProjectsModel();
+
+        $project = $projetModel->getProjetSeul($id);
+
+        if (!$project) 
+        {
+            throw \CodeIgniter\Exceptions\PageNotFoundException::forPageNotFound("Ce projet n'existe pas.");
+        }
+
+        if (!empty($project['image'])) 
+        {
+            $project['image_url'] = base_url('uploads/projets/' . $project['image']);
+        } else 
+        {
+            $project['image_url'] = base_url('assets/images/placeholders/projet.jpg');
+        }
+
+        $data = [
+            'project' => $project
+        ];
+
+         body("avijoro/project_detail", $data);
+    }
+
 }
-
-
-
-?>

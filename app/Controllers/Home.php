@@ -123,5 +123,67 @@ class Home extends BaseController
     {
         return $this->renderPage('avijoro/join'); // Créez une vue 'faq.php'
     }
-    
+    public function envoyer ()
+    {
+      // 1. On vérifie la méthode sécurisée POST
+        if ($this->request->getMethod() === 'POST') {
+            
+            // 2. On récupère TOUTES les variables envoyées par la vue HTML
+            $nomVisiteur       = $this->request->getPost('name');
+            $emailVisiteur     = $this->request->getPost('email');
+            $telephoneVisiteur = $this->request->getPost('phone');
+            $sujetVisiteur     = $this->request->getPost('subject');
+            $messageVisiteur   = $this->request->getPost('message');
+
+                        // 3. On initialise le service e-mail
+            $email = \Config\Services::email();
+
+            // Configuration SMTP en direct pour forcer Google à accepter la connexion
+            $config = [
+                'protocol'     => 'smtp',
+                'SMTPHost'     => '://gmail.com',
+                'SMTPUser'     => 'andriamahefahanitriniala@gmail.com',
+                'SMTPPass'     => 'rmdjwrhpongafhxd', // Votre clé Google à 16 lettres sans espaces
+                'SMTPPort'     => 465,
+                'SMTPCrypto'   => 'ssl',
+                'mailType'     => 'text',
+                'charset'      => 'utf-8',
+                'wordWrap'     => true,
+                'newline'      => "\r\n", // TRÈS IMPORTANT pour l'authentification Gmail
+                'CRLF'         => "\r\n"
+            ];
+
+            // On applique cette configuration à notre outil d'envoi
+            $email->initialize($config);
+
+            // 4. On configure les paramètres d'envoi
+            $email->setFrom('andriamahefahanitriniala@gmail.com', $nomVisiteur);
+            $email->setReplyTo($emailVisiteur, $nomVisiteur);
+            $email->setTo('andriamahefahanitriniala@gmail.com');
+            $email->setSubject("Nouveau message du site - Sujet : " . $sujetVisiteur);
+
+            // 5. On assemble proprement le corps du message
+            $corpsMessage = "Nom : " . $nomVisiteur . "\n";
+            $corpsMessage .= "Téléphone : " . ($telephoneVisiteur ? $telephoneVisiteur : 'Non renseigné') . "\n\n";
+            $corpsMessage .= "Message :\n" . $messageVisiteur;
+
+            $email->setMessage($corpsMessage);
+
+                        // On tente l'envoi physique
+            $resultat = $email->send();
+
+            // S'il y a un échec, on force l'affichage de l'erreur SMTP à l'écran
+            if (!$resultat) {
+                echo "<h3>L'envoi a échoué. Voici le rapport technique :</h3>";
+                echo $email->printDebugger(['headers', 'subject', 'body']);
+                exit; // Arrête immédiatement le script pour empêcher la page blanche
+            }
+
+            // Si l'envoi réussit
+            echo "<h3>L'envoi a fonctionné avec succès !</h3>";
+            exit;
+
+
+    }        
+}
 }

@@ -47,7 +47,7 @@
           ];
           foreach ($categories as $cle => $nom): 
             $est_actif = ($cat_active === $cle);
-            $url_categorie = ($cle === 'Tous') ? 'news' : 'news?categorie=' . urlencode($cle);
+            $url_categorie = ($cle === 'Tous') ? 'actualites' : 'actualites?categorie=' . urlencode($cle);
           ?>
             <a href="<?= base_url($lang . '/' . $url_categorie) ?>" class="btn-filter <?= $est_actif ? 'active' : '' ?>">
               <?= $nom ?>
@@ -87,7 +87,7 @@
               
               <!-- Zone Image + Badge superposé -->
               <div class="actualite-image-block">
-                <img src="<?= esc($article['image']) ?>" alt="<?= esc($article['titre']) ?>" />
+                <img src="<?= base_url('uploads/actualites/' . $article['image']) ?>" alt="<?= esc($article['titre']) ?>" />
                 <span class="actualite-badge-figma"><?= esc($article['categorie']) ?></span>
               </div>
               
@@ -101,7 +101,7 @@
                 
                 <h3 class="actualite-title-figma"><?= esc($article['titre']) ?></h3>
                 <p class="actualite-excerpt-figma"><?= esc($article['contenu']) ?></p>
-                <a href="<?= base_url($lang . '/news/' . $article['id']) ?>" class="actualite-link-figma">Lire la suite ➔</a>
+                <a href="<?= base_url($lang . '/actualites/' . $article['id']) ?>" class="actualite-link-figma">Lire la suite ➔</a>
               </div>
 
             </div>
@@ -128,7 +128,7 @@
               
               <!-- Image et Badge de Catégorie superposé -->
               <div class="actualite-image-block">
-                <img src="<?= esc($article['image']) ?>" alt="<?= esc($article['titre']) ?>" />
+                <img src="<?= base_url('uploads/actualites/' . $article['image']) ?>" alt="<?= esc($article['titre']) ?>" />
                 <span class="actualite-badge-figma"><?= esc($article['categorie']) ?></span>
               </div>
               
@@ -150,9 +150,10 @@
                 <p class="actualite-excerpt-figma"><?= esc($article['contenu']) ?></p>
                 
                 <!-- Lien d'accès -->
-                <a href="<?= base_url($lang . '/news/' . $article['id']) ?>" class="actualite-link-figma">
-                  Lire la suite ➔
-                </a>
+                <a href="<?= base_url($lang . '/actualites/' . $article['id']) ?>" class="actualite-link-figma">
+                Lire la suite ➔
+                  </a>
+
               </div>
 
             </div>

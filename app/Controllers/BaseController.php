@@ -50,7 +50,7 @@ abstract class BaseController extends Controller
         $locale = $this->request->getLocale();
 
         // Sécurité au cas où la locale retournée est invalide
-        if (!in_array($locale, ['fr', 'mg'])) {
+        if (!in_array($locale, ['fr', 'mg', 'en'])) {
             $locale = 'fr';
         }
 

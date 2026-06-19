@@ -29,7 +29,8 @@
         ];
         foreach ($categories as $cle => $nom): 
           $est_actif = ($cat_active === $cle);
-          $url_categorie = ($cle === 'Tous') ? 'projets' : 'projets?categorie=' . urlencode($cle);
+          $url_categorie = ($cle === 'Tous') ? 'projects' : 'projects?categorie=' . urlencode($cle);
+
         ?>
           <a href="<?= base_url(service('request')->getLocale() . '/' . $url_categorie) ?>" 
              style="text-decoration: none; padding: 0.5rem 1.25rem; border-radius: 9999px; font-weight: 600; font-size: 0.85rem; transition: all 0.2s; 
