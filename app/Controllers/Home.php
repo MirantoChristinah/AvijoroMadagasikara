@@ -17,7 +17,7 @@ class Home extends BaseController
         $locale = $this->request->getLocale();
 
         // Sécurité au cas où la locale retournée est invalide
-        if (!in_array($locale, ['fr', 'mg'])) {
+        if (!in_array($locale, ['fr', 'mg', 'en'])) {
             $locale = 'fr';
         }
 
@@ -39,22 +39,21 @@ class Home extends BaseController
 
     public function about()
     {
-        return $this->renderPage('avijoro/about'); // Créez une vue 'about.php' si ce n'est pas fait
+        return $this->renderPage('avijoro/about');
     }
 
     public function projects()
     {
-        return $this->renderPage('avijoro/projects'); // Créez une vue 'projects.php'
+        return $this->renderPage('avijoro/projects');
     }
 
-        // page liste des actualites (Simulation sans BDD)
-       public function news()
+    // page liste des actualites (Simulation sans BDD)
+    public function news()
     {
         $locale = $this->request->getLocale();
 
         // Simulation de TOUS les articles Figma (Grands et Petits)
         $faux_articles = [
-            // ARTICLES À LA UNE (featured = 1)
             [
                 'id' => 1, 'featured' => 1,
                 'titre' => "Inauguration de la 5ème école dans la région Vakinankaratra",
@@ -62,7 +61,6 @@ class Home extends BaseController
                 'contenu' => "Une nouvelle école primaire a été inaugurée avec succès, offrant un accès à l'éducation pour 180 enfants supplémentaires.",
                 'image' => "https://unsplash.com"
             ],
-            // ARTICLES RÉGULIERS (featured = 0 -> s'afficheront en petites cases sur 3 colonnes)
             [
                 'id' => 3, 'featured' => 0,
                 'titre' => "Formation professionnelle : 200 jeunes diplômés",
@@ -99,34 +97,34 @@ class Home extends BaseController
              . view('includes/footer', $data);
     }
 
-
     public function media()
     {
-        return $this->renderPage('avijoro/media'); // Créez une vue 'media.php';
+        return $this->renderPage('avijoro/media');
     }
 
     public function support()
     {
-        return $this->renderPage('avijoro/join'); // Créez une vue 'support.php'
+        return $this->renderPage('avijoro/join');
     }
 
     public function faq()
     {
-        return $this->renderPage('avijoro/faq'); // Créez une vue 'faq.php'
+        return $this->renderPage('avijoro/faq');
     }
 
-     public function contact()
+    public function contact()
     {
-        return $this->renderPage('avijoro/contact'); // Créez une vue 'faq.php'
+        return $this->renderPage('avijoro/contact');
     }
-     public function join()
+    
+    public function join()
     {
-        return $this->renderPage('avijoro/join'); // Créez une vue 'faq.php'
+        return $this->renderPage('avijoro/join');
     }
 
-    public function envoyer ()
+    public function envoyer()
     {
-      // 1. On vérifie la méthode sécurisée POST
+        // 1. On vérifie la méthode sécurisée POST
         if ($this->request->getMethod() === 'POST') {
             
             // 2. On récupère TOUTES les variables envoyées par la vue HTML
@@ -136,25 +134,25 @@ class Home extends BaseController
             $sujetVisiteur     = $this->request->getPost('subject');
             $messageVisiteur   = $this->request->getPost('message');
 
-                        // 3. On initialise le service e-mail
+            // 3. On initialise le service e-mail
             $email = \Config\Services::email();
 
-            // Configuration SMTP en direct pour forcer Google à accepter la connexion
+            // Configuration SMTP corrigée pour Gmail
             $config = [
                 'protocol'     => 'smtp',
-                'SMTPHost'     => '://gmail.com',
+                'SMTPHost'     => 'smtp.gmail.com', // <-- CORRIGÉ ICI
                 'SMTPUser'     => 'andriamahefahanitriniala@gmail.com',
-                'SMTPPass'     => 'rmdjwrhpongafhxd', // Votre clé Google à 16 lettres sans espaces
+                'SMTPPass'     => 'rmdjwrhpongafhxd', 
                 'SMTPPort'     => 465,
                 'SMTPCrypto'   => 'ssl',
                 'mailType'     => 'text',
                 'charset'      => 'utf-8',
                 'wordWrap'     => true,
-                'newline'      => "\r\n", // TRÈS IMPORTANT pour l'authentification Gmail
+                'newline'      => "\r\n", 
                 'CRLF'         => "\r\n"
             ];
 
-            // On applique cette configuration à notre outil d'envoi
+            // On applique cette configuration
             $email->initialize($config);
 
             // 4. On configure les paramètres d'envoi
@@ -170,23 +168,21 @@ class Home extends BaseController
 
             $email->setMessage($corpsMessage);
 
-                        // On tente l'envoi physique
+            // On tente l'envoi physique
             $resultat = $email->send();
 
             // S'il y a un échec, on force l'affichage de l'erreur SMTP à l'écran
             if (!$resultat) {
                 echo "<h3>L'envoi a échoué. Voici le rapport technique :</h3>";
                 echo $email->printDebugger(['headers', 'subject', 'body']);
-                exit; // Arrête immédiatement le script pour empêcher la page blanche
+                exit; 
             }
 
             // Si l'envoi réussit
             echo "<h3>L'envoi a fonctionné avec succès !</h3>";
             exit;
-
-
-    }        
-
+        }
+    } // <-- AJOUTÉ : Ferme proprement la fonction envoyer()
 
     public function postuler()
     {
@@ -213,14 +209,10 @@ class Home extends BaseController
         $model = new \App\Models\BenevoleModel();
 
         if ($model->insert($dataInsert) === false) {
-            // S'il y a des erreurs de validation, on revient en arrière
             return redirect()->back()->withInput()->with('errors', $model->errors());
         }
 
         // 4. Succès : Redirection vers /fr/soutenir ou /mg/soutenir
         return redirect()->to(base_url($locale . '/soutenir'))->with('success', 'Votre candidature a été envoyée avec succès !');
     }
-    
-
-}
 }

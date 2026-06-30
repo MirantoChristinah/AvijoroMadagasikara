@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AVIJORO Madagascar</title>
 
-    <!-- Chargement de votre feuille de style nettoyée -->
     <link href="<?= base_url('css/theme.css') ?>" rel="stylesheet">
 </head>
 
@@ -26,44 +25,44 @@
             <?php $uri = service('uri')->getPath(); ?>
             
             <a href="<?= base_url($lang) ?>" class="nav-item-figma <?= ($uri == $lang || $uri == '') ? 'active' : '' ?>">
-                Accueil
+                <?= lang('Texte.menu_accueil') ?>
             </a>
 
             <div class="nav-dropdown">
                 <a href="<?= base_url($lang . '/qui-sommes-nous') ?>" class="nav-item-figma <?= (strpos($uri, 'qui-sommes-nous') !== false) ? 'active' : '' ?>">
-                    À propos <span class="arrow-down">▼</span>
+                    <?= lang('Texte.menu_a_propos') ?> <span class="arrow-down">▼</span>
                 </a>
                 <div class="dropdown-menu">
-                    <a href="<?= base_url($lang . '/qui-sommes-nous#histoire') ?>">Notre histoire</a>
-                    <a href="<?= base_url($lang . '/qui-sommes-nous#mission') ?>">Mission & Vision</a>
-                    <a href="<?= base_url($lang . '/qui-sommes-nous#valeurs') ?>">Nos valeurs</a>
-                    <a href="<?= base_url($lang . '/qui-sommes-nous#parcours') ?>">Notre parcours</a>
-                    <a href="<?= base_url($lang . '/qui-sommes-nous#equipe') ?>">L'équipe</a>
+                    <a href="<?= base_url($lang . '/qui-sommes-nous#histoire') ?>"><?= lang('Texte.sub_histoire') ?></a>
+                    <a href="<?= base_url($lang . '/qui-sommes-nous#mission') ?>"><?= lang('Texte.sub_mission') ?></a>
+                    <a href="<?= base_url($lang . '/qui-sommes-nous#valeurs') ?>"><?= lang('Texte.sub_valeurs') ?></a>
+                    <a href="<?= base_url($lang . '/qui-sommes-nous#parcours') ?>"><?= lang('Texte.sub_parcours') ?></a>
+                    <a href="<?= base_url($lang . '/qui-sommes-nous#equipe') ?>"><?= lang('Texte.sub_equipe') ?></a>
                 </div>
             </div>
 
             <a href="<?= base_url($lang . '/projets') ?>" class="nav-item-figma <?= (strpos($uri, 'projets') !== false) ? 'active' : '' ?>">
-                Projets
+                <?= lang('Texte.menu_projets') ?>
             </a>
 
             <a href="<?= base_url($lang . '/actualites') ?>" class="nav-item-figma <?= (strpos($uri, 'actualites') !== false) ? 'active' : '' ?>">
-                Actualités
+                <?= lang('Texte.menu_actualites') ?>
             </a>
             
             <a href="<?= base_url($lang . '/media') ?>" class="nav-item-figma <?= (strpos($uri, 'media') !== false) ? 'active' : '' ?>">
-                Média
+                <?= lang('Texte.menu_media') ?>
             </a>
 
             <a href="<?= base_url($lang . '/faq') ?>" class="nav-item-figma <?= (strpos($uri, 'faq') !== false) ? 'active' : '' ?>">
-                FAQ
+                <?= lang('Texte.menu_faq') ?>
             </a>
 
             <a href="<?= base_url($lang . '/soutenir') ?>" class="nav-item-figma <?= (strpos($uri, 'soutenir') !== false) ? 'active' : '' ?>">
-                Nous rejoindre
+                <?= lang('Texte.menu_rejoindre') ?>
             </a>
             
             <a href="<?= base_url($lang . '/contact') ?>" class="nav-item-figma <?= (strpos($uri, 'contact') !== false) ? 'active' : '' ?>">
-                Contact
+                <?= lang('Texte.menu_contact') ?>
             </a>
         </div>
 
@@ -80,7 +79,7 @@
                 <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24" style="color: #ffffff; flex-shrink: 0;">
                     <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
                 </svg>
-                <span>Faire un don</span>
+                <span><?= lang('Texte.bouton_don') ?></span>
             </a>
         </div>
 
