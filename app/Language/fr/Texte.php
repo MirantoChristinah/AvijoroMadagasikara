@@ -2,6 +2,28 @@
 
 return [
 
+// HEADER MENU
+    'menu_accueil' => "Accueil",
+    'menu_a_propos' => "À propos",            
+    'menu_qui_sommes_nous' => "Qui sommes-nous ?",
+    'menu_projets' => "Nos Projets",
+    'menu_actualites' => "Actualités",
+    'menu_media' => "Media",
+    'menu_faq' => "FAQ",                     
+    'menu_rejoindre' => "Nous rejoindre",     
+    'menu_soutenir' => "Nous soutenir",
+    'menu_contact' => "Contact",
+ 
+   // HEADER DROPDOWN SUB-MENU                
+    'sub_histoire' => "Notre histoire",
+    'sub_mission'  => "Mission & Vision",
+    'sub_valeurs'  => "Nos valeurs",
+    'sub_parcours' => "Notre parcours",
+    'sub_equipe'   => "L'équipe",
+
+    // Boutons génériques
+    'bouton_don'           => 'Donation',
+
     // HERO
     'hero_titre' => "Ensemble pour l'avenir de Madagascar",
     'hero_description' => "Rejoignez les bénévoles d'AVIJORO pour mener des actions concrètes et durables.",
