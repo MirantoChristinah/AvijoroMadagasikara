@@ -8,11 +8,11 @@
       <div style="max-width: 800px; margin: 0 auto; color: #ffffff; padding: 0 1rem;">
         <!-- Titre principal -->
         <h1 style="font-size: 3rem; font-weight: 700; margin: 0 0 1.5rem 0; letter-spacing: -0.5px;">
-          Actualités
+         <?= lang('Texte.Actualite') ?>
         </h1>
         <!-- Sous-titre textuel -->
         <p style="font-size: 1.15rem; font-weight: 400; opacity: 0.95; line-height: 1.6; margin: 0;">
-          Restez informé de nos dernières initiatives, événements et réussites à travers Madagascar.
+         <?= lang('Texte.texte_hero') ?> 
         </p>
       </div>
     </div>
@@ -101,7 +101,7 @@
                 
                 <h3 class="actualite-title-figma"><?= esc($article['titre']) ?></h3>
                 <p class="actualite-excerpt-figma"><?= esc($article['contenu']) ?></p>
-                <a href="<?= base_url($lang . '/actualites/' . $article['id']) ?>" class="actualite-link-figma">Lire la suite ➔</a>
+                <a href="<?= base_url($lang . '/actualites/' . $article['id']) ?>" class="actualite-link-figma"><?= lang('Texte.lire_la_suite') ?></a>
               </div>
 
             </div>

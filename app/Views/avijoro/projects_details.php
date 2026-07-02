@@ -10,7 +10,7 @@ $badge_bg     = $est_en_cours ? '#3b82f6' : '#10b981';
       
       <!-- Bouton Retour -->
       <div style="margin-bottom: 1.5rem; text-align: left;">
-        <a href="<?= base_url($lang . '/projets') ?>" style="color: #e6f4ea; text-decoration: none; font-weight: 600; font-size: 0.9rem; display: inline-flex; align-items: center; gap: 0.5rem; background-color: rgba(255,255,255,0.1); padding: 0.5rem 1.25rem; border-radius: 9999px;">
+        <a href="<?= base_url($lang . '/projects') ?>" style="color: #e6f4ea; text-decoration: none; font-weight: 600; font-size: 0.9rem; display: inline-flex; align-items: center; gap: 0.5rem; background-color: rgba(255,255,255,0.1); padding: 0.5rem 1.25rem; border-radius: 9999px;">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
           Retour aux projets
         </a>

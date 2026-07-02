@@ -9,7 +9,7 @@
       <div style="margin-bottom: 1.5rem; text-align: left;">
         <a href="<?= base_url($lang . '/actualites') ?>" style="color: #e6f4ea; text-decoration: none; font-weight: 600; font-size: 0.9rem; display: inline-flex; align-items: center; gap: 0.5rem; background-color: rgba(255,255,255,0.1); padding: 0.5rem 1.25rem; border-radius: 9999px; transition: background 0.2s;">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
-          <?= lang('Texte.actualites_retour') ?? 'Retour aux actualités' ?>
+          <?= lang('Texte.actualites_retour') ?>
         </a>
       </div>
 
@@ -45,7 +45,7 @@
             <!-- Si l'article contient un fichier vidéo -->
             <video controls style="width: 100%; display: block; max-height: 450px; background: #000;">
               <source src="<?= base_url('uploads/actualites/videos/' . $article['video']) ?>" type="video/mp4">
-              Votre navigateur ne supporte pas la lecture de vidéos.
+              <?= lang('Texte.video_non_supportee') ?>
             </video>
           <?php elseif (!empty($article['image'])): ?>
             <!-- Si l'article contient une image -->
@@ -70,7 +70,7 @@
   <section style="padding: 3rem 1.5rem; background-color: #ffffff; text-align: center; width: 100%; box-sizing: border-box; clear: both; border-top: 1px solid #e5e7eb;">
     <div class="container mx-auto" style="max-width: 1200px; margin: 0 auto; width: 100%;">
       <a href="<?= base_url($lang . '/actualites') ?>" style="display: inline-block; background-color: #2D8659; color: #ffffff; padding: 1rem 2.5rem; border-radius: 9999px; text-decoration: none; font-size: 0.95rem; font-weight: 600; box-shadow: 0 10px 15px -3px rgba(45,134,89,0.25); transition: all 0.2s;">
-        ← Voir toutes les actualités
+        ← <?= lang('Texte.actualites_voir_toutes') ?>
       </a>
     </div>
   </section>

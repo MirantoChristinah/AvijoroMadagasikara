@@ -2,6 +2,7 @@
 
 return [
 
+<<<<<<< Updated upstream
 // HEADER MENU
     'menu_accueil' => "Accueil",
     'menu_a_propos' => "À propos",            
@@ -24,6 +25,45 @@ return [
     // Boutons génériques
     'bouton_don'           => 'Donation',
 
+=======
+
+   //Composant
+   'accueil' => 'Accueil',
+   'Apropos' => 'À propos',
+   'Projets' => 'Projets',
+   'Actualite' => 'Actualités',
+   'Media' => 'Média',
+   'FAQ' => 'FAQ',
+   'joindre' => 'Nous rejoindre',
+   'Contact' => 'Contact',
+   'Nosprojets' => 'Nos Projets ',
+    'decouvrez_initiatives' => 'Découvrez nos initiatives qui transforment des vies à travers tout Madagascar',
+    'education_pour_tous'   => 'Éducation pour tous',
+    'construction_ecoles'   => 'Construction d\'écoles et fourniture de matériel éducatif pour les enfants des zones rurales',
+    
+    'type_media'      => 'Type de média :',
+    'tous'            => 'Tous',
+    'photos'          => 'Photos',
+    'videos'          => 'Vidéos',
+    'documents'       => 'Documents',
+    'aucun_fichier'   => 'Aucun fichier disponible pour le moment.',
+
+    'voir_tous_projets'   => 'Hijery ireo tetikasa rehetra',
+    'notre_impact_video'  => 'Ny vokatry ny asantsika amin’ny alalan’ny horonantsary',
+    'decouvrez_soutien'   => 'Fantaro ny fomba hanovan’ny fanohananao fiainana eto Madagasikara.',
+   
+    //new_detail
+    'actualites_retour'     => 'Retour aux actualités',
+    'actualites_voir_toutes' => 'Voir toutes les actualités',
+    'video_non_supportee'   => 'Votre navigateur ne supporte pas la lecture de vidéos.',
+    'lire_la_suite' => 'Lire la suite ➔',
+    'texte_hero'               => ' Restez informé de nos dernières initiatives, événements et réussites à travers Madagascar.',
+    'tous_droits_reserves' => 'Tous droits réservés.',
+    'mediatheque'       => 'Médiathèque',
+    'explorez_medias'   => 'Explorez notre collection de photos, vidéos et documents témoignant de notre action sur le terrain.',
+
+    
+>>>>>>> Stashed changes
     // HERO
     'hero_titre' => "Ensemble pour l'avenir de Madagascar",
     'hero_description' => "Rejoignez les bénévoles d'AVIJORO pour mener des actions concrètes et durables.",

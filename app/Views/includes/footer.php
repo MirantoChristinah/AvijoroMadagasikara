@@ -23,17 +23,17 @@
       <div>
         <h3 style="color: #ffffff; font-size: 1.05rem; font-weight: 700; margin-bottom: 1.25rem; margin-top: 0; letter-spacing: -0.1px;"><?= lang('Texte.footer_liens_titre') ?? 'Liens rapides' ?></h3>
         <ul style="list-style: none; padding: 0; margin: 0; font-size: 0.9rem; display: flex; flex-direction: column; gap: 0.75rem;">
-          <li><a href="<?= base_url($lang . '/qui-sommes-nous') ?>" style="color: #9ca3af; text-decoration: none; transition: color 0.2s;">À propos</a></li>
-          <li><a href="<?= base_url($lang . '/projets') ?>" style="color: #9ca3af; text-decoration: none; transition: color 0.2s;">Nos projets</a></li>
-          <li><a href="<?= base_url($lang . '/actualites') ?>" style="color: #9ca3af; text-decoration: none; transition: color 0.2s;">Actualités</a></li>
-          <li><a href="<?= base_url($lang . '/soutenir') ?>" style="color: #9ca3af; text-decoration: none; transition: color 0.2s;">Devenez bénévole</a></li>
-          <li><a href="<?= base_url($lang . '/don') ?>" style="color: #9ca3af; text-decoration: none; transition: color 0.2s;">Faire un don</a></li>
+          <li><a href="<?= base_url($lang . '/qui-sommes-nous') ?>" style="color: #9ca3af; text-decoration: none; transition: color 0.2s;"><?= lang('Texte.Apropos') ?></a></li>
+          <li><a href="<?= base_url($lang . '/projects') ?>" style="color: #9ca3af; text-decoration: none; transition: color 0.2s;"><?= lang('Texte.Projets') ?></a></li>
+          <li><a href="<?= base_url($lang . '/actualites') ?>" style="color: #9ca3af; text-decoration: none; transition: color 0.2s;"><?= lang('Texte.Actualite') ?></a></li>
+          <li><a href="<?= base_url($lang . '/soutenir') ?>" style="color: #9ca3af; text-decoration: none; transition: color 0.2s;"><?= lang('Texte.joindre') ?></a></li>
+          <li><a href="<?= base_url($lang . '/don') ?>" style="color: #9ca3af; text-decoration: none; transition: color 0.2s;"><?= lang('Texte.soutenir') ?></a></li>
         </ul>
       </div>
 
             <!-- Colonne 3 : Contact (ICÔNES CORRIGÉES) -->
       <div>
-        <h3 style="color: #ffffff; font-size: 1.05rem; font-weight: 700; margin-bottom: 1.25rem; margin-top: 0; letter-spacing: -0.1px;">Contact</h3>
+        <h3 style="color: #ffffff; font-size: 1.05rem; font-weight: 700; margin-bottom: 1.25rem; margin-top: 0; letter-spacing: -0.1px;"><?= lang('Texte.Contact') ?></h3>
         <ul style="list-style: none; padding: 0; margin: 0; font-size: 0.9rem; display: flex; flex-direction: column; gap: 0.85rem;">
           
           <!-- Localisation -->
@@ -69,7 +69,7 @@
       <div>
         <h3 style="color: #ffffff; font-size: 1.05rem; font-weight: 700; margin-bottom: 1rem; margin-top: 0; letter-spacing: -0.1px;"><?= lang('Texte.footer_newsletter') ?? 'Newsletter' ?></h3>
         <p style="font-size: 0.9rem; color: #9ca3af; margin-bottom: 1.25rem; line-height: 1.5;"><?= lang('Texte.newsletter_sous_titre') ?? 'Restez informé de nos actualités et projets.' ?></p>
-        <form action="<?= base_url($lang . '/newsletter-sinscrire') ?>" method="post" style="display: flex; flex-direction: column; gap: 0.75rem;">
+        <form action="<?= base_url($lang . '/newsletter/inscription') ?>" method="post" style="display: flex; flex-direction: column; gap: 0.75rem;">
           <?= csrf_field() ?>
           <input type="email" name="email" placeholder="<?= lang('Texte.newsletter_placeholder') ?? 'Votre email' ?>" required style="width: 100%; padding: 0.75rem 1rem; border-radius: 8px; background-color: #141d2b; border: 1px solid #243247; color: #ffffff; font-size: 0.9rem; outline: none; transition: border-color 0.2s;" />
           <button type="submit" style="width: 100%; padding: 0.75rem 1rem; border-radius: 8px; background-color: #ff7043; border: none; color: #ffffff; font-weight: 600; cursor: pointer; font-size: 0.9rem; transition: background-color 0.2s;"><?= lang('Texte.newsletter_bouton') ?? "S'abonner" ?></button>
@@ -91,16 +91,16 @@
 
       <!-- Liens légaux de droite -->
       <div style="font-size: 0.85rem; color: #6b7280; display: flex; gap: 1rem; align-items: center;">
-        <a href="#" style="color: #6b7280; text-decoration: none; transition: color 0.2s;">Mentions légales</a>
+        <a href="#" style="color: #6b7280; text-decoration: none; transition: color 0.2s;"><?= lang('Texte.mentions_legales') ?></a>
         <span style="color: #243247;">|</span>
-        <a href="#" style="color: #6b7280; text-decoration: none; transition: color 0.2s;">Politique de confidentialité</a>
+        <a href="#" style="color: #6b7280; text-decoration: none; transition: color 0.2s;"><?= lang('Texte.politique_confidentialite') ?></a>
       </div>
 
     </div>
 
     <!-- Copyright de pied de page final centré -->
     <div style="font-size: 0.8rem; color: #4b5563; text-align: center; margin-top: 3rem; border-top: 1px solid #141d2b; padding-top: 1.5rem;">
-      © 2026 AVIJORO Madagascar. Tous droits réservés.
+      © 2026 AVIJORO Madagascar. <?= lang('Texte.tous_droits_reserves') ?>.
     </div>
 
   </div>

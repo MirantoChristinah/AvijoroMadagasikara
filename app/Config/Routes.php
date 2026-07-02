@@ -13,64 +13,25 @@ $routes->get('/', function () {
 
 
 
-$routes->group('fr', function ($routes) {
+// Un seul groupe magique pour toutes les langues
+$routes->group('{locale}', function ($routes) {
 
     $routes->get('/', 'Home::index');
     $routes->get('qui-sommes-nous', 'Home::about');
-    $routes->get('projets', 'Home::projects');
+    $routes->get('projects', 'Projects::index');
+    $routes->get('projects/(:num)', 'Projects::see/$1');
     
-    $routes->get('actualites', 'Home::news');
-    $routes->get('actualites/(:num)', 'Home::voir/$1');
-
+    $routes->get('actualites', 'News::index');
+    $routes->get('actualites/(:num)', 'News::see/$1');
+     
     $routes->get('media', 'Home::media');
-    $routes->post('soutenir/postuler', 'Home::postuler');
-
     $routes->get('soutenir', 'Home::support');
     $routes->get('faq', 'Home::faq');
+    
+    // Le formulaire de contact fonctionne maintenant dans TOUTES les langues
     $routes->get('contact', 'Home::contact');
     $routes->post('contact', 'Home::envoyer'); 
-    //$routes->get('actualites/(:num)', 'Actualite::see/$1');
-
-
-});
-
-
-
-$routes->group('mg', function ($routes) {
-
-    $routes->get('/', 'Home::index');
-    $routes->get('qui-sommes-nous', 'Home::about');
-    $routes->get('projets', 'Home::projects');
-    
-    $routes->get('actualites', 'Home::news');
-    $routes->get('actualites/(:num)', 'Home::voir/$1');
-
-    $routes->get('media', 'Home::media');
-
-    $routes->get('soutenir', 'Home::support');
-    $routes->post('soutenir/postuler', 'Home::postuler');
-
-    $routes->get('faq', 'Home::faq');
-    $routes->get('contact', 'Home::contact');
+    $routes->post('newsletter/inscription', 'Home::inscriptionNewsletter');
 
 });
-
-$routes->group('en', function ($routes) {
-
-    $routes->get('/', 'Home::index');
-    $routes->get('qui-sommes-nous', 'Home::about');
-    $routes->get('projets', 'Home::projects');
-    
-    $routes->get('actualites', 'Home::news');
-    $routes->get('actualites/(:num)', 'Home::voir/$1');
-
-    $routes->get('media', 'Home::media');
-
-    $routes->get('soutenir', 'Home::support');
-    $routes->post('soutenir/postuler', 'Home::postuler');
-    
-    $routes->get('faq', 'Home::faq');
-    $routes->get('contact', 'Home::contact');
-
-});
-
+?>

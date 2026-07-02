@@ -11,7 +11,7 @@ class ActualiteModel extends Model
     protected $useAutoIncrement = true;
     protected $returnType       = 'array';
     
-    protected $allowedFields    = ['categorie', 'image', 'video', 'date_publication', 'featured'];
+    protected $allowedFields    = ['categorie', 'image', 'video', 'date_publication'];
 
     /**
      * Récupère toutes les actualités traduites et filtrées
@@ -28,7 +28,6 @@ class ActualiteModel extends Model
             actualites.video, 
             actualites.date_publication, 
             actualites.categorie,
-            actualites.featured,
             actualites_traductions.titre, 
             actualites_traductions.contenu
         ');
@@ -62,7 +61,6 @@ class ActualiteModel extends Model
             actualites.video, 
             actualites.date_publication, 
             actualites.categorie,
-            actualites.featured,
             actualites_traductions.titre, 
             actualites_traductions.contenu
         ');

@@ -32,7 +32,7 @@
           $url_categorie = ($cle === 'Tous') ? 'projects' : 'projects?categorie=' . urlencode($cle);
 
         ?>
-          <a href="<?= base_url(service('request')->getLocale() . '/' . $url_categorie) ?>" 
+          <a href="<?= base_url($lang . '/' . $url_categorie) ?>" 
              style="text-decoration: none; padding: 0.5rem 1.25rem; border-radius: 9999px; font-weight: 600; font-size: 0.85rem; transition: all 0.2s; 
                     <?= $est_actif ? 'background-color: #2D8659; color: #ffffff; box-shadow: 0 4px 6px -1px rgba(45,134,89,0.2);' : 'background-color: #f3f4f6; color: #374151;' ?>">
             <?= $nom ?>
@@ -106,7 +106,7 @@
                 <!-- Si le projet est TERMINÉ, on affiche le bouton vert -->
                 <?php if (!$est_en_cours): ?>
                   <div style="border-top: 1px solid #f3f4f6; padding-top: 1rem;">
-                    <a href="<?= base_url($lang . '/projets/' . $project['id']) ?>" style="color: #2D8659; text-decoration: none; font-size: 0.9rem; font-weight: 600; display: inline-flex; align-items: center; gap: 0.25rem;">
+                    <a href="<?= base_url($lang . '/projects/' . $project['id']) ?>" style="color: #2D8659; text-decoration: none; font-size: 0.9rem; font-weight: 600; display: inline-flex; align-items: center; gap: 0.25rem;">
                       En savoir plus ➔
                     </a>
                   </div>

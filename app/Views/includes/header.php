@@ -25,12 +25,13 @@
             <?php $uri = service('uri')->getPath(); ?>
             
             <a href="<?= base_url($lang) ?>" class="nav-item-figma <?= ($uri == $lang || $uri == '') ? 'active' : '' ?>">
-                <?= lang('Texte.menu_accueil') ?>
+                <?= lang('Texte.accueil') ?>
             </a>
 
             <div class="nav-dropdown">
                 <a href="<?= base_url($lang . '/qui-sommes-nous') ?>" class="nav-item-figma <?= (strpos($uri, 'qui-sommes-nous') !== false) ? 'active' : '' ?>">
                     <?= lang('Texte.menu_a_propos') ?> <span class="arrow-down">▼</span>
+                <?=    lang('Texte.Apropos') ?> <span class="arrow-down">▼</span>
                 </a>
                 <div class="dropdown-menu">
                     <a href="<?= base_url($lang . '/qui-sommes-nous#histoire') ?>"><?= lang('Texte.sub_histoire') ?></a>
@@ -41,38 +42,52 @@
                 </div>
             </div>
 
-            <a href="<?= base_url($lang . '/projets') ?>" class="nav-item-figma <?= (strpos($uri, 'projets') !== false) ? 'active' : '' ?>">
-                <?= lang('Texte.menu_projets') ?>
+            <a href="<?= base_url($lang . '/projects') ?>" class="nav-item-figma <?= (strpos($uri, 'projets') !== false) ? 'active' : '' ?>">
+                <?= lang('Texte.Projets') ?>
             </a>
 
             <a href="<?= base_url($lang . '/actualites') ?>" class="nav-item-figma <?= (strpos($uri, 'actualites') !== false) ? 'active' : '' ?>">
-                <?= lang('Texte.menu_actualites') ?>
+                <?= lang('Texte.Actualite') ?>
             </a>
             
             <a href="<?= base_url($lang . '/media') ?>" class="nav-item-figma <?= (strpos($uri, 'media') !== false) ? 'active' : '' ?>">
-                <?= lang('Texte.menu_media') ?>
+                <?= lang('Texte.Media') ?>
             </a>
 
             <a href="<?= base_url($lang . '/faq') ?>" class="nav-item-figma <?= (strpos($uri, 'faq') !== false) ? 'active' : '' ?>">
-                <?= lang('Texte.menu_faq') ?>
+                <?= lang('Texte.FAQ') ?>
             </a>
 
             <a href="<?= base_url($lang . '/soutenir') ?>" class="nav-item-figma <?= (strpos($uri, 'soutenir') !== false) ? 'active' : '' ?>">
-                <?= lang('Texte.menu_rejoindre') ?>
+                <?= lang('Texte.joindre') ?>
             </a>
             
             <a href="<?= base_url($lang . '/contact') ?>" class="nav-item-figma <?= (strpos($uri, 'contact') !== false) ? 'active' : '' ?>">
-                <?= lang('Texte.menu_contact') ?>
+                <?= lang('Texte.Contact') ?>
             </a>
+           
         </div>
 
         <div class="navbar-right-block">
             <div class="language-selector">
-                <a href="<?= base_url('fr') ?>" style="color: <?= ($lang ?? 'fr') == 'fr' ? '#111827' : '#9ca3af'; ?>; font-weight: <?= ($lang ?? 'fr') == 'fr' ? '700' : '500'; ?>;">FR</a>
+                <?php 
+                
+                $currentPath = trim(service('uri')->getPath(), '/'); 
+                $segments = $currentPath !== '' ? explode('/', $currentPath) : [];
+                if (isset($segments[0]) && in_array($segments[0], ['fr', 'mg', 'en'])) 
+                {
+                    array_shift($segments); // On enlève la langue actuelle
+                }
+
+                $restOfUrl = implode('/', $segments);
+                ?>
+
+            
+                <a href="<?= base_url('fr/' . $restOfUrl) ?>" style="color: <?= ($lang ?? 'fr') == 'fr' ? '#111827' : '#9ca3af'; ?>; font-weight: <?= ($lang ?? 'fr') == 'fr' ? '700' : '500'; ?>;">FR</a>
                 <span style="color: #e5e7eb; user-select: none;">|</span>
-                <a href="<?= base_url('mg') ?>" style="color: <?= ($lang ?? 'fr') == 'mg' ? '#111827' : '#9ca3af'; ?>; font-weight: <?= ($lang ?? 'fr') == 'mg' ? '700' : '500'; ?>;">MG</a>
+                <a href="<?= base_url('mg/' . $restOfUrl) ?>" style="color: <?= ($lang ?? 'fr') == 'mg' ? '#111827' : '#9ca3af'; ?>; font-weight: <?= ($lang ?? 'fr') == 'mg' ? '700' : '500'; ?>;">MG</a>
                 <span style="color: #e5e7eb; user-select: none;">|</span>
-                <a href="<?= base_url('en') ?>" style="color: <?= ($lang ?? 'fr') == 'en' ? '#111827' : '#9ca3af'; ?>; font-weight: <?= ($lang ?? 'fr') == 'en' ? '700' : '500'; ?>;">EN</a>
+                <a href="<?= base_url('en/' . $restOfUrl) ?>" style="color: <?= ($lang ?? 'fr') == 'en' ? '#111827' : '#9ca3af'; ?>; font-weight: <?= ($lang ?? 'fr') == 'en' ? '700' : '500'; ?>;">EN</a>
             </div>
 
             <a href="<?= base_url($lang . '/soutenir') ?>" class="btn-soutenir">

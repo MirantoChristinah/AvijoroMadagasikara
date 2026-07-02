@@ -184,7 +184,11 @@ class Home extends BaseController
         }
     } // <-- AJOUTÉ : Ferme proprement la fonction envoyer()
 
-    public function postuler()
+
+ 
+
+
+    public function postuler ()
     {
         // 1. Récupération automatique de la locale courante par CodeIgniter
         $locale = $this->request->getLocale();
@@ -215,4 +219,42 @@ class Home extends BaseController
         // 4. Succès : Redirection vers /fr/soutenir ou /mg/soutenir
         return redirect()->to(base_url($locale . '/soutenir'))->with('success', 'Votre candidature a été envoyée avec succès !');
     }
+    
+    public function inscriptionNewsletter()
+{
+    if ($this->request->is('post')) {
+        $emailVisiteur = $this->request->getPost('email');
+
+        // Validation de la syntaxe de l'adresse email
+        if (!filter_var($emailVisiteur, FILTER_VALIDATE_EMAIL)) {
+            return redirect()->back()->with('erreur', 'Adiresy mailaka tsy manan-kery.');
+        }
+
+        // Récupération des accès sécurisés du fichier .env
+        $apiKey = env('brevo.apiKey');
+        $listId = (int) env('brevo.listId');
+
+        // Connexion à distance à l'API Brevo
+        $config = \Brevo\Client\Configuration::getDefaultConfiguration();
+        $config->setApiKey('api-key', $apiKey);
+
+        $apiInstance = new \Brevo\Client\Api\ContactsApi(new \GuzzleHttp\Client(), $config);
+        
+        $createContact = new \Brevo\Client\Model\CreateContact([
+            'email'         => $emailVisiteur,
+            'listIds'       => [$listId],
+            'updateEnabled' => true
+        ]);
+
+        try {
+            $apiInstance->createContact($createContact);
+            return redirect()->back()->with('succes', 'Misaotra tamin\'ny fisoratana anarana !');
+        } catch (\Exception $e) {
+            return redirect()->back()->with('erreur', 'Erreur : ' . $e->getMessage());
+        }
+    }
+}
+
+
+    
 }

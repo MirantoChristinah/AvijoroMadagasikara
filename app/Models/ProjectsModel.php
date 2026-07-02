@@ -4,7 +4,7 @@ namespace App\Models;
 
 use CodeIgniter\Model;
 
-class ProjetModel extends Model
+class ProjectsModel extends Model
 {
     protected $table            = 'projets';
     protected $primaryKey       = 'id';
@@ -36,7 +36,7 @@ class ProjetModel extends Model
             $this->where('projets.categorie', $categorieFiltre);
         }
 
-        $this->orderBy('projets.created_at', 'DESC');
+        $this->orderBy('projets.date_debut', 'DESC'); 
         $resultats = $this->findAll();
 
         foreach ($resultats as &$project) 

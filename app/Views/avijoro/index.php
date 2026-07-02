@@ -32,7 +32,7 @@
             <?= lang('Texte.bouton_don') ?>
           </a>
 
-          <a href="<?= base_url($lang . '/projets') ?>" class="btn-hero-outline" style="border: 2px solid white; color: white; padding: 0.85rem 2rem; border-radius: 9999px; text-decoration: none; font-weight: 600; background: transparent; text-align: center; display: inline-block;">
+          <a href="<?= base_url($lang . '/projects') ?>" class="btn-hero-outline" style="border: 2px solid white; color: white; padding: 0.85rem 2rem; border-radius: 9999px; text-decoration: none; font-weight: 600; background: transparent; text-align: center; display: inline-block;">
             <?= lang('Texte.bouton_decouvrir') ?>
           </a>
         </div>
@@ -112,8 +112,8 @@
       
       <!-- En-tête de la section -->
       <div style="text-align: center; max-width: 45rem; margin: 0 auto 4rem auto;">
-        <h2 style="font-size: 2.5rem; font-weight: 700; color: #111827; margin: 0 0 1rem 0;">Nos Projets</h2>
-        <p style="color: #4b5563; font-size: 1.125rem; line-height: 1.6; margin: 0;">Découvrez nos initiatives qui transforment des vies à travers tout Madagascar.</p>
+        <h2 style="font-size: 2.5rem; font-weight: 700; color: #111827; margin: 0 0 1rem 0;"><?= lang('Texte.Nosprojets') ?></h2>
+        <p style="color: #4b5563; font-size: 1.125rem; line-height: 1.6; margin: 0;"><?= lang('Texte.decouvrez_initiatives') ?></p>
       </div>
 
       <!-- Grille horizontale forcée pour aligner les 3 cartes côte à côte -->
@@ -126,8 +126,8 @@
             <span style="position: absolute; top: 1rem; right: 1rem; background-color: rgba(255,255,255,0.9); padding: 0.25rem 0.75rem; border-radius: 9999px; font-size: 0.75rem; font-weight: 600; color: #374151;">Éducation</span>
           </div>
           <div style="padding: 1.5rem;">
-            <h3 style="font-size: 1.25rem; font-weight: 700; color: #111827; margin: 0 0 0.75rem 0;">Éducation pour tous</h3>
-            <p style="color: #4b5563; font-size: 0.875rem; line-height: 1.6; margin: 0 0 1.5rem 0;">Construction d'écoles et fourniture de matériel éducatif pour les enfants des zones rurales.</p>
+            <h3 style="font-size: 1.25rem; font-weight: 700; color: #111827; margin: 0 0 0.75rem 0;"><?= lang('Texte.education_pour_tous') ?></h3>
+            <p style="color: #4b5563; font-size: 0.875rem; line-height: 1.6; margin: 0 0 1.5rem 0;"><?= lang('Texte.construction_ecoles') ?></p>
             <a href="<?= base_url(($lang ?? 'fr') . '/projets') ?>" style="color: #2D8659; text-decoration: none; font-size: 0.875rem; font-weight: 600; display: inline-flex; align-items: center; gap: 0.25rem;">En savoir plus ➔</a>
           </div>
         </div>
@@ -162,8 +162,8 @@
 
       <!-- BOUTON CENTRAL : VOIR TOUS LES PROJETS (FIGMA STYLE) -->
       <div style="text-align: center; width: 100%;">
-        <a href="<?= base_url(($lang ?? 'fr') . '/projets') ?>" style="display: inline-block; background-color: #2D8659; color: #ffffff; padding: 0.85rem 2.5rem; border-radius: 9999px; text-decoration: none; font-size: 0.9rem; font-weight: 600; transition: background 0.2s; box-shadow: 0 4px 6px -1px rgba(45,134,89,0.2);">
-          Voir tous les projets
+        <a href="<?= base_url( $lang . '/projects') ?>" style="display: inline-block; background-color: #2D8659; color: #ffffff; padding: 0.85rem 2.5rem; border-radius: 9999px; text-decoration: none; font-size: 0.9rem; font-weight: 600; transition: background 0.2s; box-shadow: 0 4px 6px -1px rgba(45,134,89,0.2);">
+           <?= lang('Texte.voir_tous_projets') ?>
         </a>
       </div>
 
@@ -176,8 +176,8 @@
       
       <!-- En-tête de la section -->
       <div style="text-align: center; max-width: 45rem; margin: 0 auto 3.5rem auto;">
-        <h2 style="font-size: 2.5rem; font-weight: 700; color: #111827; margin: 0 0 1rem 0;">Notre Impact en Vidéo</h2>
-        <p style="color: #4b5563; font-size: 1.125rem; line-height: 1.6; margin: 0;">Découvrez comment votre soutien transforme des vies à Madagascar.</p>
+        <h2 style="font-size: 2.5rem; font-weight: 700; color: #111827; margin: 0 0 1rem 0;"><?= lang('Texte.notre_impact_video') ?></h2>
+        <p style="color: #4b5563; font-size: 1.125rem; line-height: 1.6; margin: 0;"><?= lang('Texte.decouvrez_soutien') ?></p>
       </div>
 
       <!-- Lecteur Vidéo au design Figma -->

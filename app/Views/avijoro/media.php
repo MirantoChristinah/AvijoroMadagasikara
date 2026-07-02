@@ -7,10 +7,10 @@
     <div class="home-container">
       <div style="max-width: 800px; margin: 0 auto; color: #ffffff; padding: 0 1rem;">
         <h1 style="font-size: 3.5rem; font-weight: 700; margin: 0 0 1.5rem 0; letter-spacing: -0.5px;">
-          Médiathèque
+          <?= lang ('Texte.mediatheque')?>
         </h1>
         <p style="font-size: 1.15rem; font-weight: 400; opacity: 0.95; line-height: 1.6; margin: 0;">
-          Explorez notre collection de photos, vidéos et documents témoignant de notre action sur le terrain.
+          <?= lang ('Texte.explorez_medias') ?>
         </p>
       </div>
     </div>
@@ -69,17 +69,17 @@
                 <?php if ($media['type'] === 'Vidéo'): ?>
                   <span class="media-badge-type">
                     <svg xmlns="http://w3.org" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m22 8-6 4 6 4V8Z"></path><rect width="14" height="12" x="2" y="6" rx="2" ry="2"></rect></svg>
-                    Vidéos
+                     <?= lang ('Texte.videos') ?>
                   </span>
                 <?php elseif ($media['type'] === 'Document'): ?>
                   <span class="media-badge-type">
                     <svg xmlns="http://w3.org" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"></path><polyline points="14 2 14 8 20 8"></polyline></svg>
-                    Documents
+                       <?= lang ('Texte.documents') ?>
                   </span>
                 <?php else: ?>
                   <span class="media-badge-type">
                     <svg xmlns="http://w3.org" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z"></path><circle cx="12" cy="13" r="3"></circle></svg>
-                    Photos
+                      <?= lang ('Texte.photos') ?>
                   </span>
                 <?php endif; ?>
 
@@ -110,7 +110,7 @@
           <?php endforeach; ?>
         <?php else: ?>
           <div style="grid-column: span 3; text-align: center; padding: 4rem 0; color: #717182;">
-            <p style="font-size: 1.1rem;">Aucun fichier disponible pour le moment.</p>
+            <p style="font-size: 1.1rem;"> <?= lang ('Texte.aucun_fichier')?></p>
           </div>
         <?php endif; ?>
 
