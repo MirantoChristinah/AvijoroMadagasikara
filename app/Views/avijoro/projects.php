@@ -15,8 +15,6 @@
     <div class="container mx-auto px-4" style="max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; box-sizing: border-box; width: 100%;">
       <div style="display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap; font-size: 0.9rem;">
         
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#4b5563" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle; margin-right: 0.25rem;"><polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"></polygon></svg>
-        <span style="color: #4b5563; font-weight: 600; margin-right: 0.5rem;">📁 <?= lang('Texte.projects_filtrer') ?> :</span>
         
         <?php 
         $cat_active = $categorie_selectionnee ?? 'Tous'; 

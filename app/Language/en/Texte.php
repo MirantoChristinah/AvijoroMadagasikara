@@ -2,6 +2,68 @@
 
 return [
     
+
+    //fana
+
+    'menu_accueil' => "Home",
+    'menu_qui_sommes_nous' => "About Us",
+    'menu_projets' => "Our Projects",
+    'menu_actualites' => "News",
+    'menu_soutenir' => "Support Us",
+    'menu_media' => "Media",
+
+    'actualites_retour'     => 'Back to news',
+    'actualites_voir_toutes' => 'View all news',
+    'video_non_supportee'   => 'Your browser does not support the video tag.',
+    'aucun_fichier' => 'No files available at the moment.',
+    'newsletter' => "Newsletter",
+
+    //new
+    'lire_la_suite ➔' => 'Read more',
+    'sub_histoire' => "Our History",
+    'sub_mission'  => "Mission & Vision",
+    'sub_valeurs'  => "Our Values",
+    'sub_parcours' => "Our Journey",
+    'sub_equipe'   => "The Team",
+
+    //Component
+   'accueil' => 'Home',
+   'Apropos' => 'About Us',
+   'Projets' => 'Projects',
+   'Actualite' => 'News and Updates',
+   'Media' => 'Media',
+   'FAQ' => 'FAQ',
+   'joindre' => 'Join Our Organization',
+   'Contact' => 'Contact Us',
+   'Nosprojets' => 'Our Projects',
+   'decouvrez_initiatives' => 'Discover our initiatives driving impactful transformation across Madagascar',
+   'education_pour_tous'   => 'Education for All',
+   'construction_ecoles'   => 'Constructing schools and providing educational materials for children in rural regions',
+     
+   'voir_tous_projets'   => 'View all projects',
+   'notre_impact_video'  => 'Our impact in video',
+   'decouvrez_soutien'   => 'Discover how your support generates sustainable change in Madagascar.',
+   
+   //new_detail
+   'actualites_retour'     => 'Return to news archive',
+   'actualites_voir_toutes' => 'View all news',
+   'video_non_supportee'   => 'Your browser does not support video playback.',
+   'lire_la_suite' => 'Read more ➔',
+   'texte_hero'               => 'Stay informed of our latest initiatives, events, and milestones across Madagascar.',
+    'tous_droits_reserves' => 'All rights reserved.',
+    'mentions_legales'         => 'Legal Notice',
+    'politique_confidentialite' => 'Privacy Policy',
+    'mediatheque'       => 'Media Library',
+    'explorez_medias'   => 'Explore our collection of photographs, videos, and documents showcasing our impact on the ground.',
+      
+    'type_media'      => 'Media Type:',
+    'tous'            => 'All',
+    'photos'          => 'Photos',
+    'videos'          => 'Videos',
+    'documents'       => 'Documents',
+    'aucun_fichier'   => 'No files available at the moment.',
+
+
     // Menu de navigation
     'menu_accueil'         => 'Home',
     'menu_a_propos'        => 'About Us',
@@ -280,5 +342,123 @@ return [
     'contact_label_suivez_nous' => 'Follow us',
     'contact_bouton_envoyer'    => 'Send message',
     'contact_titre_map'         => 'Find us',
+
+
+        // Section 1 : Hero
+    'hero_rejoignez_nous_titre' => "Join Us",
+    'hero_rejoignez_nous_desc' => "Become a volunteer and help transform lives in Madagascar.",
+
+    // Section 2 : Pourquoi devenir bénévole
+    'benevole_pourquoi_titre' => "Why Become a Volunteer?",
+    'benevole_pourquoi_desc' => "Joining AVIJORO means becoming part of a committed community that makes a difference every day.",
+    'benefit_impact' => "Contribute to a real social impact",
+    'benefit_competences' => "Develop new skills",
+    'benefit_rencontres' => "Meet like-minded committed people",
+    'benefit_projets' => "Participate in concrete projects",
+    'benefit_formation' => "Receive ongoing training",
+    'benefit_attestation' => "Get a volunteering certificate",
+
+    // Section 3 : Opportunités
+    'opp_titre' => "Volunteering Opportunities",
+    'opp_desc' => "Whatever your profile, there is a place for you in our association.",
+    'opp_education_titre' => "Education",
+    'opp_education_desc' => "Teaching, tutoring, running workshops",
+    'opp_sante_titre' => "Healthcare",
+    'opp_sante_desc' => "Medical assistance, awareness, vaccination campaigns",
+    'opp_environnement_titre' => "Environment",
+    'opp_environnement_desc' => "Reforestation, clean-ups, ecological awareness",
+    'opp_communication_titre' => "Communication",
+    'opp_communication_desc' => "Social media management, writing, photography",
+    'opp_logistique_titre' => "Logistics",
+    'opp_logistique_desc' => "Event organization, stock management",
+    'opp_administration_titre' => "Administration",
+    'opp_administration_desc' => "Accounting, project management, reporting",
+
+    // Section 4 : Formulaire
+    'form_titre' => "Application Form",
+    'form_desc' => "Fill out this form and we will contact you shortly.",
+    'form_merci' => "Thank you!",
+    'form_prenom' => "First Name",
+    'form_nom' => "Last Name",
+    'form_email' => "Email",
+    'form_telephone' => "Phone number",
+    'form_disponibilite' => "Availability",
+    'form_dispo_selectionnez' => "Select your availability",
+    'form_dispo_plein_temps' => "Full-time (Full week)",
+    'form_dispo_partiel' => "Part-time (A few days a week)",
+    'form_dispo_weekend' => "Weekends only",
+    'form_dispo_soiree' => "Evenings (After school / work)",
+    'form_dispo_ponctuel' => "Occasional (Specific events and missions)",
+    'form_competences' => "Skills and fields of interest",
+    'form_competences_placeholder' => "E.g.: Teaching, healthcare, IT...",
+    'form_motivation' => "Motivation",
+    'form_motivation_placeholder' => "Why do you want to join AVIJORO?",
+    'form_bouton_envoyer' => "Submit my application",
+
+        // ==========================================
+    // PAGE CONTACT
+    // ==========================================
+    'contact_hero_titre' => "Contact Us",
+    'contact_hero_desc' => "We are here to listen. Feel free to contact us for any questions or suggestions.",
+    
+    // Coordonnées (Bloc Gauche)
+    'contact_coordonnees_titre' => "Contact Information",
+    'contact_adresse_label' => "Address",
+    'contact_telephone_label' => "Phone",
+    'contact_email_label' => "Email",
+    'contact_horaires_label' => "Hours",
+    'contact_horaires_semaine' => "Mon - Fri: 8:00 AM - 5:00 PM",
+    'contact_horaires_samedi' => "Sat: 8:00 AM - 12:00 PM",
+    
+    // Formulaire (Bloc Droite)
+    'contact_form_titre' => "Send Us a Message",
+    'contact_form_nom' => "Full Name",
+    'contact_form_email' => "Email",
+    'contact_form_telephone' => "Phone Number",
+    'contact_form_sujet' => "Subject",
+    
+    // Menu Déroulant des Sujets
+    'contact_sujet_selectionnez' => "Select a subject",
+    'contact_sujet_partenariat' => "Become a partner",
+    'contact_sujet_benevolat' => "Question about volunteering",
+    'contact_sujet_autre' => "Other request",
+    
+    // Message et validation
+    'contact_form_message' => "Message",
+    'contact_message_placeholder' => "Describe your request...",
+    'contact_suivez_nous' => "Follow Us",
+    'contact_bouton_envoyer' => "Send Message",
+    
+    // Section Carte
+    'contact_map_titre' => "Find Us",
+
+        // Barre de filtres Média
+    'media_type_label' => "Media type:",
+    'media_filtre_tous' => "All",
+    'media_filtre_photos' => "Photos",
+    'media_filtre_videos' => "Videos",
+    'media_filtre_documents' => "Documents",
+
+    'news_aucun_article' => 'No files are currently available.',
+
+
+    
+    'project_back_to_list'        => 'Back to projects',
+    'project_status_ongoing'      => 'Ongoing',
+    'project_status_completed'    => 'Completed',
+    'project_heading_presentation'=> 'Project Overview',
+    'project_heading_specifications' => 'Technical Details',
+    'project_label_progress'      => 'Progress',
+    'project_label_beneficiaries' => 'Beneficiaries',
+    'project_label_location'      => 'Location',
+    'project_label_start_date'    => 'Start Date',
+    'project_label_end_date'      => 'End Date',
+    'project_value_undefined'     => 'Not defined',
+    'project_btn_view_document'   => 'View official document',
+
+
+    'media_btn_retour' => 'Back to Gallery',
+  'media_ouvrir_telecharger' => 'Open or Download document',
+
 ];
 ?>

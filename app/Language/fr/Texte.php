@@ -1,31 +1,22 @@
 <?php
 
 return [
-
-<<<<<<< Updated upstream
-// HEADER MENU
-    'menu_accueil' => "Accueil",
-    'menu_a_propos' => "À propos",            
-    'menu_qui_sommes_nous' => "Qui sommes-nous ?",
-    'menu_projets' => "Nos Projets",
-    'menu_actualites' => "Actualités",
-    'menu_media' => "Media",
-    'menu_faq' => "FAQ",                     
-    'menu_rejoindre' => "Nous rejoindre",     
-    'menu_soutenir' => "Nous soutenir",
-    'menu_contact' => "Contact",
- 
-   // HEADER DROPDOWN SUB-MENU                
+          
     'sub_histoire' => "Notre histoire",
     'sub_mission'  => "Mission & Vision",
     'sub_valeurs'  => "Nos valeurs",
     'sub_parcours' => "Notre parcours",
     'sub_equipe'   => "L'équipe",
+      
+    'menu_accueil' => "Accueil",
+    'menu_qui_sommes_nous' => "Qui sommes-nous ?",
+    'menu_projets' => "Nos Projets",
+    'menu_actualites' => "Actualités",
+    'menu_soutenir' => "Nous soutenir",
+    'menu_media' => "Média",
+    
+    'newsletter' => "Newsletter",
 
-    // Boutons génériques
-    'bouton_don'           => 'Donation',
-
-=======
 
    //Composant
    'accueil' => 'Accueil',
@@ -40,7 +31,8 @@ return [
     'decouvrez_initiatives' => 'Découvrez nos initiatives qui transforment des vies à travers tout Madagascar',
     'education_pour_tous'   => 'Éducation pour tous',
     'construction_ecoles'   => 'Construction d\'écoles et fourniture de matériel éducatif pour les enfants des zones rurales',
-    
+    'aucun_fichier' => 'Aucun fichier disponible pour le moment.',
+
     'type_media'      => 'Type de média :',
     'tous'            => 'Tous',
     'photos'          => 'Photos',
@@ -63,7 +55,6 @@ return [
     'explorez_medias'   => 'Explorez notre collection de photos, vidéos et documents témoignant de notre action sur le terrain.',
 
     
->>>>>>> Stashed changes
     // HERO
     'hero_titre' => "Ensemble pour l'avenir de Madagascar",
     'hero_description' => "Rejoignez les bénévoles d'AVIJORO pour mener des actions concrètes et durables.",
@@ -322,5 +313,120 @@ return [
     'contact_label_suivez_nous' => 'Suivez-nous',
     'contact_bouton_envoyer'    => 'Envoyer le message',
     'contact_titre_map'         => 'Nous trouver',
+
+        // Section 1 : Hero
+    'hero_rejoignez_nous_titre' => "Rejoignez-nous",
+    'hero_rejoignez_nous_desc' => "Devenez bénévole et contribuez à transformer des vies à Madagascar.",
+
+    // Section 2 : Pourquoi devenir bénévole
+    'benevole_pourquoi_titre' => "Pourquoi devenir bénévole ?",
+    'benevole_pourquoi_desc' => "Rejoindre AVIJORO, c'est faire partie d'une communauté engagée qui fait la différence chaque jour.",
+    'benefit_impact' => "Contribuer à un impact social réel",
+    'benefit_competences' => "Développer de nouvelles compétences",
+    'benefit_rencontres' => "Rencontrer des personnes engagées",
+    'benefit_projets' => "Participer à des projets concrets",
+    'benefit_formation' => "Recevoir une formation continue",
+    'benefit_attestation' => "Obtenir une attestation de bénévolat",
+
+    // Section 3 : Opportunités
+    'opp_titre' => "Opportunités de bénévolat",
+    'opp_desc' => "Quel que soit votre profil, il y a une place pour vous dans notre association.",
+    'opp_education_titre' => "Éducation",
+    'opp_education_desc' => "Enseignement, soutien scolaire, animation d'ateliers",
+    'opp_sante_titre' => "Santé",
+    'opp_sante_desc' => "Assistance médicale, sensibilisation, campagnes de vaccination",
+    'opp_environnement_titre' => "Environnement",
+    'opp_environnement_desc' => "Reforestation, nettoyage, sensibilisation écologique",
+    'opp_communication_titre' => "Communication",
+    'opp_communication_desc' => "Gestion des réseaux sociaux, rédaction, photographie",
+    'opp_logistique_titre' => "Logistique",
+    'opp_logistique_desc' => "Organisation d'événements, gestion de stocks",
+    'opp_administration_titre' => "Administration",
+    'opp_administration_desc' => "Comptabilité, gestion de projets, reporting",
+
+    // Section 4 : Formulaire
+    'form_titre' => "Formulaire de candidature",
+    'form_desc' => "Remplissez ce formulaire et nous vous contacterons rapidement.",
+    'form_merci' => "Merci !",
+    'form_prenom' => "Prénom",
+    'form_nom' => "Nom",
+    'form_email' => "Email",
+    'form_telephone' => "Téléphone",
+    'form_disponibilite' => "Disponibilité",
+    'form_dispo_selectionnez' => "Sélectionnez votre disponibilité",
+    'form_dispo_plein_temps' => "Plein temps (Semaine complète)",
+    'form_dispo_partiel' => "Temps partiel (Quelques jours en semaine)",
+    'form_dispo_weekend' => "Uniquement les week-ends",
+    'form_dispo_soiree' => "En soirée (Après les cours / le travail)",
+    'form_dispo_ponctuel' => "Ponctuel (Événements et missions spécifiques)",
+    'form_competences' => "Compétences et domaines d'intérêt",
+    'form_competences_placeholder' => "Ex: Enseignement, santé, informatique...",
+    'form_motivation' => "Motivation",
+    'form_motivation_placeholder' => "Pourquoi souhaitez-vous rejoindre AVIJORO ?",
+    'form_bouton_envoyer' => "Envoyer ma candidature",
+         // ==========================================
+    // PAGE CONTACT
+    // ==========================================
+    'contact_hero_titre' => "Contactez-nous",
+    'contact_hero_desc' => "Nous sommes à votre écoute. N'hésitez pas à nous contacter pour toute question ou suggestion.",
+    
+    // Coordonnées (Bloc Gauche)
+    'contact_coordonnees_titre' => "Nos coordonnées",
+    'contact_adresse_label' => "Adresse",
+    'contact_telephone_label' => "Téléphone",
+    'contact_email_label' => "Email",
+    'contact_horaires_label' => "Horaires",
+    'contact_horaires_semaine' => "Lun - Ven : 8h00 - 17h00",
+    'contact_horaires_samedi' => "Sam : 8h00 - 12h00",
+    
+    // Formulaire (Bloc Droite)
+    'contact_form_titre' => "Envoyez-nous un message",
+    'contact_form_nom' => "Nom complet",
+    'contact_form_email' => "Email",
+    'contact_form_telephone' => "Téléphone",
+    'contact_form_sujet' => "Sujet",
+    
+    // Menu Déroulant des Sujets
+    'contact_sujet_selectionnez' => "Sélectionnez un sujet",
+    'contact_sujet_partenariat' => "Devenir partenaire",
+    'contact_sujet_benevolat' => "Question sur le bénévolat",
+    'contact_sujet_autre' => "Autre demande",
+    
+    // Message et validation
+    'contact_form_message' => "Message",
+    'contact_message_placeholder' => "Décrivez votre demande...",
+    'contact_suivez_nous' => "Suivez-nous",
+    'contact_bouton_envoyer' => "Envoyer le message",
+    
+    // Section Carte
+    'contact_map_titre' => "Nous trouver",
+
+        // Barre de filtres Média
+    'media_type_label' => "Type de média :",
+    'media_filtre_tous' => "Tous",
+    'media_filtre_photos' => "Photos",
+    'media_filtre_videos' => "Vidéos",
+    'media_filtre_documents' => "Documents",
+
+
+
+    'project_back_to_list'        => 'Retour aux projets',
+    'project_status_ongoing'      => 'En cours',
+    'project_status_completed'    => 'Terminé',
+    'project_heading_presentation'=> 'Présentation du projet',
+    'project_heading_specifications' => 'Fiche technique',
+    'project_label_progress'      => 'Progression',
+    'project_label_beneficiaries' => 'Bénéficiaires',
+    'project_label_location'      => 'Localisation',
+    'project_label_start_date'    => 'Date de début',
+    'project_label_end_date'      => 'Date de fin',
+    'project_value_undefined'     => 'Non définie',
+    'project_btn_view_document'   => 'Consulter le document officiel',
+  
+    'media_btn_retour' => 'Retour à la médiathèque',
+        '   media_ouvrir_telecharger' => 'Ouvrir ou Télécharger le document',
+
+
+
 ];
 ?>

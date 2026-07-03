@@ -1,0 +1,420 @@
+<?php
+
+return [
+
+    //composant
+    'accueil' => 'Tongasoa',
+    'Apropos' => 'Mombamomba ny fikambanana',
+    'Projets' => 'Ireo tetikasa',
+    'Actualite' => 'Ireo vaovao',
+    'Media' => 'Sary sy horonantsary',
+    'FAQ' => 'Fametram-panontaniana',
+    'joindre' => 'Hanatevin-daharana',
+    'Contact' => 'Mifandraisa aminay',
+    'Nosprojets' => 'Ireo Tetikasa',
+
+    'sub_histoire' => "Ny tantaranay",
+    'sub_mission'  => "Iraka & Vinavina",
+    'sub_valeurs'  => "Ny soatoavinay",
+    'sub_parcours' => "Ny dianay",
+    'sub_equipe'   => "Ny mpikambana",
+    'newsletter' => "Fampitaham-baovao",
+
+
+    'decouvrez_initiatives' => 'Fantaro ireo hetsika ataonay manova fiainana manerana an’i Madagasikara',
+    'education_pour_tous'   => 'Fanabeazana ho an’ny rehetra',
+    'construction_ecoles'   => 'Fananganana sekoly sy fanomezana fitaovam-pianarana ho an’ireo ankizy any ambanivohitra',
+    'voir_tous_projets'   => 'Hijery ireo tetikasa rehetra',
+    'notre_impact_video'  => 'Ny vokatry ny asantsika amin’ny alalan’ny horonantsary',
+    'decouvrez_soutien'   => 'Fantaro ny fomba hanovan’ny fanohananao fiainana eto Madagasikara.',
+    'tous_droits_reserves' => 'Zo rehetra voatana.',
+
+    //new_detail
+
+    'actualites_retour'     => 'Hiverina amin’ireo vaovao',
+    'actualites_voir_toutes' => 'Hijery ireo vaovao rehetra',
+    'video_non_supportee'   => 'Tsy zakan’ny mpitety tranonkalanao ny fandefasana horonantsary.',
+    'lire_la_suite' => 'Hamaky ny tohiny ➔',
+    'texte_hero'  => 'Araho vaovao hatrany ireo hetsika, zava-bita, ary ezaka farany ataonay manerana an\'i Madagasikara.',
+
+    // HERO
+    'hero_titre' => "Ndao hifarana ho an'ny hoavin'i Madagasikara",
+    'hero_description' => "Andao hiaraka amin'ireo mpanolo-tena ato amin'ny AVIJORO hanao asa mivaingana sy maharitra.",
+    'bouton_rejoindre' => "Ho tonga Mpanolo-tena",
+    'bouton_don' => "Hanao Donation",
+    'bouton_decouvrir' => "Hijery ny Asa Ataonay",
+
+    // MISSION
+    'mission_titre' => "Ny Iraka & Ny Fanentanana Nataonay",
+    'mission_description' => "Jereo ny fomba fiasa isan'andro eny an-kianja ataon'ny fikambananay.",
+
+    'bloc_mission_titre' => "Ny Iraka Nampisahanina",
+    'bloc_mission_desc' => "Manohana ny fampandrosoana eny ifotony amin'ny alalan'ny fanabeazana sy ny fahasalamana.",
+
+    'bloc_vision_titre' => "Ny Vinany",
+    'bloc_vision_desc' => "Manorina hoavy feno firaisankina ho an'ny olom-pirenena rehetra.",
+
+    'bloc_valeurs_titre' => "Ny Soatoavinay",
+    'bloc_valeurs_desc' => "Mangarahara, fanoloran-tena, fanajana ary firaisankina.",
+
+    // STATISTIQUES
+    'stat_benevoles' => "Mpanolo-tena mavitrika",
+    'stat_projets' => "Tetikasa vita",
+    'stat_beneficiaires' => "Ireo nahazo tombontsoa",
+    'stat_reussite' => "Taham-pahombiazana",
+
+    // FOOTER
+    'footer_description' => "Ny AVIJORO Madagasikara dia fikambanana natokana hanohanana ny mponina eny ifotony.",
+    'footer_liens_titre' => "Rohy haingana",
+    'footer_contact' => "Mifandraisa aminay",
+    'footer_newsletter' => "Newsletter",
+
+    'newsletter_sous_titre' => "Araho tsy tapaka ny vaovao momba ny asanay",
+    'newsletter_placeholder' => "Ny mailakao...",
+    'newsletter_bouton' => "Hisoratra anarana",
+
+    'mentions_legales' => "Fampahafantarana ara-dalàna",
+    'politique_confidentialite' => "Fitsipika momba ny tsiambaratelo",
+
+    'droits_reserves' => "Zo rehetra voatana",
+
+    // HEADER MENU
+    'menu_accueil' => "Tongasoa",
+    'menu_qui_sommes_nous' => "Iza moa izahay ?",
+    'menu_projets' => "Ireo Tetikasanay",
+    'menu_actualites' => "Vaovao",
+    'menu_soutenir' => "Hanohana anay",
+    'menu_media' => "Haino aman-jery",
+
+    // CONTACT
+    'contact_titre'          => 'Mifandraisa aminay',
+    'contact_slogan'         => 'Manana fanontaniana, soso-kevitra na te hiara-hiasa aminay? Vonona hihaino anao ny rantsana misahana izany.',
+    'coordonnees_titre'      => 'Ny Toerana misy anay',
+    'contact_adresse'        => 'Adiresy',
+    'contact_telephone'      => 'Nomeraon-telefaonina',
+    'contact_email'          => 'Mailaka',
+    'contact_horaires'       => 'Ora fisokafana',
+    'horaires_semaine'       => 'Alatsinainy - Zoma : 08ora maraina - 05ora hariva',
+    'horaires_samedi'        => 'Sabotsy : 09ora maraina - 12ora antoandro',
+    'suivez_nous'            => 'Araho izahay',
+    'envoyer_message_titre'  => 'Hamelàna hafatra izahay',
+    'form_nom'               => 'Anarana feno',
+    'form_email'             => 'Adiresy mailaka',
+    'form_telephone'         => 'Nomeraon-telefaonina',
+    'form_sujet'             => 'Antom-pifandraisana',
+    'form_bouton_envoyer'    => 'Handefa ny hafatra',
+
+    // ABOUT
+    'about_titre'         => 'Iza moa izahay ?',
+    'about_slogan'        => 'Fantaro ny tantara, ny soatoavina ary ny fanoloran-tenan\'ny fikambanana AVIJORO eto Madagasikara.',
+    'histoire_titre'      => 'Ny Tantarantsika',
+    'histoire_p1'         => 'Niorina vokatry ny fikambanan\'ireo mpanolo-tena maromaro feno faharisihana, ny AVIJORO dia teraka avy amin\'ny finiavana hitondra fanohanana mivaingana ho an\'ny fiarahamonina eny ifotony.',
+    'histoire_p2'         => 'Hatramin\'ny niandohany, miara-miasa tànana am-piasana amin\'ny mponina izahay mba hametrahana vahaolana maharitra sy mahaleo tena.',
+    'histoire_p3'         => 'Ny tetikasa tsirairay tontosa dia manamafy ny finoanay fa raha tafaray isika, afaka manorina hoavy tsara kokoa sy feno firaisankina.',
+    'mission_titre_bloc'  => 'Ny Iraka',
+    'mission_texte_bloc'  => 'Manampy, manabe ary manohana ireo mponina marefo amin\'ny alalan\'ny tetikasa fidirana amin\'ny fanabeazana, fahasalamana ary fampandrosoana maharitra.',
+    'vision_titre_bloc'   => 'Ny Vinany',
+    'vision_texte_bloc'   => 'Ho tonga mpisehatra fototra amin\'ny fanovana eto Madagasikara, izay ahafahan\'ny fiarahamonina tsirairay manana ny loharanon-karena ilainy hiainana am-pahamendrehana.',
+
+    // DON / SOUTENIR
+    'soutenir_titre'          => 'Hanohana ny AVIJORO',
+    'soutenir_slogan'         => 'Ny kely vita dia misy vidiny avokoa. Ny fahalonatan-tananao no mamelona ireo tetikasa maha-olona sy manohana ny mponina eto Madagasikara.',
+    'comment_don_titre'       => 'Ahoana no fomba fanaovana donation ?',
+    'comment_don_desc'        => 'Safidio ny fomba fandoavam-bola mety aminao indrindra handefasana ny fandraisana anjara am-pilaminana sy azo antoka.',
+    'don_banque_titre'        => 'Famindram-bola amin\'ny Banky',
+    'don_qr_desc'             => 'Scan-eo ny kaody QR manokana',
+    'don_qr_details'          => 'Azo ampiasaina amin\'ny alalan\'ny fampiharana finday an\'ny bankinao',
+    'don_fb_desc'             => 'Idiro ny fandraisana anjara iombonana an-tsoratra eto amin\'ny aterineto',
+    'impact_don_titre'        => 'Ny vokatry ny donation-nao',
+    'impact_don_desc'         => 'Jereo ny fomba hampiasana amin\'ny fomba mivaingana ny volanao eny an-kianja hitondrana fanovana.',
+    'impact_1'                => 'Afaka manome fitaovana fianarana feno ho an\'ny ankizy iray mandritra ny taona iray.',
+    'impact_2'                => 'Miantoka fizaham-pahasalamana maimaim-poana sy fanafody fototra ho an\'ny fianakaviana iray.',
+    'impact_3'                => 'Mandray anjara amin\'ny fividianana masomboly sy fitaovana ho an\'ny tetikasa fambolena eny an-toerana.',
+    'impact_4'                => 'Manampy amin\'ny famatsiam-bola ho an\'ny fananganana sy fametrahana fantsakana rano fisotro madio.',
+    'transparence_titre'      => 'Mangarahara ny fitantanana ny Vola',
+    'transparence_desc'       => 'Manome toky izahay fa hampiasa ny Ariary tsirairay amin\'ny fomba feno andraikitra, ara-drariny ary mangarahara.',
+    'repartition_titre'       => 'Ny fizarazarana ny fandaniana',
+    'repart_projets'          => 'Famatsiam-bola mivantana ho an\'ny tetikasa eny an-kianja',
+    'repart_fonctionnement'   => 'Ny fandaniana ara-panjakana sy ny lojistika',
+    'repart_comm'             => 'Ny fifandraisana sy ny fitadiavana mpamatsy vola',
+
+    // FAQ
+    'faq_titre'           => 'Fandaharana Fanontaniana sy Valiny',
+    'faq_slogan'          => 'Manana fanontaniana momba ny asan\'ny AVIJORO ve ianao? Jereo eto haingana ny valiny rehetra.',
+    'faq_cat_general'     => 'Ankapobeny',
+    'faq_cat_benevolat'   => 'Mpanolo-tena & Fanoloran-tena',
+    'faq_cat_dons'        => 'Donation & Famatsiam-bola',
+    'faq_q1'              => 'Inona moa ny fikambanana AVIJORO ?',
+    'faq_a1'              => 'Ny AVIJORO dia fikambanana mpanao asa soa maha-olona eto Madagasikara izay miasa ho an\'ny fidirana amin\'ny fanabeazana, ny fanatsarana ny fahasalamana ary ny fampandrosoana maharitra ny fiarahamonina eny ifotony.',
+    'faq_q2'              => 'Aiza ho aiza marina no miasa ny fikambanana ?',
+    'faq_a2'              => 'Eto Antananarivo ny foibenay, saingy ny tetikasa eny an-kianja kosa dia miantefa indrindra amin\'ireo faritra ambanivohitra mitoka-monina sy ireo tanàna sahirana manerana an\'i Madagasikara.',
+    'faq_q3'              => 'Ahoana no ahafahako manaraka ny fivoaran\'ny tetikasa ?',
+    'faq_a3'              => 'Azonao atao ny manaraka mivantana ny zava-bistanay rehetra ao amin\'ny pejintsika sosialy (Facebook, Instagram) ary koa ao amin\'ny faritry ny "Vaovao" sy "Haino aman-jery" amin\'ity tranonkala ity.',
+    'faq_q4'              => 'Ahoana no ho tonga mpanolo-tena ao amin\'ny AVIJORO ?',
+    'faq_a4'              => 'Tsotra kely izany! Tsidiho ny pejy "Hanohana anay" na asio hafatra izahay amin\'ny alalan\'ny fampiasana ny taratasy fenoina ao amin\'ny pejy "Mifandraisa aminay" ka lazao ao ny fahaizanao sy ny fotoana malalanao.',
+    'faq_q5'              => 'Afaka manao asa mpanolo-tena avy lavitra ve ?',
+    'faq_a5'              => 'Eny tokoa! Mitady mpanolo-tena miasa avy lavitra matetika izahay hanampy anay amin\'ny fifandraisana, fandikan-teny, fitantanana tetikasa na fampandrosoana ara-tsolosaina.',
+    'faq_q6'              => 'Ahoana no ampiasana ny volako rehefa manao donation aho ?',
+    'faq_a6'              => 'Ny 75%-n\'ny donation tsirairay dia mankany amin\'ny famatsiam-bola ny asanay mivaingana eny an-kianja. Ny 25% ambony kosa dia miantoka ny lojistika farany kely ilaina sy ny fifandraisan\'ny fikambanana.',
+    'faq_q7'              => 'Afaka manome fitaovana ve aho (boky, fitafiana, sns.) ?',
+    'faq_a7'              => 'Eny, manao fanangonana fitaovana fianarana, fitaovana ara-pahasalamana ary fitafiana izahay indraindray. Mifandraisa amin\'ny rantsana miandraikitra izany amin\'ny alalan\'ny mailaka mba handaminana ny lojistika.',
+
+        // --- JOIN ---
+    'join_titre'                       => 'Ho tonga Mpilatsaka an-tsitrapo',
+    'join_slogan'                      => 'Omeo ny fotoanao sy ny fahaizanao hampitomboana ny asantsika feno firaisankina eto Madagasikara.',
+    'pourquoi_benevole_titre'          => 'Nahoana no hanatevin-daharana anay ?',
+    'pourquoi_benevole_desc'           => 'Ny fidirana ao amin\'ny AVIJORO dia midika ho fandraisana anjara amin\'ny traikefa maha-olona miavaka, mangarahara ary akaiky ny zava-misy eny am-potony.',
+    'avantage_1'                       => 'Mandray anjara mivantana amin\'ny fampandrosoana eny ifotony.',
+    'avantage_2'                       => 'Mizara sy manome vidiny ny fahaiza-manao anananao.',
+    'avantage_3'                       => 'Miaina traikefa maha-olona tsy hay hohalinoina.',
+    'avantage_4'                       => 'Mivoatra ao anatin\'ny vondrona mavitrika.',
+    'avantage_5'                       => 'Hihaona amin\'ny olona manolo-tena sy tia firaisankina.',
+    'avantage_6'                       => 'Miasa ao anatin\'ny fangaraharana tanteraka sy ny etika.',
+    'opportunites_titre'               => 'Ny Rantsana Fiasanay',
+    'opportunites_desc'                => 'Jereo ireo sehatra azonao idirana mifanaraka amin\'ny talenta sy ny fanirianao.',
+    'pole_edu_titre'                   => 'Fanohanana ara-pianarana & Fanabeazana',
+    'pole_edu_desc'                    => 'Ampio amin\'ny fampihodinana ny atrikasa fampianarana sy ny fiarahana amin\'ireo ankizy sahirana.',
+    'pole_sante_titre'                 => 'Fahasalamana & Fanentana',
+    'pole_sante_desc'                  => 'Mandray anjara amin\'ny fikarakarana ny fitsaboana mitety vohitra sy ny hetsika fisorohana.',
+    'pole_env_titre'                   => 'Tontolo iainana & Fampandrosoana',
+    'pole_env_desc'                    => 'Mandray anjara amin\'ny tetikasa fidirana amin\'ny rano fisotro madio sy ny fambolen-kazo eny ifotony.',
+    'form_candidature_titre'           => 'Taratasy Fisoratana Anarana',
+    'form_candidature_desc'            => 'Fenoy ity takelaka ity handefasana ny mombamomba anao. Hifandray aminao haingana ny rantsana mpitantana.',
+    'label_nom'                        => 'Anarana sy Fanampiny',
+    'label_email'                      => 'Adiresy mailaka',
+    'label_telephone'                  => 'Laharana finday',
+    'label_dispo'                      => 'Ny fotoana malalanao',
+    'label_motivation'                 => 'Nahoana ianao no te hanatevin-daharana anay ? (Ny antony manosika anao)',
+    'bouton_soumettre_candidature'     => 'Handefa ny fisoratana anarako',
+
+    // --- MEDIA ---
+    'media_titre'          => 'Médiathèque / Tahirin-tsary',
+    'media_slogan'         => 'Hajereo amin\'ny alalan\'ny sary, horonantsary ary tahirin-kevitra ofisialy ny fotoana manan-danja tamin\'ny asanay eny am-potony.',
+    'media_filtre_label'   => 'Sivana araka ny karazany',
+    'media_onglet_tous'    => 'Rehetra',
+    'media_onglet_photos'  => 'Sary',
+    'media_onglet_videos'  => 'Horonantsary',
+    'media_onglet_docs'    => 'Tahirin-kevitra',
+    'media_ouvrir'         => 'Hanokatra ny media',
+    'media_aucun'          => 'Tsy misy media mifanaraka amin\'izany karazany izany aloha hatreto.',
+
+    // --- NEWS ---
+    'news_titre'          => 'Vaovao & Blog',
+    'news_slogan'         => 'Araho ny vaovao farany, ny hetsika ary ny tantara miavaka momba ny fikambanana AVIJORO.',
+    'news_filtrer'        => 'Sivana araka ny sokajy',
+    'news_cat_tous'       => 'Rehetra',
+    'news_cat_evenements' => 'Hetsika',
+    'news_cat_projets'    => 'Tetikasa',
+    'news_cat_campagnes'  => 'Fanentanana',
+    'news_cat_reussites'  => 'Fahombiazana',
+    'news_lire_suite'     => 'Hamaky ny tohiny',
+    'news_aucun'          => 'Tsy misy lahatsoratra mifanaraka amin\'ity sokajy ity aloha hatreto.',
+    
+    // --- PROJECTS ---
+    'projects_titre'          => 'Ireo Tetikasanay Eny Am-potony',
+    'projects_slogan'         => 'Jereo ireo asa mivaingana tontosain\'ny AVIJORO ho an\'ny fampandrosoana maharitra eto Madagasikara.',
+    'projects_filtrer'        => 'Sivana araka ny sehatra',
+    'projects_cat_tous'       => 'Rehetra',
+    'projects_cat_education'  => 'Fanabeazana',
+    'projects_cat_sante'      => 'Fahasalamana',
+    'projects_cat_eau'        => 'Rano Fisotro Madio',
+    'projects_cat_environ'    => 'Tontolo iainana',
+    'project_statut_cours'    => 'An-dalam-panatanterahana',
+    'project_statut_termine'  => 'Tontosa',
+    'project_fiche'           => 'Mombamomba ny Tetikasa',
+    'projects_aucun'          => 'Tsy misy tetikasa mifanaraka amin\'ity sokajy ity aloha hatreto.',
+
+    // --- HOME RETOUR ---
+    'hero_titre'               => 'Miaraka, hanorina hoavy tsara kokoa ho an\'i Madagasikara',
+    'hero_description'         => 'Manatevina laharana ny iraka maha-olona ampianay ary mandray anjara amin\'ny fanatsarana ny fiainan\'ny fianakaviana an dany sy an-javany amin\'ny alalan\'ny fanabeazana, ny fahasalamana ary ny fampandrosoana maharitra.',
+    'bouton_rejoindre'         => 'Hanatevin-daharana ny fikambanana',
+    'bouton_don'               => 'Hanao fanomezana',
+    'bouton_decouvrir'         => 'Hijery ireo tetikasa',
+    'mission_titre'            => 'Ny Iraka Sahanina',
+    'mission_description'      => 'Ny AVIJORO Madagasikara dia fikambanana miara-miasa amin\'ny maha-olona natokana hanatsarana ny fiainan\'ny vondrom-piarahamonina malagasy. Miasa eo amin\'ny sehatry ny fanabeazana, fahasalamana, fidirana amin\'ny rano fisotro madio ary ny fiarovana ny tontolo iainana izahay.',
+    'bloc_mission_titre'       => 'Iraka',
+    'bloc_mission_desc'        => 'Hanatsara maharitra ny fari-piainan\'ireo mponina marefo eto Madagasikara.',
+    'bloc_vision_titre'        => 'Vinavina',
+    'bloc_vision_desc'         => 'Madagasikara iray izay ahitana ny olona tsirairay afaka miditra amin\'ny fanabeazana, fahasalamana ary tontolo iainana madio.',
+    'bloc_valeurs_titre'       => 'Soatoavina',
+    'bloc_valeurs_desc'        => 'Firaisankina, fangaraharana, fifanajana, zava-baovao ary fanoloran-tena iombonana.',
+    'stat_benevoles'           => 'Mpilatsaka an-tsitrapo mavitrika',
+    'stat_projets'             => 'Tetikasa an-dalam-pandrosoana',
+    'stat_beneficiaires'       => 'Ireo nahazo tombontsoa',
+    'stat_reussite'            => 'Taham-pahombiazana',
+    'home_projets_titre'       => 'Ireo Tetikasa Vaovao',
+    'home_projets_desc'        => 'Topi-maso amin\'ireo asa mivaingana farany tontosainay eny am-potony.',
+    'home_projets_voir_tous'   => 'Hijery ny tetikasa rehetra',
+    'home_p1_title'            => 'Fanabeazana ho an\'ny rehetra',
+    'home_p1_desc'             => 'Fanamboarana sekoly sy fanomezana fitaovam-pianarana ho an\'ireo ankizy any ambanivohitra.',
+    'home_p2_title'            => 'Fidirana amin\'ny rano fisotro madio',
+    'home_p2_desc'             => 'Fametrahana fantsakana sy rafitra fanivanana rano any amin\'ireo tanàna lavitra tany.',
+    'home_p3_title'            => 'Fambolen-kazo (Reforestation)',
+    'home_p3_desc'             => 'Fambolen-kazo sy fanentanana momba ny tontolo iainana mba hiarovana ny zava-maniry sy ny biby (biodiversité).',
+    'home_testi_titre'         => 'Ny nambaran\'izy ireo',
+    'home_testi_t1_text'       => 'Nanova ny fiainako ny fidirana tao amin\'ny AVIJORO. Reharehako ny mandray anjara amin\'ny fampandrosoana ny fireneko.',
+    'home_testi_t1_role'       => 'Mpilatsaka an-tsitrapo nanomboka ny taona 2023',
+    'home_testi_t2_text'       => 'Tena manome aingam-panahy ny vokatry ny asantsika amin\'ny vondrom-piarahamonina eny ifotony. Mitondra fahombiazana vaovao ny andro tsirairay.',
+    'home_testi_t2_role'       => 'Mpandrindra ny Tetikasa',
+    'home_testi_t3_text'       => 'Isaorana ny AVIJORO, afaka mandeha mianatra ny zanako ary mahazo rano fisotro madio ny tanànanay ankehitriny.',
+    'home_testi_t3_role'       => 'Nahazo tombontsoa',
+
+    'cta_diff_titre' => 'Vonona hitondra fiovana ve ianao ?',
+    'cta_diff_desc'  => 'Andao hanatevin-daharana anay anio ary mandray anjara amin\'ny asantsika maha-olona eto Madagasikara.',
+
+    // --- PAGE CONTACT ---
+    'contact_hero_titre'   => 'Mifandraisa aminay',
+    'contact_hero_desc'    => 'Vonona hihaino anao izahay. Aza misalasala mifandray aminay raha manana fanontaniana na soso-kevitra.',
+    
+    // Coordonnées (Gauche)
+    'contact_titre_coordonnees' => 'Ny mombamomba anay',
+    'contact_label_adresse'     => 'Adiresy',
+    'contact_valeur_adresse'    => 'Antananarivo, Madagasikara<br>BP 12345',
+    'contact_label_telephone'   => 'Finday',
+    'contact_label_email'       => 'Mailaka',
+    'contact_label_horaires'    => 'Ora fisokafana',
+    'contact_valeur_horaires'   => 'Alats. - Zoma : 8h00 - 17h00<br>Sabotsy : 8h00 - 12h00',
+    
+       // Formulaire (Droite)
+    'contact_titre_formulaire'  => 'Hamelàna hafatra izahay',
+    'contact_label_nom'         => 'Anarana feno *',
+    'contact_label_email_form'  => 'Mailaka *',
+    'contact_label_tel_form'    => 'Finday',
+    'contact_label_sujet'       => 'Lohahevitra / Antom-panoratana *',
+    'contact_placeholder_sujet' => 'Misafidiana lohahevitra iray',
+    'contact_sujet_partenariat' => 'Te ho mpiara-miasa',
+    'contact_sujet_benevolat'   => 'Fanontaniana momba ny asa an-tsitrapo',
+    'contact_sujet_autre'       => 'Fangatahana hafa',
+    'contact_label_message'     => 'Hafatra *',
+    'contact_placeholder_msg'   => 'Soraty eto ny antsipirian\'ny fangatahanao...',
+    'contact_label_suivez_nous' => 'Araho izahay',
+    'contact_bouton_envoyer'    => 'Handefa ny hafatra',
+    'contact_titre_map'         => 'Ny toerana misy anay',
+    
+    'mentions_legales'         => 'Fampahafantarana ara-dalàna',
+    'politique_confidentialite' => 'Fitsipika momba ny tsiambaratelo',
+
+    'mediatheque'       => 'Tahirin-tsary sy feo',
+    'explorez_medias'   => 'Jereo ireo sary, horonantsary, ary tahirin-kevitra manaporofo ny asa ataonay eny an-kianja.',
+    'type_media'      => 'Karazana haino aman-jery :',
+    'tous'            => 'Rehetra',
+    'photos'          => 'Sary',
+    'videos'          => 'Horonantsary',
+    'documents'       => 'Tahirin-kevitra',
+    'aucun_fichier'   => 'Tsy misy rakitra azo jerena aloha amin\'izao fotoana izao.',
+    'aucun_fichier' => 'Tsy misy rakitra azo jerena aloha amin\'izao fotoana izao.',
+
+        // Section 1 : Hero
+    'hero_rejoignez_nous_titre' => "Andao hiara-hiasa",
+    'hero_rejoignez_nous_desc' => "Manomeza tanana ho mpilatsaka an-tsitrapo ary mandraisa anjara amin'ny fanovana ny fiainana eto Madagasikara.",
+
+    // Section 2 : Pourquoi devenir bénévole
+    'benevole_pourquoi_titre' => "Nahoana no ho lasa mpilatsaka an-tsitrapo ?",
+    'benevole_pourquoi_desc' => "Ny fidirana ao amin'ny AVIJORO dia ho mpikambana ao anatin'ny vondrom-piarahamonina mavitrika izay mitondra fiovana isan'andro.",
+    'benefit_impact' => "Mitondra fiovana mivaingana eo amin'ny fiarahamonina",
+    'benefit_competences' => "Manatsara sy mianatra fahaiza-manao vaovao",
+    'benefit_rencontres' => "Hihaona amin'ny olona manana finiavana",
+    'benefit_projets' => "Handray anjara amin'ireo tetikasa mivaingana",
+    'benefit_formation' => "Hahazo fampitsaharana sy fiofanana mitohy",
+    'benefit_attestation' => "Hahazo fanamarinana amin'ny naha mpilatsaka an-tsitrapo",
+
+    // Section 3 : Opportunités
+    'opp_titre' => "Ireo sehatra afaka andraisana anjara",
+    'opp_desc' => "Na manao ahoana na manao ahoana ny fahaizanao, misy toerana hatrany ho anao ato amin'ny fikambanana.",
+    'opp_education_titre' => "Fanabeazana",
+    'opp_education_desc' => "Fampianarana, fanohanana ara-pianarana, fampifandrombrohana atrikasa",
+    'opp_sante_titre' => "Fahasalamana",
+    'opp_sante_desc' => "Fanampiana ara-pahasalamana, fanentanana, fanaovana vaccin",
+    'opp_environnement_titre' => "Tontolo iainana",
+    'opp_environnement_desc' => "Fambolen-kazo, fanadiovana, fanentanana momba ny tontolo iainana",
+    'opp_communication_titre' => "Serasera",
+    'opp_communication_desc' => "Fitantanana ny tambajotra sôsialy, fanoratana, fangalana sary",
+    'opp_logistique_titre' => "Logistika",
+    'opp_logistique_desc' => "Fikarakarana hetsika, fitantanana ny tahiry",
+    'opp_administration_titre' => "Fitantanana",
+    'opp_administration_desc' => "Fitontanam-bola, fitantanana tetikasa, fanaovana tatitra",
+
+    // Section 4 : Formulaire
+    'form_titre' => "Fizotran'ny fangatahana",
+    'form_desc' => "Fenoy ity takelaka ity dia hifandray aminao haingana izahay.",
+    'form_merci' => "Misaotra !",
+    'form_prenom' => "Anarana",
+    'form_nom' => "Fanampiny",
+    'form_email' => "E-mail",
+    'form_telephone' => "Laharana finday",
+    'form_disponibilite' => "Fotoana malalaka",
+    'form_dispo_selectionnez' => "Safidio ny fotoana malalaka ananao",
+    'form_dispo_plein_temps' => "Manontolo andro (Herinandro feno)",
+    'form_dispo_partiel' => "Tohany (Andro vitsivitsy ao anatin'ny herinandro)",
+    'form_dispo_weekend' => "Ny faran'ny herinandro ihany",
+    'form_dispo_soiree' => "Ny hariva (Rehefa mirava mianatra na miasa)",
+    'form_dispo_ponctuel' => "Tselatselatra (Hetsika sy asa manokana)",
+    'form_competences' => "Fahaiza-manao sy sehatra mahaliana",
+    'form_competences_placeholder' => "Ohatra: Fampianarana, fahasalamana, informatika...",
+    'form_motivation' => "Ny antony manosika anao",
+    'form_motivation_placeholder' => "Nahoana ianao no te hiditra ao amin'ny AVIJORO ?",
+    'form_bouton_envoyer' => "Handefa ny fangatahana",
+        // ==========================================
+    // PAGE CONTACT
+    // ==========================================
+    'contact_hero_titre' => "Mifandraisa aminay",
+    'contact_hero_desc' => "Vonona hihaino anao izahay. Aza misalasala manontany na manome soso-kevitra.",
+    
+    // Coordonnées (Bloc Gauche)
+    'contact_coordonnees_titre' => "Ny momba anay",
+    'contact_adresse_label' => "Adiresy",
+    'contact_telephone_label' => "Laharana finday",
+    'contact_email_label' => "E-mail",
+    'contact_horaires_label' => "Ora fiasana",
+    'contact_horaires_semaine' => "Alats - Zoma : 8h00 - 17h00",
+    'contact_horaires_samedi' => "Sabotsy : 8h00 - 12h00",
+    
+    // Formulaire (Bloc Droite)
+    'contact_form_titre' => "Handefa hafatra ho anay",
+    'contact_form_nom' => "Anarana feno",
+    'contact_form_email' => "E-mail",
+    'contact_form_telephone' => "Laharana finday",
+    'contact_form_sujet' => "Antony",
+    
+    // Menu Déroulant des Sujets
+    'contact_sujet_selectionnez' => "Safidio ny antony",
+    'contact_sujet_partenariat' => "Te ho mpiara-miombon'antoka",
+    'contact_sujet_benevolat' => "Fanontaniana momba ny filatsahana an-tsitrapo",
+    'contact_sujet_autre' => "Fangatahana hafa",
+    
+    // Message et validation
+    'contact_form_message' => "Hafatra",
+    'contact_message_placeholder' => "Soraty eto ny antsipirian'ny fangatahanao...",
+    'contact_suivez_nous' => "Araho izahay",
+    'contact_bouton_envoyer' => "Handefa ny hafatra",
+    
+    // Section Carte
+    'contact_map_titre' => "Ny toerana misy anay",
+
+        // Barre de filtres Média
+    'media_type_label' => "Karazan-tsary sy tahirin-kevitra :",
+    'media_filtre_tous' => "Rehetra",
+    'media_filtre_photos' => "Sary",
+    'media_filtre_videos' => "Vidio",
+    'media_filtre_documents' => "Tahirin-kevitra",
+    'news_aucun_article' =>' Tsy mbola misy rakitra azo ampiasaina aloha hatramin\'izao',
+    'project_back_to_list'        => 'Hiverina amin\'ny tetikasa',
+    'project_status_ongoing'      => 'An-dalam-panatanterahana',
+    'project_status_completed'    => 'Vita',
+    'project_heading_presentation'=> 'Fampahafantarana ny tetikasa',
+    'project_heading_specifications' => 'Tabilao ara-teknika',
+    'project_label_progress'      => 'Fandrosoan\'ny asa',
+    'project_label_beneficiaries' => 'Iharan\'ny tombontsoa',
+    'project_label_location'      => 'Toerana',
+    'project_label_start_date'    => 'Daty nanombohana',
+    'project_label_end_date'      => 'Daty hiafarana',
+    'project_value_undefined'     => 'Tsy voafaritra',
+    'project_btn_view_document'   => 'Hijery ny tahirin-kevitra ofisialy',
+ 
+    'media_btn_retour' => 'Hiverina amin\'ny tahiry',
+    'media_ouvrir_telecharger' => 'Hijery na hampidina ny rakitra',
+
+
+
+]
+?>

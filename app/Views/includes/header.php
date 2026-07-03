@@ -30,7 +30,6 @@
 
             <div class="nav-dropdown">
                 <a href="<?= base_url($lang . '/qui-sommes-nous') ?>" class="nav-item-figma <?= (strpos($uri, 'qui-sommes-nous') !== false) ? 'active' : '' ?>">
-                    <?= lang('Texte.menu_a_propos') ?> <span class="arrow-down">▼</span>
                 <?=    lang('Texte.Apropos') ?> <span class="arrow-down">▼</span>
                 </a>
                 <div class="dropdown-menu">

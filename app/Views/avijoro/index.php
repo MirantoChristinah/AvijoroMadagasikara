@@ -107,56 +107,61 @@
   </section>
 
     <!-- ================= SECTION COMPLETE : NOS PROJETS FIGMA ================= -->
-  <section class="projects-section" style="padding: 5rem 0; background-color: #f9fafb; border-top: 1px solid #e5e7eb; border-bottom: 1px solid #e5e7eb; width: 100%; clear: both;">
-    <div class="home-container" style="max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; width: 100%; box-sizing: border-box;">
+ <!-- ================= SECTION DYNAMIQUE : NOS PROJETS ================= -->
+<section class="projects-section" style="padding: 5rem 0; background-color: #f9fafb; border-top: 1px solid #e5e7eb; border-bottom: 1px solid #e5e7eb; width: 100%; clear: both;">
+  <div class="home-container" style="max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; width: 100%; box-sizing: border-box;">
+    
+    <!-- En-tête de la section -->
+    <div style="text-align: center; max-width: 45rem; margin: 0 auto 4rem auto;">
+      <h2 style="font-size: 2.5rem; font-weight: 700; color: #111827; margin: 0 0 1rem 0;"><?= lang('Texte.Nosprojets') ?></h2>
+      <p style="color: #4b5563; font-size: 1.125rem; line-height: 1.6; margin: 0;"><?= lang('Texte.decouvrez_initiatives') ?></p>
+    </div>
+
+    <!-- Grille dynamique -->
+    <div style="width: 100%; text-align: center; font-size: 0; margin-bottom: 3rem;">
       
-      <!-- En-tête de la section -->
-      <div style="text-align: center; max-width: 45rem; margin: 0 auto 4rem auto;">
-        <h2 style="font-size: 2.5rem; font-weight: 700; color: #111827; margin: 0 0 1rem 0;"><?= lang('Texte.Nosprojets') ?></h2>
-        <p style="color: #4b5563; font-size: 1.125rem; line-height: 1.6; margin: 0;"><?= lang('Texte.decouvrez_initiatives') ?></p>
-      </div>
+      <?php if (!empty($projets) && is_array($projets)): ?>
+        <?php foreach ($projets as $projet): ?>
+          
+          <!-- Carte Projet Dynamique -->
+          <div style="display: inline-block; width: 31%; margin: 0 1%; vertical-align: top; font-size: 1rem; text-align: left; background-color: #ffffff; border-radius: 1rem; overflow: hidden; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); border: 1px solid #f3f4f6; box-sizing: border-box;">
+            
+            <!-- Image du projet -->
+            <div style="position: relative; height: 220px; background-color: #e5e7eb;">
+              <img src="<?= esc($projet['image']) ?>" alt="<?= esc($projet['title']) ?>" style="width: 100%; height: 100%; object-fit: cover;" />
+              
+              <!-- Catégorie dynamique -->
+              <span style="position: absolute; top: 1rem; right: 1rem; background-color: rgba(255,255,255,0.9); padding: 0.25rem 0.75rem; border-radius: 9999px; font-size: 0.75rem; font-weight: 600; color: #374151;">
+                <?= esc($projet['category']) ?>
+              </span>
+            </div>
+            
+            <!-- Contenu textuel -->
+            <div style="padding: 1.5rem;">
+              <h3 style="font-size: 1.25rem; font-weight: 700; color: #111827; margin: 0 0 0.75rem 0;">
+                <?= esc($projet['title']) ?>
+              </h3>
+              
+              <p style="color: #4b5563; font-size: 0.875rem; line-height: 1.6; margin: 0 0 1.5rem 0;">
+                <?= character_limiter(strip_tags($projet['description']), 120) ?>
+              </p>
+              
+              <!-- Lien vers le détail du projet spécifique -->
+              <a href="<?= base_url(($lang ?? 'fr') . '/projets/' . $projet['id']) ?>" style="color: #2D8659; text-decoration: none; font-size: 0.875rem; font-weight: 600; display: inline-flex; align-items: center; gap: 0.25rem;">
+                En savoir plus ➔
+              </a>
+            </div>
 
-      <!-- Grille horizontale forcée pour aligner les 3 cartes côte à côte -->
-      <div style="width: 100%; text-align: center; font-size: 0; margin-bottom: 3rem;">
-        
-        <!-- Carte 1 : Éducation pour tous -->
-        <div style="display: inline-block; width: 31%; margin: 0 1%; vertical-align: top; font-size: 1rem; text-align: left; background-color: #ffffff; border-radius: 1rem; overflow: hidden; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); border: 1px solid #f3f4f6; box-sizing: border-box;">
-          <div style="position: relative; height: 220px; background-color: #e5e7eb;">
-            <img src="https://unsplash.com" alt="Éducation" style="width: 100%; height: 100%; object-fit: cover;" />
-            <span style="position: absolute; top: 1rem; right: 1rem; background-color: rgba(255,255,255,0.9); padding: 0.25rem 0.75rem; border-radius: 9999px; font-size: 0.75rem; font-weight: 600; color: #374151;">Éducation</span>
           </div>
-          <div style="padding: 1.5rem;">
-            <h3 style="font-size: 1.25rem; font-weight: 700; color: #111827; margin: 0 0 0.75rem 0;"><?= lang('Texte.education_pour_tous') ?></h3>
-            <p style="color: #4b5563; font-size: 0.875rem; line-height: 1.6; margin: 0 0 1.5rem 0;"><?= lang('Texte.construction_ecoles') ?></p>
-            <a href="<?= base_url(($lang ?? 'fr') . '/projets') ?>" style="color: #2D8659; text-decoration: none; font-size: 0.875rem; font-weight: 600; display: inline-flex; align-items: center; gap: 0.25rem;">En savoir plus ➔</a>
-          </div>
-        </div>
 
-        <!-- Carte 2 : Accès à l'eau potable -->
-        <div style="display: inline-block; width: 31%; margin: 0 1%; vertical-align: top; font-size: 1rem; text-align: left; background-color: #ffffff; border-radius: 1rem; overflow: hidden; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); border: 1px solid #f3f4f6; box-sizing: border-box;">
-          <div style="position: relative; height: 220px; background-color: #e5e7eb;">
-            <img src="https://unsplash.com" alt="Eau potable" style="width: 100%; height: 100%; object-fit: cover;" />
-            <span style="position: absolute; top: 1rem; right: 1rem; background-color: rgba(255,255,255,0.9); padding: 0.25rem 0.75rem; border-radius: 9999px; font-size: 0.75rem; font-weight: 600; color: #374151;">Santé</span>
-          </div>
-          <div style="padding: 1.5rem;">
-            <h3 style="font-size: 1.25rem; font-weight: 700; color: #111827; margin: 0 0 0.75rem 0;">Accès à l'eau potable</h3>
-            <p style="color: #4b5563; font-size: 0.875rem; line-height: 1.6; margin: 0 0 1.5rem 0;">Installation de puits et systèmes de filtration d'eau dans les villages éloignés.</p>
-            <a href="<?= base_url(($lang ?? 'fr') . '/projets') ?>" style="color: #2D8659; text-decoration: none; font-size: 0.875rem; font-weight: 600; display: inline-flex; align-items: center; gap: 0.25rem;">En savoir plus ➔</a>
-          </div>
-        </div>
+        <?php endforeach; ?>
+      <?php else: ?>
+        <p style="font-size: 1.125rem; color: #6b7280;">Aucun projet disponible pour le moment.</p>
+      <?php endif; ?>
 
-        <!-- Carte 3 : Reforestation -->
-        <div style="display: inline-block; width: 31%; margin: 0 1%; vertical-align: top; font-size: 1rem; text-align: left; background-color: #ffffff; border-radius: 1rem; overflow: hidden; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); border: 1px solid #f3f4f6; box-sizing: border-box;">
-          <div style="position: relative; height: 220px; background-color: #e5e7eb;">
-            <img src="https://unsplash.com" alt="Reforestation" style="width: 100%; height: 100%; object-fit: cover;" />
-            <span style="position: absolute; top: 1rem; right: 1rem; background-color: rgba(255,255,255,0.9); padding: 0.25rem 0.75rem; border-radius: 9999px; font-size: 0.75rem; font-weight: 600; color: #374151;">Environnement</span>
-          </div>
-          <div style="padding: 1.5rem;">
-            <h3 style="font-size: 1.25rem; font-weight: 700; color: #111827; margin: 0 0 0.75rem 0;">Reforestation</h3>
-            <p style="color: #4b5563; font-size: 0.875rem; line-height: 1.6; margin: 0 0 1.5rem 0;">Plantation d'arbres et sensibilisation environnementale pour préserver la biodiversité.</p>
-            <a href="<?= base_url(($lang ?? 'fr') . '/projets') ?>" style="color: #2D8659; text-decoration: none; font-size: 0.875rem; font-weight: 600; display: inline-flex; align-items: center; gap: 0.25rem;">En savoir plus ➔</a>
-          </div>
-        </div>
+    </div>
+  </div>
+</section>
 
       </div>
 

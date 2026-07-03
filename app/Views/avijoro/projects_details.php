@@ -12,7 +12,7 @@ $badge_bg     = $est_en_cours ? '#3b82f6' : '#10b981';
       <div style="margin-bottom: 1.5rem; text-align: left;">
         <a href="<?= base_url($lang . '/projects') ?>" style="color: #e6f4ea; text-decoration: none; font-weight: 600; font-size: 0.9rem; display: inline-flex; align-items: center; gap: 0.5rem; background-color: rgba(255,255,255,0.1); padding: 0.5rem 1.25rem; border-radius: 9999px;">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
-          Retour aux projets
+          <?= lang('Texte.project_back_to_list') ?>
         </a>
       </div>
 
@@ -32,7 +32,7 @@ $badge_bg     = $est_en_cours ? '#3b82f6' : '#10b981';
           <?php else: ?>
             <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
           <?php endif; ?>
-          <span><?= $est_en_cours ? lang('Texte.project_statut_cours') : lang('Texte.project_statut_termine') ?></span>
+          <span><?= $est_en_cours ? lang('Texte.project_status_ongoing') : lang('Texte.project_status_completed') ?></span>
         </span>
       </div>
 
@@ -53,7 +53,7 @@ $badge_bg     = $est_en_cours ? '#3b82f6' : '#10b981';
           </div>
 
           <!-- Description textuelle complète -->
-          <h2 style="font-size: 1.5rem; font-weight: 700; color: #111827; margin: 0 0 1rem 0;">Présentation du projet</h2>
+          <h2 style="font-size: 1.5rem; font-weight: 700; color: #111827; margin: 0 0 1rem 0;"><?= lang('Texte.project_heading_presentation') ?></h2>
           <div style="color: #4b5563; font-size: 1.1rem; line-height: 1.8; text-align: justify;">
             <?= nl2br(esc($project['description'])) ?>
           </div>
@@ -65,13 +65,13 @@ $badge_bg     = $est_en_cours ? '#3b82f6' : '#10b981';
       <div style="flex: 1; min-width: 280px;">
         <div style="background-color: #ffffff; border-radius: 1.25rem; padding: 2rem; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.05); border: 1px solid #e5e7eb; box-sizing: border-box; position: sticky; top: 2rem;">
           
-          <h3 style="font-size: 1.25rem; font-weight: 700; color: #111827; margin: 0 0 1.5rem 0; border-bottom: 2px solid #f3f4f6; padding-bottom: 0.5rem;">Fiche technique</h3>
+          <h3 style="font-size: 1.25rem; font-weight: 700; color: #111827; margin: 0 0 1.5rem 0; border-bottom: 2px solid #f3f4f6; padding-bottom: 0.5rem;"><?= lang('Texte.project_heading_specifications') ?></h3>
 
           <!-- Barre de progression conditionnelle si EN COURS -->
           <?php if ($est_en_cours): ?>
             <div style="margin-bottom: 1.5rem;">
               <div style="display: flex; justify-content: space-between; align-items: center; font-size: 0.85rem; font-weight: 600; color: #374151; margin-bottom: 0.5rem;">
-                <span style="color: #6b7280; font-weight: 500;">Progression</span>
+                <span style="color: #6b7280; font-weight: 500;"><?= lang('Texte.project_label_progress') ?></span>
                 <span style="color: #2D8659;"><?= $project['progress'] ?>%</span>
               </div>
               <div style="width: 100%; background-color: #e5e7eb; height: 8px; border-radius: 9999px; overflow: hidden;">
@@ -82,30 +82,30 @@ $badge_bg     = $est_en_cours ? '#3b82f6' : '#10b981';
 
           <!-- Informations Métadonnées -->
           <div style="font-size: 0.95rem; color: #374151; padding: 0.75rem 0; border-bottom: 1px solid #f3f4f6; display: flex; justify-content: space-between;">
-            <span style="color: #6b7280;">Bénéficiaires :</span>
+            <span style="color: #6b7280;"><?= lang('Texte.project_label_beneficiaries') ?> :</span>
             <span style="font-weight: 700;"><?= number_format($project['beneficiaries'] ?? 1500) ?></span>
           </div>
           
           <div style="font-size: 0.95rem; color: #374151; padding: 0.75rem 0; border-bottom: 1px solid #f3f4f6; display: flex; justify-content: space-between;">
-            <span style="color: #6b7280;">Localisation :</span>
+            <span style="color: #6b7280;"><?= lang('Texte.project_label_location') ?> :</span>
             <span style="font-weight: 600; color: #111827;"><?= esc($project['location'] ?? 'Madagascar') ?></span>
           </div>
 
           <div style="font-size: 0.95rem; color: #374151; padding: 0.75rem 0; border-bottom: 1px solid #f3f4f6; display: flex; justify-content: space-between;">
-            <span style="color: #6b7280;">Date de début :</span>
-            <span style="font-weight: 500; color: #111827;"><?= !empty($project['date_debut']) ? date('d/m/Y', strtotime($project['date_debut'])) : 'Non définie' ?></span>
+            <span style="color: #6b7280;"><?= lang('Texte.project_label_start_date') ?> :</span>
+            <span style="font-weight: 500; color: #111827;"><?= !empty($project['date_debut']) ? date('d/m/Y', strtotime($project['date_debut'])) : lang('Texte.project_value_undefined') ?></span>
           </div>
 
           <div style="font-size: 0.95rem; color: #374151; padding: 0.75rem 0; margin-bottom: 2rem; display: flex; justify-content: space-between;">
-            <span style="color: #6b7280;">Date de fin :</span>
-            <span style="font-weight: 500; color: #111827;"><?= !empty($project['date_fin']) ? date('d/m/Y', strtotime($project['date_fin'])) : 'En cours' ?></span>
+            <span style="color: #6b7280;"><?= lang('Texte.project_label_end_date') ?> :</span>
+            <span style="font-weight: 500; color: #111827;"><?= !empty($project['date_fin']) ? date('d/m/Y', strtotime($project['date_fin'])) : lang('Texte.project_status_ongoing') ?></span>
           </div>
 
           <!-- Lien Drive Document Optionnel -->
           <?php if (!empty($project['document_drive_link'])): ?>
             <div style="margin-top: 1.5rem;">
               <a href="<?= esc($project['document_drive_link']) ?>" target="_blank" style="display: block; text-align: center; background-color: #f3f4f6; color: #374151; padding: 0.8rem; border-radius: 0.5rem; text-decoration: none; font-size: 0.9rem; font-weight: 600; border: 1px solid #d1d5db; transition: background 0.2s;">
-                📄 Consulter le document officiel
+                📄 <?= lang('Texte.project_btn_view_document') ?>
               </a>
             </div>
           <?php endif; ?>

@@ -27,7 +27,7 @@
           <li><a href="<?= base_url($lang . '/projects') ?>" style="color: #9ca3af; text-decoration: none; transition: color 0.2s;"><?= lang('Texte.Projets') ?></a></li>
           <li><a href="<?= base_url($lang . '/actualites') ?>" style="color: #9ca3af; text-decoration: none; transition: color 0.2s;"><?= lang('Texte.Actualite') ?></a></li>
           <li><a href="<?= base_url($lang . '/soutenir') ?>" style="color: #9ca3af; text-decoration: none; transition: color 0.2s;"><?= lang('Texte.joindre') ?></a></li>
-          <li><a href="<?= base_url($lang . '/don') ?>" style="color: #9ca3af; text-decoration: none; transition: color 0.2s;"><?= lang('Texte.soutenir') ?></a></li>
+          <li><a href="<?= base_url($lang . '/media') ?>" style="color: #9ca3af; text-decoration: none; transition: color 0.2s;"><?= lang('Texte.Media') ?></a></li>
         </ul>
       </div>
 
@@ -67,7 +67,7 @@
 
       <!-- Colonne 4 : Newsletter -->
       <div>
-        <h3 style="color: #ffffff; font-size: 1.05rem; font-weight: 700; margin-bottom: 1rem; margin-top: 0; letter-spacing: -0.1px;"><?= lang('Texte.footer_newsletter') ?? 'Newsletter' ?></h3>
+        <h3 style="color: #ffffff; font-size: 1.05rem; font-weight: 700; margin-bottom: 1rem; margin-top: 0; letter-spacing: -0.1px;"><?= lang('Texte.newsletter') ?? 'Newsletter' ?></h3>
         <p style="font-size: 0.9rem; color: #9ca3af; margin-bottom: 1.25rem; line-height: 1.5;"><?= lang('Texte.newsletter_sous_titre') ?? 'Restez informé de nos actualités et projets.' ?></p>
         <form action="<?= base_url($lang . '/newsletter/inscription') ?>" method="post" style="display: flex; flex-direction: column; gap: 0.75rem;">
           <?= csrf_field() ?>
