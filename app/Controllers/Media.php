@@ -28,7 +28,7 @@ class Media extends BaseController
         return $this->body("avijoro/media", $data);
     }
 
-        public function voir($id)
+    public function voir($id)
     {
         $mediaModel = new MediaModel();
         $locale     = $this->request->getLocale();
@@ -54,14 +54,19 @@ class Media extends BaseController
             throw \CodeIgniter\Exceptions\PageNotFoundException::forPageNotFound();
         }
 
-        // Formatage des chemins des fichiers selon le type
-        $cheminFichier = base_url('uploads/medias/' . $media['fichier']);
-        $miniature = $cheminFichier;
-
-        if ($media['type'] === 'video') {
-            $miniature = base_url('uploads/medias/thumbnails/' . pathinfo($media['fichier'], PATHINFO_FILENAME) . '.jpg');
-        } elseif ($media['type'] === 'document') {
-            $miniature = base_url('assets/images/icons/pdf-placeholder.png');
+        // Formatage des chemins selon vos nouveaux dossiers dans public/
+        if ($media['type'] === 'document') {
+            // Fichiers dans public/documents/
+            $cheminFichier = base_url('documents/' . $media['fichier']);
+            $miniature     = base_url('assets/images/icons/pdf-placeholder.png');
+        } elseif ($media['type'] === 'video') {
+            // Vidéos et miniatures dans public/images/
+            $cheminFichier = base_url('images/' . $media['fichier']);
+            $miniature     = base_url('images/thumbnails/' . pathinfo($media['fichier'], PATHINFO_FILENAME) . '.jpg');
+        } else {
+            // Images classiques dans public/images/
+            $cheminFichier = base_url('images/' . $media['fichier']);
+            $miniature     = $cheminFichier;
         }
 
         $media['chemin_complet'] = $cheminFichier;
@@ -75,5 +80,4 @@ class Media extends BaseController
         // On utilise l'antislash \ pour appeler votre fonction globale body()
         return $this->body("avijoro/media_detail", $data);
     }
-
 }

@@ -4,3 +4,5 @@ vendor/
 writable/
 composer.lock
 xampp-linux-installer.run
+# Ignorer tous les fichiers envoyés par les utilisateurs
+public/uploads/

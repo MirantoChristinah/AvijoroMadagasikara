@@ -56,13 +56,28 @@
         
         <?php if (!empty($liste_medias)): ?>
           <?php foreach ($liste_medias as $media): ?>
-            <a href="<?= base_url($lang . '/media/voir/' . $media['id']) ?>" class="media-card-figma">
+            
+            <?php 
+              // 1. Définition dynamique des chemins vers les dossiers publics
+              if (mb_strtolower($media['type']) === 'document') {
+                  $imageSrc = $media['miniature'] ?? base_url('assets/images/icons/pdf-placeholder.png');
+                  $lienCible = base_url('documents/' . esc($media['fichier']));
+                  $target = 'target="_blank"';
+              } else {
+                  // Photos et vidéos pointent vers public/images/
+                  $imageSrc = base_url('images/' . esc($media['miniature']));
+                  $lienCible = base_url($lang . '/media/voir/' . $media['id']);
+                  $target = '';
+              }
+            ?>
+
+            <a href="<?= $lienCible ?>" <?= $target ?> class="media-card-figma">
               
               <!-- Zone Image avec ses badges superposés -->
               <div class="media-image-block">
-                <img src="<?= esc($media['miniature']) ?>" alt="<?= esc($media['titre']) ?>" />
+                <img src="<?= $imageSrc ?>" alt="<?= esc($media['titre']) ?>" />
                 
-                <!-- 1. Badge Type (Vérification tolérante sans risques d'accent) -->
+                <!-- Badge Type -->
                 <?php if (mb_strtolower($media['type']) === 'vidéo' || mb_strtolower($media['type']) === 'video'): ?>
                   <span class="media-badge-type">
                     <svg xmlns="http://w3.org" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m22 8-6 4 6 4V8Z"></path><rect width="14" height="12" x="2" y="6" rx="2" ry="2"></rect></svg>
@@ -80,7 +95,7 @@
                   </span>
                 <?php endif; ?>
 
-                <!-- 2. Overlay avec icône au survol -->
+                <!-- Overlay avec icône au survol -->
                 <div class="media-hover-overlay">
                   <svg xmlns="http://w3.org" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                     <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
@@ -89,7 +104,7 @@
                   </svg>
                 </div>
 
-                <!-- 3. Badge Compteur / Durée (En bas à droite) -->
+                <!-- Badge Compteur / Durée (En bas à droite) -->
                 <?php if (!empty($media['valeur_badge'])): ?>
                   <span class="media-badge-counter">
                     <?= esc($media['valeur_badge']) ?>
