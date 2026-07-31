@@ -10,9 +10,7 @@ $routes->get('/', function () {
     return redirect()->to('/fr');
 });
 
-// ====================================================================
-// 🔒 ROUTES D'AUTHENTIFICATION & DU BACK-OFFICE (ADMINISTRATION)
-// ====================================================================
+
 
 $routes->get('login', 'Administration\Auth::login');
 $routes->post('login/check', 'Administration\Auth::check');
@@ -22,19 +20,16 @@ $routes->get('logout', 'Administration\Auth::logout');
 // Le filtre 'adminAuth' bloque l'accès si on n'est pas connecté.
 $routes->group('admin', ['filter' => 'adminAuth'], function ($routes) {
     
-    // Page d'accueil de ton administration
-    $routes->get('dashboard', 'Administration\Dashboard::index'); // 👈 CORRIGÉ ICI
+    $routes->get('dashboard', 'Administration\Dashboard::index'); 
 
-    // --- Gestion des Projets ---
-    $routes->get('projets', 'Administration\Projets::index'); // 👈 CORRIGÉ ICI
+    $routes->get('projets', 'Administration\Projets::index'); 
     $routes->get('projets/creer', 'Administration\Projets::creer');
     $routes->post('projets/enregistrer', 'Administration\Projets::enregistrer');
     $routes->get('projets/modifier/(:num)', 'Administration\Projets::modifier/$1');
     $routes->post('projets/mettre-a-jour/(:num)', 'Administration\Projets::mettreAJour/$1');
     $routes->get('projets/supprimer/(:num)', 'Administration\Projets::supprimer/$1');
 
-    // --- Gestion des Actualités ---
-    $routes->get('actualites', 'Administration\Actualites::index'); // 👈 CORRIGÉ ICI
+    $routes->get('actualites', 'Administration\Actualites::index'); 
     $routes->get('actualites/creer', 'Administration\Actualites::creer');
     $routes->post('actualites/enregistrer', 'Administration\Actualites::enregistrer');
     $routes->get('actualites/modifier/(:num)', 'Administration\Actualites::modifier/$1');
@@ -55,9 +50,7 @@ $routes->group('admin', ['filter' => 'adminAuth'], function ($routes) {
 });
 
 
-// ====================================================================
-// 🌍 ROUTES PUBLIQUES MULTILINGUES (Ton groupe magique actuel)
-// ====================================================================
+
 $routes->group('{locale}', function ($routes) {
 
     $routes->get('/', 'Index::index');

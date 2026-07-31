@@ -13,16 +13,14 @@ class Projets extends BaseController
         $data['projets'] = $db->table('projets')
             ->select('projets.*, projets_traductions.titre')
             ->join('projets_traductions', 'projets_traductions.projet_id = projets.id', 'left')
-            ->where('projets_traductions.langue_id', 2) // Français par défaut
+            ->where('projets_traductions.langue_id', 2) 
             ->get()->getResultArray();
 
-        // 📁 CORRIGÉ : On pointe vers le fichier index.php du dossier projets
         return view('Administration/projets/index', $data);
     }
 
     public function creer()
     {
-        // 📁 CORRIGÉ : On s'assure du bon chemin vers creer.php
         return view('Administration/projets/creer');
     }
 
@@ -30,21 +28,17 @@ class Projets extends BaseController
     {
         $db = \Config\Database::connect();
         
-        // 1. Interception du fichier image
         $fichierImage = $this->request->getFile('image');
         $nomImagePourBDD = null;
 
         // Si une image valide a été sélectionnée dans le formulaire
         if ($fichierImage && $fichierImage->isValid() && !$fichierImage->hasMoved()) {
             
-            // On génère un nom unique aléatoire
             $nomImagePourBDD = $fichierImage->getRandomName();
-            
-            // 📁 Déplacement dans public/uploads/images/
             $fichierImage->move(FCPATH . 'uploads/images/', $nomImagePourBDD);
         }
 
-        // 2. Préparation de l'écriture dans la table 'projets'
+        // Préparation de l'écriture dans la table 'projets'
         $donneesProjet = [
             'categorie'           => $this->request->getPost('categorie'),
             'statut'              => $this->request->getPost('statut'),
@@ -54,7 +48,7 @@ class Projets extends BaseController
             'image'               => $nomImagePourBDD
         ];
 
-        // 3. Lancement de la transaction sécurisée
+        // Lancement de la transaction sécurisée
         $db->transStart();
 
         // Insertion dans 'projets'
@@ -80,13 +74,8 @@ class Projets extends BaseController
             return redirect()->back()->with('error', 'Échec de la sauvegarde.');
         }
 
-        // 🔗 CORRIGÉ : On redirige vers l'URL officielle de ta route web
         return redirect()->to('/admin/projets')->with('success', 'Projet ajouté avec succès !');
     }
-
-        // ====================================================================
-    // SUPPRESSION COMPLÈTE (PROJET + TRADUCTIONS + FICHIER PHOTO)
-    // ====================================================================
     public function supprimer($id = null)
     {
         if ($id === null) {
@@ -95,18 +84,14 @@ class Projets extends BaseController
 
         $db = \Config\Database::connect();
 
-        // 1. On cherche le projet pour connaître le nom de sa photo sur le disque
         $projet = $db->table('projets')->where('id', $id)->get()->getRowArray();
 
         if ($projet) {
-            // 📁 Nettoyage : Si le fichier photo existe dans public/uploads/images/, on le supprime
             if ($projet['image'] && file_exists(FCPATH . 'uploads/images/' . $projet['image'])) {
                 unlink(FCPATH . 'uploads/images/' . $projet['image']);
             }
 
-            // 2. Suppression dans la table 'projets'
-            // Grâce au ON DELETE CASCADE de tes clés étrangères SQL, 
-            // effacer le projet supprime AUTOMATIQUEMENT ses 3 traductions liées !
+            
             $db->table('projets')->where('id', $id)->delete();
 
             return redirect()->to('/admin/projets')->with('success', 'Le projet et ses traductions ont été définitivement supprimés.');
@@ -114,11 +99,6 @@ class Projets extends BaseController
 
         return redirect()->to('/admin/projets')->with('error', 'Projet introuvable.');
     }
-
-
-        // ====================================================================
-    // 1. AFFICHAGE DU FORMULAIRE DE MODIFICATION PRÉ-REMPLI
-    // ====================================================================
     public function modifier($id = null)
     {
         if ($id === null) {
@@ -146,9 +126,6 @@ class Projets extends BaseController
         return view('Administration/projets/modifier', $data);
     }
 
-    // ====================================================================
-    // 2. ENREGISTREMENT DE LA MISE À JOUR EN BASE DE DONNÉES
-    // ====================================================================
     public function mettreAJour($id = null)
     {
         if ($id === null) {

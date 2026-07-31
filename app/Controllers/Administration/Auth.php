@@ -6,7 +6,7 @@ use App\Controllers\BaseController;
 
 class Auth extends BaseController
 {
-    // 1. Affiche le formulaire de connexion
+    // Affiche le formulaire de connexion
     public function login()
     {
         // Si l'utilisateur est déjà connecté, on l'envoie direct à l'admin
@@ -31,7 +31,6 @@ class Auth extends BaseController
         $user = $db->table('users')->where('email', $email)->get()->getRowArray();
 
         if ($user) {
-            // COMPARAISON SIMPLE EN TEXTE CLAIR (Pas de hachage) 👇
             if ($password == $user['mot_de_passe']) {
                 
                 // On crée la session
@@ -54,7 +53,7 @@ class Auth extends BaseController
     }
 
 
-    // 3. Déconnexion de l'utilisateur
+    //  Déconnexion de l'utilisateur
     public function logout()
     {
         // Détruit toutes les variables de session actives

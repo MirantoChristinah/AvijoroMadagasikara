@@ -6,9 +6,7 @@ use App\Controllers\BaseController;
 
 class Medias extends BaseController
 {
-    // ====================================================================
-    // 1. AFFICHAGE DE LA MÉDIATHÈQUE
-    // ====================================================================
+   
    public function index()
 {
     $db = \Config\Database::connect();
@@ -20,10 +18,6 @@ class Medias extends BaseController
 
     return view('Administration/medias/index', $data);
 }
-
-    // ====================================================================
-    // 2. AFFICHAGE DU FORMULAIRE D'AJOUT
-    // ====================================================================
     public function creer()
     {
         $db = \Config\Database::connect();
@@ -65,10 +59,6 @@ class Medias extends BaseController
         return redirect()->to('/admin/medias')->with('error', 'Média introuvable.');
     }
 
-
-        // ====================================================================
-    // 5. AFFICHAGE DU FORMULAIRE DE MODIFICATION TEXTUELLE
-    // ====================================================================
     public function modifier($id = null)
     {
         if ($id === null) {
@@ -103,9 +93,7 @@ class Medias extends BaseController
         return view('Administration/medias/modifier', $data);
     }
 
-         // ====================================================================
-    // C. ENREGISTREMENT EN BASE DE DONNÉES (VERSION COMPLÈTE & SÉCURISÉE)
-    // ====================================================================
+      
     public function enregistrer()
     {
         $db = \Config\Database::connect();
@@ -176,10 +164,6 @@ class Medias extends BaseController
 
         return redirect()->to('/admin/medias')->with('success', 'Média enregistré avec succès !');
     }
-
-    // ====================================================================
-    // E. ENREGISTREMENT DE LA MISE À JOUR (VERSION COMPLÈTE & SÉCURISÉE)
-    // ====================================================================
     public function mettreAJour($id = null)
     {
         if ($id === null) {
