@@ -6,4 +6,3 @@ composer.lock
 xampp-linux-installer.run
 # Ignorer tous les fichiers envoyés par les utilisateurs
 public/uploads/
-ma_super_photo.png
