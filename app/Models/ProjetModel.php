@@ -35,7 +35,7 @@ class ProjetModel extends Model
         ');
 
         $this->join('projets_traductions', 'projets_traductions.projet_id = projets.id');
-        $this->join('langues', 'langues.id = projects_traductions.langue_id');
+        $this->join('langues', 'langues.id = projets_traductions.langue_id');
 
         $this->where('langues.code', $codeLangue);
 

@@ -114,39 +114,39 @@
                     <label for="tab-en" class="tab-btn btn-en">English (EN)</label>
                 </div>
 
-                <!-- Onglet Français -->
+                <!-- Onglet Français (ID = 2) -->
                 <div class="tab-content content-fr">
                     <div class="login-group">
                         <label class="login-label">Titre du Projet (FR)</label>
-                        <input type="text" name="trad[titre]" class="login-input" required placeholder="Ex: Rénovation des infrastructures scolaires">
+                        <input type="text" name="trad[2][titre]" class="login-input" required placeholder="Ex: Rénovation des infrastructures scolaires">
                     </div>
                     <div class="form-group-full">
                         <label class="login-label">Description narrative (FR)</label>
-                        <textarea name="trad[description]" class="login-input" style="height: 140px; resize: vertical;" placeholder="Expliquez les objectifs et impacts du projet..." required></textarea>
+                        <textarea name="trad[2][description]" class="login-input" style="height: 140px; resize: vertical;" placeholder="Expliquez les objectifs et impacts du projet..." required></textarea>
                     </div>
                 </div>
 
-                <!-- Onglet Malgache -->
+                <!-- Onglet Malgache (ID = 1) -->
                 <div class="tab-content content-mg">
                     <div class="login-group">
                         <label class="login-label">Titre du Projet (MG)</label>
-                        <input type="text" name="trad[titre]" class="login-input" required placeholder="Ex: Fanavaozana ny fotodrafitrasa sekoly">
+                        <input type="text" name="trad[1][titre]" class="login-input" required placeholder="Ex: Fanavaozana ny fotodrafitrasa sekoly">
                     </div>
                     <div class="form-group-full">
                         <label class="login-label">Description narrative (MG)</label>
-                        <textarea name="trad[description]" class="login-input" style="height: 140px; resize: vertical;" placeholder="Soraty eto ny antsipiriany..." required></textarea>
+                        <textarea name="trad[1][description]" class="login-input" style="height: 140px; resize: vertical;" placeholder="Soraty eto ny antsipiriany..." required></textarea>
                     </div>
                 </div>
 
-                <!-- Onglet Anglais -->
+                <!-- Onglet Anglais (ID = 3) -->
                 <div class="tab-content content-en">
                     <div class="login-group">
                         <label class="login-label">Titre du Projet (EN)</label>
-                        <input type="text" name="trad[titre]" class="login-input" required placeholder="Ex: School Infrastructure Renovation">
+                        <input type="text" name="trad[3][titre]" class="login-input" required placeholder="Ex: School Infrastructure Renovation">
                     </div>
                     <div class="form-group-full">
                         <label class="login-label">Description narrative (EN)</label>
-                        <textarea name="trad[description]" class="login-input" style="height: 140px; resize: vertical;" placeholder="Overview of goals and community impacts..." required></textarea>
+                        <textarea name="trad[3][description]" class="login-input" style="height: 140px; resize: vertical;" placeholder="Overview of goals and community impacts..." required></textarea>
                     </div>
                 </div>
             </div>
