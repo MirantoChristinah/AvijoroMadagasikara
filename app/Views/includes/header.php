@@ -31,10 +31,19 @@
             <?php $uri = service('uri')->getPath(); ?>
 
             <ul class="navbar-nav navbar-menu mx-auto">
-                <li class="nav-item">
-                    <a href="<?= base_url($lang) ?>" class="nav-link nav-item-figma <?= ($uri == $lang || $uri == '') ? 'active' : '' ?>">
+
+                <li class="nav-item dropdown nav-dropdown">
+                    <a href="<?= base_url($lang) ?>" class="nav-link nav-item-figma dropdown-toggle <?= ($uri == $lang || $uri == '') ? 'active' : '' ?>"
+                       data-bs-toggle="dropdown" aria-expanded="false">
                         <?= lang('Texte.accueil') ?>
                     </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="<?= base_url($lang) ?>"><?= lang('Texte.accueil') ?></a></li>
+                        <li><a class="dropdown-item" href="<?= base_url($lang . '#mission') ?>"><?= lang('Texte.mission_titre') ?></a></li>
+                        <li><a class="dropdown-item" href="<?= base_url($lang . '#projets') ?>"><?= lang('Texte.Nosprojets') ?></a></li>
+                        <li><a class="dropdown-item" href="<?= base_url($lang . '#impact') ?>"><?= lang('Texte.notre_impact_video') ?></a></li>
+                        <li><a class="dropdown-item" href="<?= base_url($lang . '/soutenir') ?>"><?= lang('Texte.bouton_don') ?></a></li>
+                    </ul>
                 </li>
 
                 <li class="nav-item dropdown nav-dropdown">
@@ -43,6 +52,7 @@
                         <?= lang('Texte.Apropos') ?>
                     </a>
                     <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="<?= base_url($lang . '/qui-sommes-nous') ?>"><?= lang('Texte.Apropos') ?></a></li>
                         <li><a class="dropdown-item" href="<?= base_url($lang . '/qui-sommes-nous#histoire') ?>"><?= lang('Texte.sub_histoire') ?></a></li>
                         <li><a class="dropdown-item" href="<?= base_url($lang . '/qui-sommes-nous#mission') ?>"><?= lang('Texte.sub_mission') ?></a></li>
                         <li><a class="dropdown-item" href="<?= base_url($lang . '/qui-sommes-nous#valeurs') ?>"><?= lang('Texte.sub_valeurs') ?></a></li>
@@ -51,41 +61,86 @@
                     </ul>
                 </li>
 
-                <li class="nav-item">
-                    <a href="<?= base_url($lang . '/projects') ?>" class="nav-link nav-item-figma <?= (strpos($uri, 'projects') !== false) ? 'active' : '' ?>">
+                <li class="nav-item dropdown nav-dropdown">
+                    <a href="<?= base_url($lang . '/projects') ?>" class="nav-link nav-item-figma dropdown-toggle <?= (strpos($uri, 'projects') !== false) ? 'active' : '' ?>"
+                       data-bs-toggle="dropdown" aria-expanded="false">
                         <?= lang('Texte.Projets') ?>
                     </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="<?= base_url($lang . '/projects') ?>"><?= lang('Texte.projects_titre') ?></a></li>
+                        <li><a class="dropdown-item" href="<?= base_url($lang . '/projects?categorie=' . urlencode('Éducation')) ?>"><?= lang('Texte.projects_cat_education') ?></a></li>
+                        <li><a class="dropdown-item" href="<?= base_url($lang . '/projects?categorie=' . urlencode('Santé')) ?>"><?= lang('Texte.projects_cat_sante') ?></a></li>
+                        <li><a class="dropdown-item" href="<?= base_url($lang . '/projects?categorie=' . urlencode('Eau')) ?>"><?= lang('Texte.projects_cat_eau') ?></a></li>
+                        <li><a class="dropdown-item" href="<?= base_url($lang . '/projects?categorie=' . urlencode('Environnement')) ?>"><?= lang('Texte.projects_cat_environ') ?></a></li>
+                    </ul>
                 </li>
 
-                <li class="nav-item">
-                    <a href="<?= base_url($lang . '/actualites') ?>" class="nav-link nav-item-figma <?= (strpos($uri, 'actualites') !== false) ? 'active' : '' ?>">
+                <li class="nav-item dropdown nav-dropdown">
+                    <a href="<?= base_url($lang . '/actualites') ?>" class="nav-link nav-item-figma dropdown-toggle <?= (strpos($uri, 'actualites') !== false) ? 'active' : '' ?>"
+                       data-bs-toggle="dropdown" aria-expanded="false">
                         <?= lang('Texte.Actualite') ?>
                     </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="<?= base_url($lang . '/actualites') ?>"><?= lang('Texte.news_titre') ?></a></li>
+                        <li><a class="dropdown-item" href="<?= base_url($lang . '/actualites?categorie=' . urlencode('Événements')) ?>"><?= lang('Texte.news_cat_evenements') ?></a></li>
+                        <li><a class="dropdown-item" href="<?= base_url($lang . '/actualites?categorie=' . urlencode('Projets')) ?>"><?= lang('Texte.news_cat_projets') ?></a></li>
+                        <li><a class="dropdown-item" href="<?= base_url($lang . '/actualites?categorie=' . urlencode('Campagnes')) ?>"><?= lang('Texte.news_cat_campagnes') ?></a></li>
+                        <li><a class="dropdown-item" href="<?= base_url($lang . '/actualites?categorie=' . urlencode('Réussites')) ?>"><?= lang('Texte.news_cat_reussites') ?></a></li>
+                    </ul>
                 </li>
 
-                <li class="nav-item">
-                    <a href="<?= base_url($lang . '/media') ?>" class="nav-link nav-item-figma <?= (strpos($uri, 'media') !== false) ? 'active' : '' ?>">
+                <li class="nav-item dropdown nav-dropdown">
+                    <a href="<?= base_url($lang . '/media') ?>" class="nav-link nav-item-figma dropdown-toggle <?= (strpos($uri, 'media') !== false) ? 'active' : '' ?>"
+                       data-bs-toggle="dropdown" aria-expanded="false">
                         <?= lang('Texte.Media') ?>
                     </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="<?= base_url($lang . '/media') ?>"><?= lang('Texte.media_filtre_tous') ?></a></li>
+                        <li><a class="dropdown-item" href="<?= base_url($lang . '/media?type=' . urlencode('Photos')) ?>"><?= lang('Texte.media_filtre_photos') ?></a></li>
+                        <li><a class="dropdown-item" href="<?= base_url($lang . '/media?type=' . urlencode('Vidéos')) ?>"><?= lang('Texte.media_filtre_videos') ?></a></li>
+                        <li><a class="dropdown-item" href="<?= base_url($lang . '/media?type=' . urlencode('Documents')) ?>"><?= lang('Texte.media_filtre_documents') ?></a></li>
+                    </ul>
                 </li>
 
-                <li class="nav-item">
-                    <a href="<?= base_url($lang . '/faq') ?>" class="nav-link nav-item-figma <?= (strpos($uri, 'faq') !== false) ? 'active' : '' ?>">
+                <li class="nav-item dropdown nav-dropdown">
+                    <a href="<?= base_url($lang . '/faq') ?>" class="nav-link nav-item-figma dropdown-toggle <?= (strpos($uri, 'faq') !== false) ? 'active' : '' ?>"
+                       data-bs-toggle="dropdown" aria-expanded="false">
                         <?= lang('Texte.FAQ') ?>
                     </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="<?= base_url($lang . '/faq') ?>"><?= lang('Texte.faq_titre') ?></a></li>
+                        <li><a class="dropdown-item" href="<?= base_url($lang . '/faq#general') ?>"><?= lang('Texte.faq_cat_general') ?></a></li>
+                        <li><a class="dropdown-item" href="<?= base_url($lang . '/faq#benevolat') ?>"><?= lang('Texte.faq_cat_benevolat') ?></a></li>
+                        <li><a class="dropdown-item" href="<?= base_url($lang . '/faq#dons') ?>"><?= lang('Texte.faq_cat_dons') ?></a></li>
+                    </ul>
                 </li>
 
-                <li class="nav-item">
-                    <a href="<?= base_url($lang . '/soutenir') ?>" class="nav-link nav-item-figma <?= (strpos($uri, 'soutenir') !== false) ? 'active' : '' ?>">
+                <li class="nav-item dropdown nav-dropdown">
+                    <a href="<?= base_url($lang . '/soutenir') ?>" class="nav-link nav-item-figma dropdown-toggle <?= (strpos($uri, 'soutenir') !== false) ? 'active' : '' ?>"
+                       data-bs-toggle="dropdown" aria-expanded="false">
                         <?= lang('Texte.joindre') ?>
                     </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="<?= base_url($lang . '/soutenir') ?>"><?= lang('Texte.joindre') ?></a></li>
+                        <li><a class="dropdown-item" href="<?= base_url($lang . '/soutenir#pourquoi') ?>"><?= lang('Texte.benevole_pourquoi_titre') ?></a></li>
+                        <li><a class="dropdown-item" href="<?= base_url($lang . '/soutenir#opportunites') ?>"><?= lang('Texte.opp_titre') ?></a></li>
+                        <li><a class="dropdown-item" href="<?= base_url($lang . '/soutenir#candidature') ?>"><?= lang('Texte.form_titre') ?></a></li>
+                    </ul>
                 </li>
 
-                <li class="nav-item">
-                    <a href="<?= base_url($lang . '/contact') ?>" class="nav-link nav-item-figma <?= (strpos($uri, 'contact') !== false) ? 'active' : '' ?>">
+                <li class="nav-item dropdown nav-dropdown">
+                    <a href="<?= base_url($lang . '/contact') ?>" class="nav-link nav-item-figma dropdown-toggle <?= (strpos($uri, 'contact') !== false) ? 'active' : '' ?>"
+                       data-bs-toggle="dropdown" aria-expanded="false">
                         <?= lang('Texte.Contact') ?>
                     </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="<?= base_url($lang . '/contact') ?>"><?= lang('Texte.Contact') ?></a></li>
+                        <li><a class="dropdown-item" href="<?= base_url($lang . '/contact#coordonnees') ?>"><?= lang('Texte.contact_coordonnees_titre') ?></a></li>
+                        <li><a class="dropdown-item" href="<?= base_url($lang . '/contact#formulaire') ?>"><?= lang('Texte.contact_form_titre') ?></a></li>
+                        <li><a class="dropdown-item" href="<?= base_url($lang . '/contact#carte') ?>"><?= lang('Texte.contact_map_titre') ?></a></li>
+                    </ul>
                 </li>
+
             </ul>
 
             <div class="navbar-right-block">

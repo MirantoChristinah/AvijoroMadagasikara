@@ -22,7 +22,7 @@
   </section>
 
   <!-- ================= 2. NOTRE HISTOIRE ================= -->
-  <section class="py-16 lg:py-24 bg-white" style="padding: 5rem 0; width: 100%;">
+  <section id="histoire" class="py-16 lg:py-24 bg-white" style="padding: 5rem 0; width: 100%;">
     <div class="container mx-auto px-4" style="max-width: 1200px; margin: 0 auto;">
       <div style="width: 100%; text-align: center; font-size: 0;">
         
@@ -50,7 +50,7 @@
   </section>
 
    <!-- ================= SECTION : MISSION & VISION STYLE FIGMA BLANC ================= -->
-  <section class="mission-vision-section" style="padding: 5rem 0; background-color: #f9fafb; border-top: 1px solid #e5e7eb; border-bottom: 1px solid #e5e7eb; width: 100%; clear: both;">
+  <section id="mission" class="mission-vision-section" style="padding: 5rem 0; background-color: #f9fafb; border-top: 1px solid #e5e7eb; border-bottom: 1px solid #e5e7eb; width: 100%; clear: both;">
     <div class="container mx-auto px-4" style="max-width: 1200px; margin: 0 auto; box-sizing: border-box; width: 100%;">
       
       <div style="width: 100%; text-align: center; font-size: 0;">
@@ -91,7 +91,7 @@
     </div>
   </section>
     <!-- ================= SECTION : NOS VALEURS STYLE FIGMA FILAIRE ================= -->
-  <section class="values-section" style="padding: 5rem 0; background-color: #ffffff; width: 100%; clear: both;">
+  <section id="valeurs" class="values-section" style="padding: 5rem 0; background-color: #ffffff; width: 100%; clear: both;">
     <div class="container mx-auto px-4" style="max-width: 1200px; margin: 0 auto; box-sizing: border-box; width: 100%;">
       
       <!-- En-tête de la section -->
@@ -164,7 +164,7 @@
 
 
    <!-- ================= SECTION : NOTRE PARCOURS (TIMELINE VERTICALE FIGMA) ================= -->
-  <section class="parcours-section" style="padding: 5rem 0; background-color: #ffffff; width: 100%; clear: both;">
+  <section id="parcours" class="parcours-section" style="padding: 5rem 0; background-color: #ffffff; width: 100%; clear: both;">
     <div class="container mx-auto px-4" style="max-width: 1200px; margin: 0 auto; box-sizing: border-box; width: 100%;">
       
       <!-- En-tête de la section -->
@@ -219,7 +219,7 @@
   </section>
 
    <!-- ================= SECTION : NOTRE ÉQUIPE STYLE FIGMA AVEC BLOCS INITIALES ================= -->
-  <section class="team-section" style="padding: 5rem 0; background-color: #ffffff; width: 100%; clear: both;" id="valeurs">
+  <section id="equipe" class="team-section" style="padding: 5rem 0; background-color: #ffffff; width: 100%; clear: both;">
     <div class="container mx-auto px-4" style="max-width: 1200px; margin: 0 auto; box-sizing: border-box; width: 100%;" >
       
       <!-- En-tête de la section -->

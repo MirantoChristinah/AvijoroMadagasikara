@@ -43,8 +43,8 @@
   --sidebar-ring: oklch(0.708 0 0);
   
   /* Custom colors for AVIJORO */
-  --color-green: #2D8659;
-  --color-blue: #1E88E5;
+  --color-green: #61ce70;
+  --color-blue: #007bff;
   --color-orange: #FF7043;
 
   /* Équivalents des tailles de texte */
@@ -1249,6 +1249,12 @@ body {
   justify-content: space-between;
 }
 
+/* Décalage des ancres de section sous la navbar fixe */
+section[id],
+div[id] {
+  scroll-margin-top: 90px;
+}
+
 .navbar-menu {
   height: 100%;
   gap: 1.5rem;
@@ -1335,6 +1341,27 @@ body {
 /* ==========================================================================
    8. FOOTER STYLE FIGMA (AVIJORO)
    ========================================================================== */
+
+/* Accordéon FAQ - couleurs de la charte AVIJORO */
+.faq-section .accordion-button {
+  font-weight: 600;
+  color: #1f2937;
+}
+
+.faq-section .accordion-button:not(.collapsed) {
+  background-color: #e6f4ea;
+  color: #2D8659;
+}
+
+.faq-section .accordion-button:focus {
+  box-shadow: none;
+  border-color: #2D8659;
+}
+
+.faq-section .accordion-body {
+  color: #4b5563;
+  line-height: 1.7;
+}
 
 .avijoro-footer {
   background-color: #0b1220;

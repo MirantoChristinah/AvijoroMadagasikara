@@ -11,7 +11,6 @@ $routes->get('/', function () {
 });
 
 
-
 $routes->get('login', 'Administration\Auth::login');
 $routes->post('login/check', 'Administration\Auth::check');
 $routes->get('logout', 'Administration\Auth::logout');

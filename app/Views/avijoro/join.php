@@ -23,7 +23,7 @@
    <!-- ==========================================
        SECTION 2 : POURQUOI DEVENIR BÉNÉVOLE (STRUCTURE MAQUETTE 3 COLONNES)
        ========================================== -->
-  <section class="benevole-gray-section">
+  <section id="pourquoi" class="benevole-gray-section">
     <div class="home-container">
       
       <div class="mission-header-block" style="text-align: center; margin-bottom: 4rem;">
@@ -65,7 +65,7 @@
      <!-- ==========================================
        SECTION 3 : OPPORTUNITÉS DE BÉNÉVOLAT (VERSION ÉMOJIS FIGMA)
        ========================================== -->
-  <section class="benevole-gray-section" style="background-color: #ffffff; border-top: none; padding: 5rem 0;">
+  <section id="opportunites" class="benevole-gray-section" style="background-color: #ffffff; border-top: none; padding: 5rem 0;">
     <div class="home-container">
       
       <div class="mission-header-block" style="text-align: center; margin-bottom: 4rem;">
@@ -102,7 +102,7 @@
   <!-- ==========================================
        SECTION 4 : FORMULAIRE DE CANDIDATURE
        ========================================== -->
-  <section class="benevole-gray-section" style="border-top: 1px solid var(--border);">
+  <section id="candidature" class="benevole-gray-section" style="border-top: 1px solid var(--border);">
     <div class="home-container">
       
       <div class="form-card-container">

@@ -41,7 +41,7 @@
   </section>
 
   <!-- ================= 2. MISSION SECTION ================= -->
-  <section class="mission-section" style="padding: 5rem 0; background-color: #ffffff; width: 100%;">
+  <section id="mission" class="mission-section" style="padding: 5rem 0; background-color: #ffffff; width: 100%;">
     <div class="home-container" style="max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; width: 100%; box-sizing: border-box;">
       
       <div class="mission-header-block" style="text-align: center; max-width: 45rem; margin: 0 auto 3.5rem auto;">
@@ -108,7 +108,7 @@
 
     <!-- ================= SECTION COMPLETE : NOS PROJETS FIGMA ================= -->
  <!-- ================= SECTION DYNAMIQUE : NOS PROJETS ================= -->
-<section class="projects-section" style="padding: 5rem 0; background-color: #f9fafb; border-top: 1px solid #e5e7eb; border-bottom: 1px solid #e5e7eb; width: 100%; clear: both;">
+<section id="projets" class="projects-section" style="padding: 5rem 0; background-color: #f9fafb; border-top: 1px solid #e5e7eb; border-bottom: 1px solid #e5e7eb; width: 100%; clear: both;">
   <div class="home-container" style="max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; width: 100%; box-sizing: border-box;">
     
     <!-- En-tête de la section -->
@@ -176,7 +176,7 @@
   </section>
 
     <!-- ================= SECTION ISOLÉE : NOTRE IMPACT EN VIDÉO ================= -->
-  <section class="video-impact-section" style="padding: 5rem 0; background-color: #ffffff; width: 100%; clear: both;">
+  <section id="impact" class="video-impact-section" style="padding: 5rem 0; background-color: #ffffff; width: 100%; clear: both;">
     <div class="home-container" style="max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; width: 100%; box-sizing: border-box;">
       
       <!-- En-tête de la section -->

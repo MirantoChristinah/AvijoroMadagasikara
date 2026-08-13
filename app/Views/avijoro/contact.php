@@ -18,7 +18,7 @@
   <!-- ==========================================
        SECTION 2 : FORMULAIRE ET COORDONNÉES
        ========================================== -->
-  <section style="background-color: #ffffff; border-bottom: 1px solid #eef0f2;">
+  <section id="coordonnees" style="background-color: #ffffff; border-bottom: 1px solid #eef0f2;">
     <div class="home-container">
       <div class="contact-main-grid">
         
@@ -72,7 +72,7 @@
         <!-- DROITE : FORMULAIRE ET FOOTER DE GRILLE -->
 
         
-        <div class="contact-content">
+        <div id="formulaire" class="contact-content">
           <h2 class="contact-form-title"><?= lang('Texte.contact_form_titre') ?></h2>
           
           <form action="<?= base_url(($lang ?? 'fr') . '/contact/envoyer') ?>" method="post">
@@ -141,7 +141,7 @@
   <!-- ==========================================
        SECTION 3 : NOUS TROUVER (CARTE GOOGLE MAPS)
        ========================================== -->
-  <section class="contact-map-section">
+  <section id="carte" class="contact-map-section">
     <div class="home-container">
       <h2 class="contact-map-title"><?= lang('Texte.contact_map_titre') ?></h2>
       
