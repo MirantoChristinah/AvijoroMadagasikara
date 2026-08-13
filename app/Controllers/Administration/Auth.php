@@ -9,12 +9,8 @@ class Auth extends BaseController
     // Affiche le formulaire de connexion
     public function login()
     {
-        // Si l'utilisateur est déjà connecté, on l'envoie direct à l'admin
-        if (session()->get('isLoggedIn')) {
-            return redirect()->to('Administration/dashboard');
-        }
-        
-        // Charge la vue située dans app/Views/admin/login.php
+        // Charge la vue située dans app/Views/Administration/login.php
+        // Le formulaire s'affiche toujours, même si une session existe déjà.
         return view('Administration/login');
     }
 
