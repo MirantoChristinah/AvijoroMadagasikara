@@ -47,6 +47,10 @@ $routes->group('admin', ['filter' => 'adminAuth'], function ($routes) {
     $routes->get('medias/supprimer/(:num)', 'Administration\Medias::supprimer/$1');
     $routes->post('medias/enregistrer', 'Administration\Medias::enregistrer');
 
+    $routes->get('benevoles', 'Administration\Benevoles::index');
+    $routes->get('benevoles/statut/(:num)/(:any)', 'Administration\Benevoles::statut/$1/$2');
+    $routes->get('benevoles/supprimer/(:num)', 'Administration\Benevoles::supprimer/$1');
+
 });
 
 

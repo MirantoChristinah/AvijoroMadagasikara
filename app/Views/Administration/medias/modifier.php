@@ -37,11 +37,7 @@
 </head>
 <body>
 
-    <!-- Barre de Navigation -->
-    <nav class="admin-navbar">
-        <a class="admin-logo" href="<?= base_url('admin/dashboard') ?>">AVIJORO Admin</a>
-        <a href="<?= base_url('logout') ?>" class="btn-logout">Déconnexion</a>
-    </nav>
+    <?= $this->include('Administration/partials/admin_header') ?>
 
     <!-- Conteneur Principal -->
     <div class="admin-container" style="max-width: 850px;">

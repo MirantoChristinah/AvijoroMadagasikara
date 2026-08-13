@@ -8,14 +8,7 @@
 </head>
 <body>
 
-    <!-- Barre de Navigation Moderne -->
-    <nav class="admin-navbar">
-        <a class="admin-logo" href="<?= base_url('admin/dashboard') ?>">AVIJORO Admin</a>
-        <div class="admin-user-info">
-            <span class="user-badge">👤 <?= esc($nom_admin) ?></span>
-            <a href="<?= base_url('logout') ?>" class="btn-logout">Déconnexion</a>
-        </div>
-    </nav>
+    <?= $this->include('Administration/partials/admin_header') ?>
 
     <!-- Contenu Principal -->
     <div class="admin-container">
@@ -63,6 +56,18 @@
                     <p>Téléversez les reportages photos, associez des vidéos de chantiers et stockez les documents officiels consultables.</p>
                 </div>
                 <a href="<?= base_url('admin/medias') ?>" class="btn-admin">Ouvrir les Médias</a>
+            </div>
+
+            <!-- Module Candidatures & Bénévoles -->
+            <div class="admin-card">
+                <div>
+                    <div class="card-icon icon-benevoles">
+                        <svg xmlns="http://w3.org" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                    </div>
+                    <h3>Candidatures & Bénévoles</h3>
+                    <p>Consultez les candidatures reçues via « Devenir Bénévole », acceptez ou refusez les volontaires et gérez les contacts.</p>
+                </div>
+                <a href="<?= base_url('admin/benevoles') ?>" class="btn-admin">Voir les Candidatures</a>
             </div>
 
         </div>
