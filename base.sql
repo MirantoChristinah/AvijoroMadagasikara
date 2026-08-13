@@ -138,3 +138,27 @@ CREATE TABLE traductions_interface (
     contenu TEXT NOT NULL,
     FOREIGN KEY (langue_id) REFERENCES langues(id) ON DELETE RESTRICT
 );
+
+-- ============================================================
+-- FUNDRAISING : Produits & Campagnes
+-- ============================================================
+CREATE TABLE produits (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    prix INT NOT NULL DEFAULT 0,
+    categorie VARCHAR(100),
+    image VARCHAR(255),
+    tailles VARCHAR(255),
+    couleurs VARCHAR(255),
+    disponible TINYINT(1) DEFAULT 1,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE produits_traductions (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    produit_id INT NOT NULL,
+    langue_id INT NOT NULL,
+    nom VARCHAR(255) NOT NULL,
+    description TEXT,
+    FOREIGN KEY (produit_id) REFERENCES produits(id) ON DELETE CASCADE,
+    FOREIGN KEY (langue_id) REFERENCES langues(id) ON DELETE RESTRICT
+);

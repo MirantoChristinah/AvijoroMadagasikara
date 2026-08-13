@@ -46,6 +46,13 @@ $routes->group('admin', ['filter' => 'adminAuth'], function ($routes) {
     $routes->get('benevoles/statut/(:num)/(:any)', 'Administration\Benevoles::statut/$1/$2');
     $routes->get('benevoles/supprimer/(:num)', 'Administration\Benevoles::supprimer/$1');
 
+    $routes->get('produits', 'Administration\Produits::index');
+    $routes->get('produits/creer', 'Administration\Produits::creer');
+    $routes->post('produits/enregistrer', 'Administration\Produits::enregistrer');
+    $routes->get('produits/modifier/(:num)', 'Administration\Produits::modifier/$1');
+    $routes->post('produits/mettre-a-jour/(:num)', 'Administration\Produits::mettreAJour/$1');
+    $routes->get('produits/supprimer/(:num)', 'Administration\Produits::supprimer/$1');
+
 });
 
 
@@ -66,7 +73,11 @@ $routes->group('{locale}', function ($routes) {
     $routes->post('soutenir/postuler', 'Join::postuler');
     $routes->get('don', 'Home::don');
     $routes->get('faq', 'Home::faq');
-    
+
+    $routes->get('fundraising', 'Fundraising::index');
+    $routes->get('fundraising/produits', 'Fundraising::produits');
+    $routes->get('fundraising/produit/(:num)', 'Fundraising::produit/$1');
+
     $routes->get('contact', 'Contact::index');
     $routes->post('contact/envoyer', 'Contact::envoyer'); 
     $routes->post('newsletter/inscription', 'Home::inscriptionNewsletter');
