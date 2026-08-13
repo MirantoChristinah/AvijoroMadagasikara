@@ -1260,6 +1260,29 @@ div[id] {
   gap: 1.5rem;
 }
 
+@media (min-width: 1200px) {
+  .main-navbar {
+    position: relative;
+  }
+
+  .navbar-collapse {
+    flex-wrap: wrap;
+  }
+
+  .navbar-menu {
+    height: auto;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.25rem 1.5rem;
+    padding: 0.5rem 0;
+  }
+
+  .navbar-menu .nav-item-figma {
+    height: auto;
+    min-height: 80px;
+  }
+}
+
 /* Dropdown : garder l'ouverture au survol en desktop */
 .nav-dropdown:hover .dropdown-menu {
   display: block;
