@@ -1199,3 +1199,317 @@ body {
     height: 300px;
   }
 }
+
+/* ==========================================================================
+   7. OVERRIDES BOOTSTRAP — NAVBAR (header converti en Bootstrap 5)
+   ========================================================================== */
+
+.main-navbar {
+  min-height: 80px;
+  height: auto;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.navbar-container {
+  width: 100%;
+}
+
+.navbar-brand.navbar-logo {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+/* Bouton burger personnalisé */
+.navbar-toggler {
+  border: none;
+  padding: 0.35rem 0.25rem;
+  box-shadow: none !important;
+  outline: none;
+}
+
+.hamburger-box {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  width: 24px;
+}
+
+.hamburger-box span {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: #1f2937;
+  border-radius: 2px;
+  transition: background-color 0.2s ease;
+}
+
+/* Réactive la marge auto qui centre le menu desktop */
+.navbar-collapse {
+  justify-content: space-between;
+}
+
+.navbar-menu {
+  height: 100%;
+  gap: 1.5rem;
+}
+
+/* Dropdown : garder l'ouverture au survol en desktop */
+.nav-dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.dropdown-menu {
+  border-radius: 0.5rem;
+}
+
+.dropdown-menu .dropdown-item {
+  font-size: 0.9rem;
+  padding: 0.6rem 1.2rem;
+}
+
+.dropdown-menu .dropdown-item:hover,
+.dropdown-menu .dropdown-item:focus {
+  background-color: #f3f4f6;
+  color: #2D8659;
+}
+
+/* Mobile / tablette : menu replié (collapse Bootstrap) */
+@media (max-width: 1199.98px) {
+  .navbar-container {
+    flex-direction: row !important;
+    align-items: center;
+    flex-wrap: nowrap;
+  }
+
+  .navbar-collapse {
+    margin-top: 1rem;
+    padding: 1rem 0;
+    border-top: 1px solid #eef0f2;
+    background-color: #ffffff;
+  }
+
+  .navbar-menu {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.25rem;
+    height: auto;
+    width: 100%;
+  }
+
+  .navbar-menu .nav-item-figma {
+    height: auto;
+    padding: 0.6rem 0;
+    font-size: 0.95rem;
+  }
+
+  .navbar-menu .nav-item-figma::after {
+    display: none;
+  }
+
+  .nav-dropdown {
+    display: block;
+    width: 100%;
+  }
+
+  .nav-dropdown .dropdown-menu {
+    position: static;
+    box-shadow: none;
+    border: 0;
+    padding: 0 0 0.5rem 1rem;
+    background: transparent;
+  }
+
+  .nav-dropdown .dropdown-menu .dropdown-item {
+    padding: 0.45rem 0.75rem;
+  }
+
+  .navbar-right-block {
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    padding: 0.5rem 0 0.25rem;
+  }
+}
+
+/* ==========================================================================
+   8. FOOTER STYLE FIGMA (AVIJORO)
+   ========================================================================== */
+
+.avijoro-footer {
+  background-color: #0b1220;
+  color: #9ca3af;
+  font-size: 0.875rem;
+  padding: 4rem 0 0;
+  width: 100%;
+  clear: both;
+}
+
+.footer-grid {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  padding-bottom: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.footer-brand-title {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #ffffff;
+  font-size: 1.15rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  margin-bottom: 1rem;
+}
+
+.footer-description {
+  color: #9ca3af;
+  line-height: 1.7;
+  margin: 0;
+  max-width: 26rem;
+}
+
+.footer-col-title {
+  color: #ffffff;
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  margin: 0 0 1.25rem 0;
+}
+
+.footer-col-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.footer-col-links a {
+  color: #9ca3af;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.footer-col-links a:hover {
+  color: #ffffff;
+}
+
+.footer-col-contact {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.footer-col-contact li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+  color: #9ca3af;
+}
+
+.footer-col-contact svg {
+  flex-shrink: 0;
+  margin-top: 0.15rem;
+}
+
+.footer-newsletter-text {
+  color: #9ca3af;
+  line-height: 1.6;
+  margin: 0 0 1rem 0;
+}
+
+.footer-newsletter-input {
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 0.5rem;
+  color: #ffffff;
+  padding: 0.65rem 0.85rem;
+  font-size: 0.85rem;
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+.footer-newsletter-input::placeholder {
+  color: #6b7280;
+}
+
+.footer-newsletter-input:focus {
+  border-color: #2D8659;
+}
+
+.footer-newsletter-btn {
+  width: 100%;
+  margin-top: 0.6rem;
+  background-color: #ff7043;
+  border: none;
+  border-radius: 0.5rem;
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 0.85rem;
+  padding: 0.65rem 0.85rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.footer-newsletter-btn:hover {
+  background-color: #f06336;
+}
+
+.footer-mid {
+  padding: 1.5rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.footer-social-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #9ca3af;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.footer-social-btn:hover {
+  color: #ffffff;
+  border-color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.06);
+}
+
+.footer-legal {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.footer-legal a {
+  color: #9ca3af;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.footer-legal a:hover {
+  color: #ffffff;
+}
+
+.footer-legal span {
+  color: rgba(255, 255, 255, 0.2);
+  user-select: none;
+}
+
+.footer-copyright {
+  text-align: center;
+  padding: 1.5rem 0 2rem;
+  color: #6b7280;
+  font-size: 0.8rem;
+}

@@ -147,7 +147,7 @@
               </p>
               
               <!-- Lien vers le détail du projet spécifique -->
-              <a href="<?= base_url(($lang ?? 'fr') . '/projets/' . $projet['id']) ?>" style="color: #2D8659; text-decoration: none; font-size: 0.875rem; font-weight: 600; display: inline-flex; align-items: center; gap: 0.25rem;">
+              <a href="<?= base_url(($lang ?? 'fr') . '/projects/' . $projet['id']) ?>" style="color: #2D8659; text-decoration: none; font-size: 0.875rem; font-weight: 600; display: inline-flex; align-items: center; gap: 0.25rem;">
                 En savoir plus ➔
               </a>
             </div>

@@ -3,7 +3,7 @@ namespace App\Controllers;
 
 use App\Models\BenevoleModel;
 
-class Joins extends BaseController
+class Join extends BaseController
 {
     public function index ()
     {

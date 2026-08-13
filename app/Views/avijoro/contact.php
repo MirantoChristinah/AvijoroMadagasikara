@@ -75,7 +75,7 @@
         <div class="contact-content">
           <h2 class="contact-form-title"><?= lang('Texte.contact_form_titre') ?></h2>
           
-          <form action="<?= base_url(($lang ?? 'fr') . '/contact/envoyer ') ?>" method="post">
+          <form action="<?= base_url(($lang ?? 'fr') . '/contact/envoyer') ?>" method="post">
             <?= csrf_field() ?>
             
             <div class="contact-form-grid">

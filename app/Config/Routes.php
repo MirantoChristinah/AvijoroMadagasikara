@@ -36,10 +36,6 @@ $routes->group('admin', ['filter' => 'adminAuth'], function ($routes) {
     $routes->post('actualites/mettre-a-jour/(:num)', 'Administration\Actualites::mettreAJour/$1');
     $routes->get('actualites/supprimer/(:num)', 'Administration\Actualites::supprimer/$1');
 
-    $routes->get('projets/modifier/(:num)', 'Administration\Projets::modifier/$1');
-    $routes->post('projets/mettre-a-jour/(:num)', 'Administration\Projets::mettreAJour/$1'); // 👈 Doit pointer exactement ici
-        
-    
     $routes->get('medias', 'Administration\Medias::index');
     $routes->get('medias/creer', 'Administration\Medias::creer');
     $routes->get('medias/modifier/(:num)', 'Administration\Medias::modifier/$1');
@@ -68,6 +64,7 @@ $routes->group('{locale}', function ($routes) {
     $routes->get('media', 'Media::index');
     $routes->get('media/voir/(:num)', 'Media::voir/$1');
     $routes->get('soutenir', 'Join::index');
+    $routes->post('soutenir/postuler', 'Join::postuler');
     $routes->get('faq', 'Home::faq');
     
     $routes->get('contact', 'Contact::index');

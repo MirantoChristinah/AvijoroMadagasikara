@@ -5,8 +5,8 @@ class Faq extends BaseController
 {
     public function index ()
     {
-        //data['faq']= variable qui contient les données  model pour récuperer les données dans database
-        body("avijoro/faq",$data);
+        $data = ['lang' => $this->request->getLocale()];
+        return $this->body('avijoro/faq', $data);
     }
 }
 
