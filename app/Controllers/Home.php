@@ -107,6 +107,11 @@ class Home extends BaseController
         return $this->renderPage('avijoro/join');
     }
 
+    public function don()
+    {
+        return $this->renderPage('avijoro/donate');
+    }
+
     public function faq()
     {
         return $this->renderPage('avijoro/faq');

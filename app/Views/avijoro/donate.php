@@ -1,160 +1,77 @@
-<div class="pt-16 lg:pt-20">
-  <!-- Section Hero -->
-  <section class="bg-gradient-to-br from-[#FF7043] to-[#F4511E] text-white py-16 lg:py-24">
-    <div class="container mx-auto px-4 text-center">
-      <div class="text-white mb-6 text-6xl">❤️</div>
-      <h1 class="text-4xl lg:text-6xl font-bold mb-6"><?= lang('Texte.soutenir_titre') ?></h1>
-      <p class="text-lg lg:text-xl text-orange-50 max-w-3xl mx-auto">
-        <?= lang('Texte.soutenir_slogan') ?>
-      </p>
+<div class="main-content-wrapper">
+
+  <!-- ================= HERO (DÉGRADÉ ORANGE) ================= -->
+  <section class="don-hero" style="background: linear-gradient(135deg, #FF7043, #F4511E); padding: 5rem 0; text-align: center; width: 100%;">
+    <div class="hero-actualites-container">
+      <div class="display-1 mb-3" style="line-height: 1;">❤️</div>
+      <h1><?= lang('Texte.soutenir_titre') ?></h1>
+      <p><?= lang('Texte.soutenir_slogan') ?></p>
     </div>
   </section>
 
-  <!-- Section Méthodes de Dons -->
-  <section class="py-16 lg:py-24 bg-white">
-    <div class="container mx-auto px-4">
-      <div class="text-center mb-12">
-        <h2 class="text-3xl lg:text-5xl font-bold mb-4 text-gray-900">
-          <?= lang('Texte.comment_don_titre') ?>
-        </h2>
-        <p class="text-lg text-gray-600 max-w-2xl mx-auto">
-          <?= lang('Texte.comment_don_desc') ?>
-        </p>
+  <!-- ================= MÉTHODES DE DONS ================= -->
+  <section class="py-5 bg-white">
+    <div class="container">
+
+      <div class="text-center mb-5">
+        <h2 class="h1 fw-bold text-dark mb-3"><?= lang('Texte.comment_don_titre') ?></h2>
+        <p class="text-secondary mx-auto" style="max-width: 42rem;"><?= lang('Texte.comment_don_desc') ?></p>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-        <!-- Méthode 1: Mobile Money -->
-        <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300">
-          <div class="bg-gradient-to-br from-orange-500 to-red-500 p-8 text-white text-center">
-            <div class="text-4xl mb-2">📱</div>
-            <h3 class="text-xl font-bold">Mobile Money</h3>
-          </div>
-          <div class="p-6 text-center">
-            <p class="text-gray-600 mb-3">MVola, Orange Money, Airtel Money</p>
-            <p class="text-sm font-medium text-gray-900 bg-gray-50 px-3 py-2 rounded-lg">+261 34 12 345 67</p>
-          </div>
-        </div>
+      <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
 
-        <!-- Méthode 2: Virement Bancaire -->
-        <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300">
-          <div class="bg-gradient-to-br from-blue-500 to-indigo-500 p-8 text-white text-center">
-            <div class="text-4xl mb-2">💳</div>
-            <h3 class="text-xl font-bold"><?= lang('Texte.don_banque_titre') ?></h3>
-          </div>
-          <div class="p-6 text-center">
-            <p class="text-gray-600 mb-3">BOA Madagascar</p>
-            <p class="text-xs font-medium text-gray-900 bg-gray-50 px-3 py-2 rounded-lg select-all">IBAN: MG12 3456 7890 1234 5678 90</p>
-          </div>
-        </div>
-
-        <!-- Méthode 3: QR Code -->
-        <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300">
-          <div class="bg-gradient-to-br from-green-500 to-teal-500 p-8 text-white text-center">
-            <div class="text-4xl mb-2">🔳</div>
-            <h3 class="text-xl font-bold">QR Code</h3>
-          </div>
-          <div class="p-6 text-center">
-            <p class="text-gray-600 mb-3"><?= lang('Texte.don_qr_desc') ?></p>
-            <p class="text-sm font-medium text-gray-900 bg-gray-50 px-3 py-2 rounded-lg"><?= lang('Texte.don_qr_details') ?></p>
-          </div>
-        </div>
-
-        <!-- Méthode 4: Facebook Fundraising -->
-        <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300">
-          <div class="bg-gradient-to-br from-blue-600 to-blue-400 p-8 text-white text-center">
-            <div class="text-4xl mb-2">👥</div>
-            <h3 class="text-xl font-bold">Facebook</h3>
-          </div>
-          <div class="p-6 text-center">
-            <p class="text-gray-600 mb-3"><?= lang('Texte.don_fb_desc') ?></p>
-            <a href="https://facebook.com" target="_blank" class="block text-sm font-medium text-blue-600 hover:underline bg-blue-50 px-3 py-2 rounded-lg">facebook.com/avijoro</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Section Échelles d'Impact -->
-  <section class="py-16 lg:py-24 bg-gray-50">
-    <div class="container mx-auto px-4">
-      <div class="text-center mb-12">
-        <div class="text-[#2D8659] text-5xl mb-4">📈</div>
-        <h2 class="text-3xl lg:text-5xl font-bold mb-4 text-gray-900"><?= lang('Texte.impact_don_titre') ?></h2>
-        <p class="text-lg text-gray-600 max-w-2xl mx-auto"><?= lang('Texte.impact_don_desc') ?></p>
-      </div>
-
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
-        <!-- Niveau 1 -->
-        <div class="bg-white p-8 rounded-2xl text-center hover:shadow-lg transition-shadow">
-          <div class="text-5xl mb-4">📚</div>
-          <div class="text-2xl font-bold text-[#FF7043] mb-3">10,000 Ar</div>
-          <p class="text-gray-700"><?= lang('Texte.impact_1') ?></p>
-        </div>
-        <!-- Niveau 2 -->
-        <div class="bg-white p-8 rounded-2xl text-center hover:shadow-lg transition-shadow">
-          <div class="text-5xl mb-4">🏥</div>
-          <div class="text-2xl font-bold text-[#FF7043] mb-3">50,000 Ar</div>
-          <p class="text-gray-700"><?= lang('Texte.impact_2') ?></p>
-        </div>
-        <!-- Niveau 3 -->
-        <div class="bg-white p-8 rounded-2xl text-center hover:shadow-lg transition-shadow">
-          <div class="text-5xl mb-4">🌳</div>
-          <div class="text-2xl font-bold text-[#FF7043] mb-3">100,000 Ar</div>
-          <p class="text-gray-700"><?= lang('Texte.impact_3') ?></p>
-        </div>
-        <!-- Niveau 4 -->
-        <div class="bg-white p-8 rounded-2xl text-center hover:shadow-lg transition-shadow">
-          <div class="text-5xl mb-4">💧</div>
-          <div class="text-2xl font-bold text-[#FF7043] mb-3">500,000 Ar</div>
-          <p class="text-gray-700"><?= lang('Texte.impact_4') ?></p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Section Transparence Financière -->
-  <section class="py-16 lg:py-24 bg-white">
-    <div class="container mx-auto px-4 max-w-4xl">
-      <div class="text-center mb-12">
-        <div class="text-[#1E88E5] text-5xl mb-4">🛡️</div>
-        <h2 class="text-3xl lg:text-5xl font-bold mb-4 text-gray-900"><?= lang('Texte.transparence_titre') ?></h2>
-        <p class="text-lg text-gray-600"><?= lang('Texte.transparence_desc') ?></p>
-      </div>
-
-      <div class="bg-gradient-to-br from-gray-50 to-gray-100 p-8 lg:p-12 rounded-2xl">
-        <h3 class="text-2xl font-bold mb-8 text-gray-900 text-center"><?= lang('Texte.repartition_titre') ?></h3>
-        
-        <div class="space-y-6">
-          <!-- Barre 1: Projets -->
-          <div>
-            <div class="flex items-center justify-between mb-2">
-              <span class="font-medium text-gray-900"><?= lang('Texte.repart_projets') ?></span>
-              <span class="font-bold text-lg text-gray-900">75%</span>
+        <!-- Méthode 1 : Mobile Money -->
+        <div class="col">
+          <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden">
+            <div class="card-body text-center text-white" style="background: linear-gradient(135deg, #FF7043, #F4511E);">
+              <div class="display-5 mb-2">📱</div>
+              <h3 class="h5 fw-bold mb-0">Mobile Money</h3>
             </div>
-            <div class="w-full bg-gray-200 rounded-full h-4">
-              <div class="bg-[#2D8659] h-4 rounded-full" style="width: 75%"></div>
+            <div class="card-body text-center">
+              <p class="text-secondary small mb-3">MVola, Orange Money, Airtel Money</p>
+              <span class="d-inline-block bg-light text-dark rounded-3 px-3 py-2 small fw-semibold">+261 34 12 345 67</span>
             </div>
           </div>
+        </div>
 
-          <!-- Barre 2: Fonctionnement -->
-          <div>
-            <div class="flex items-center justify-between mb-2">
-              <span class="font-medium text-gray-900"><?= lang('Texte.repart_fonctionnement') ?></span>
-              <span class="font-bold text-lg text-gray-900">15%</span>
+        <!-- Méthode 2 : Virement Bancaire -->
+        <div class="col">
+          <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden">
+            <div class="card-body text-center text-white" style="background: linear-gradient(135deg, #1E88E5, #283593);">
+              <div class="display-5 mb-2">💳</div>
+              <h3 class="h5 fw-bold mb-0"><?= lang('Texte.don_banque_titre') ?></h3>
             </div>
-            <div class="w-full bg-gray-200 rounded-full h-4">
-              <div class="bg-[#1E88E5] h-4 rounded-full" style="width: 15%"></div>
+            <div class="card-body text-center">
+              <p class="text-secondary small mb-3">BOA Madagascar</p>
+              <span class="d-inline-block bg-light text-dark rounded-3 px-3 py-2 small fw-semibold user-select-all">IBAN: MG12 3456 7890 1234 5678 90</span>
             </div>
           </div>
+        </div>
 
-          <!-- Barre 3: Communication -->
-          <div>
-            <div class="flex items-center justify-between mb-2">
-              <span class="font-medium text-gray-900"><?= lang('Texte.repart_comm') ?></span>
-              <span class="font-bold text-lg text-gray-900">10%</span>
+        <!-- Méthode 3 : QR Code -->
+        <div class="col">
+          <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden">
+            <div class="card-body text-center text-white" style="background: linear-gradient(135deg, #2D8659, #0f766e);">
+              <div class="display-5 mb-2">🔳</div>
+              <h3 class="h5 fw-bold mb-0">QR Code</h3>
             </div>
-            <div class="w-full bg-gray-200 rounded-full h-4">
-              <div class="bg-[#FF7043] h-4 rounded-full" style="width: 10%"></div>
+            <div class="card-body text-center">
+              <p class="text-secondary small mb-3"><?= lang('Texte.don_qr_desc') ?></p>
+              <span class="d-inline-block bg-light text-dark rounded-3 px-3 py-2 small fw-semibold"><?= lang('Texte.don_qr_details') ?></span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Méthode 4 : Facebook don -->
+        <div class="col">
+          <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden">
+            <div class="card-body text-center text-white" style="background: linear-gradient(135deg, #1877F2, #0a4aa8);">
+              <div class="display-5 mb-2">👥</div>
+              <h3 class="h5 fw-bold mb-0">Facebook</h3>
+            </div>
+            <div class="card-body text-center">
+              <p class="text-secondary small mb-3"><?= lang('Texte.don_fb_desc') ?></p>
+              <a href="https://facebook.com" target="_blank" class="d-inline-block bg-primary-subtle text-primary rounded-3 px-3 py-2 small fw-semibold text-decoration-none">facebook.com/avijoro</a>
             </div>
           </div>
         </div>
@@ -162,4 +79,92 @@
       </div>
     </div>
   </section>
+
+  <!-- ================= ÉCHELLES D'IMPACT ================= -->
+  <section class="py-5" style="background-color: #f9fafb;">
+    <div class="container">
+      <div class="text-center mb-5">
+        <div class="display-5 mb-3" style="color: #2D8659;">📈</div>
+        <h2 class="h1 fw-bold text-dark mb-3"><?= lang('Texte.impact_don_titre') ?></h2>
+        <p class="text-secondary mx-auto" style="max-width: 42rem;"><?= lang('Texte.impact_don_desc') ?></p>
+      </div>
+
+      <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4" style="max-width: 1000px; margin-inline: auto;">
+        <div class="col">
+          <div class="card h-100 border-0 shadow-sm rounded-4 text-center p-4">
+            <div class="display-5 mb-3">📚</div>
+            <div class="h4 fw-bold mb-2" style="color: #FF7043;">10,000 Ar</div>
+            <p class="text-secondary small mb-0"><?= lang('Texte.impact_1') ?></p>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100 border-0 shadow-sm rounded-4 text-center p-4">
+            <div class="display-5 mb-3">🏥</div>
+            <div class="h4 fw-bold mb-2" style="color: #FF7043;">50,000 Ar</div>
+            <p class="text-secondary small mb-0"><?= lang('Texte.impact_2') ?></p>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100 border-0 shadow-sm rounded-4 text-center p-4">
+            <div class="display-5 mb-3">🌳</div>
+            <div class="h4 fw-bold mb-2" style="color: #FF7043;">100,000 Ar</div>
+            <p class="text-secondary small mb-0"><?= lang('Texte.impact_3') ?></p>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100 border-0 shadow-sm rounded-4 text-center p-4">
+            <div class="display-5 mb-3">💧</div>
+            <div class="h4 fw-bold mb-2" style="color: #FF7043;">500,000 Ar</div>
+            <p class="text-secondary small mb-0"><?= lang('Texte.impact_4') ?></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= TRANSPARENCE FINANCIÈRE ================= -->
+  <section class="py-5 bg-white">
+    <div class="container" style="max-width: 800px;">
+      <div class="text-center mb-5">
+        <div class="display-5 mb-3" style="color: #1E88E5;">🛡️</div>
+        <h2 class="h1 fw-bold text-dark mb-3"><?= lang('Texte.transparence_titre') ?></h2>
+        <p class="text-secondary mx-auto" style="max-width: 42rem;"><?= lang('Texte.transparence_desc') ?></p>
+      </div>
+
+      <div class="bg-light rounded-4 p-4 p-lg-5">
+        <h3 class="h4 fw-bold text-center text-dark mb-4"><?= lang('Texte.repartition_titre') ?></h3>
+
+        <div class="mb-4">
+          <div class="d-flex justify-content-between mb-2">
+            <span class="fw-medium text-dark"><?= lang('Texte.repart_projets') ?></span>
+            <span class="fw-bold text-dark">75%</span>
+          </div>
+          <div class="progress" style="height: 1rem;">
+            <div class="progress-bar rounded-pill" style="width: 75%; background-color: #2D8659;"></div>
+          </div>
+        </div>
+
+        <div class="mb-4">
+          <div class="d-flex justify-content-between mb-2">
+            <span class="fw-medium text-dark"><?= lang('Texte.repart_fonctionnement') ?></span>
+            <span class="fw-bold text-dark">15%</span>
+          </div>
+          <div class="progress" style="height: 1rem;">
+            <div class="progress-bar rounded-pill" style="width: 15%; background-color: #1E88E5;"></div>
+          </div>
+        </div>
+
+        <div>
+          <div class="d-flex justify-content-between mb-2">
+            <span class="fw-medium text-dark"><?= lang('Texte.repart_comm') ?></span>
+            <span class="fw-bold text-dark">10%</span>
+          </div>
+          <div class="progress" style="height: 1rem;">
+            <div class="progress-bar rounded-pill" style="width: 10%; background-color: #FF7043;"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
 </div>

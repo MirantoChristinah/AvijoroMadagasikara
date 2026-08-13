@@ -28,7 +28,7 @@
             <?= lang('Texte.bouton_rejoindre') ?>
           </a>
 
-          <a href="<?= base_url($lang . '/soutenir') ?>" class="btn-hero-secondary" style="background-color: #FF7043; color: white; padding: 0.85rem 2rem; border-radius: 9999px; text-decoration: none; font-weight: 600; text-align: center; display: inline-block;">
+          <a href="<?= base_url($lang . '/don') ?>" class="btn-hero-secondary" style="background-color: #FF7043; color: white; padding: 0.85rem 2rem; border-radius: 9999px; text-decoration: none; font-weight: 600; text-align: center; display: inline-block;">
             <?= lang('Texte.bouton_don') ?>
           </a>
 
@@ -227,7 +227,7 @@
         </a>
 
         <!-- Bouton Orange : Soutenir nos projets -->
-        <a href="<?= base_url(($lang ?? 'fr') . '/soutenir') ?>" style="display: inline-block; background-color: #FF7043; color: #ffffff; padding: 1rem 2.5rem; border-radius: 9999px; text-decoration: none; font-weight: 600; font-size: 0.95rem; box-shadow: 0 10px 15px -3px rgba(255,112,67,0.3); transition: transform 0.2s;">
+        <a href="<?= base_url(($lang ?? 'fr') . '/don') ?>" style="display: inline-block; background-color: #FF7043; color: #ffffff; padding: 1rem 2.5rem; border-radius: 9999px; text-decoration: none; font-weight: 600; font-size: 0.95rem; box-shadow: 0 10px 15px -3px rgba(255,112,67,0.3); transition: transform 0.2s;">
           <?= lang('Texte.bouton_don') ?> <!-- Réutilise "Soutenir nos projets / Faire un don" -->
         </a>
 

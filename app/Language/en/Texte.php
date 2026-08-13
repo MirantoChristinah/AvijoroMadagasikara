@@ -187,7 +187,7 @@ return [
     'repartition_titre'       => 'Expense Breakdown',
     'repart_projets'          => 'Direct funding for field projects',
     'repart_fonctionnement'   => 'Administrative and logistical expenses',
-    'repart_comm'             => 'Communication and fundraising',
+    'repart_comm'             => 'Communication and don',
 
     //faq
     'faq_titre'           => 'Frequently Asked Questions',

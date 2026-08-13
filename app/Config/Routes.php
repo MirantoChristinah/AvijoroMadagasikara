@@ -64,6 +64,7 @@ $routes->group('{locale}', function ($routes) {
     $routes->get('media/voir/(:num)', 'Media::voir/$1');
     $routes->get('soutenir', 'Join::index');
     $routes->post('soutenir/postuler', 'Join::postuler');
+    $routes->get('don', 'Home::don');
     $routes->get('faq', 'Home::faq');
     
     $routes->get('contact', 'Contact::index');

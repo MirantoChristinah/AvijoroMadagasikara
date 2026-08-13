@@ -130,7 +130,7 @@
       <h2 style="font-size: 2.75rem; font-weight: 700; color: #111827; margin: 0 0 1rem 0; letter-spacing: -0.025em;"><?= lang('Texte.projects_support_titre') ?></h2>
       <p style="color: #4b5563; font-size: 1.125rem; line-height: 1.6; max-width: 44rem; margin: 0 auto 2.5rem auto;"><?= lang('Texte.projects_support_desc') ?></p>
       <div style="text-align: center; width: 100%;">
-        <a href="<?= base_url($lang . '/soutenir') ?>" style="display: inline-block; background-color: #FF7043; color: #ffffff; padding: 1rem 3rem; border-radius: 9999px; text-decoration: none; font-size: 0.95rem; font-weight: 600; box-shadow: 0 10px 15px -3px rgba(255,112,67,0.25);"><?= lang('Texte.projects_support_btn') ?></a>
+        <a href="<?= base_url($lang . '/don') ?>" style="display: inline-block; background-color: #FF7043; color: #ffffff; padding: 1rem 3rem; border-radius: 9999px; text-decoration: none; font-size: 0.95rem; font-weight: 600; box-shadow: 0 10px 15px -3px rgba(255,112,67,0.25);"><?= lang('Texte.projects_support_btn') ?></a>
       </div>
     </div>
   </section>
