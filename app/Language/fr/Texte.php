@@ -40,9 +40,9 @@ return [
     'documents'       => 'Documents',
     'aucun_fichier'   => 'Aucun fichier disponible pour le moment.',
 
-    'voir_tous_projets'   => 'Hijery ireo tetikasa rehetra',
-    'notre_impact_video'  => 'Ny vokatry ny asantsika amin’ny alalan’ny horonantsary',
-    'decouvrez_soutien'   => 'Fantaro ny fomba hanovan’ny fanohananao fiainana eto Madagasikara.',
+    'voir_tous_projets'   => 'voir tous les projets',
+    'notre_impact_video'  => 'Notre impact selon un etrait video',
+    'decouvrez_soutien'   => 'connaitre son apport sur Madagascar.',
    
     //new_detail
     'actualites_retour'     => 'Retour aux actualités',
